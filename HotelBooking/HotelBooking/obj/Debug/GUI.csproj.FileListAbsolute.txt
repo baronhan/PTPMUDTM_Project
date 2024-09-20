@@ -18,3 +18,7 @@ D:\HotelBooking\HotelBooking\HotelBooking\bin\Debug\DAL.dll.config
 D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\GUI.csproj.Up2Date
 D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\HotelBooking.Form_Main.resources
 D:\HotelBooking\HotelBooking\HotelBooking\bin\Debug\Bunifu_UI_v1.52.dll
+D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\HotelBooking.Form_RoomList.resources
+D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\HotelBooking.Form_Home.resources
+D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\HotelBooking.Form_HistoryBooking.resources
+D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\HotelBooking.Form_UserProfile.resources

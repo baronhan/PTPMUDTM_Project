@@ -20,7 +20,7 @@ namespace HotelBooking
 
         private void Form_Main_Load(object sender, EventArgs e)
         {
-            labelWelcome.Text = "Welcome" + _username;
+            labelWelcome.Text = "Welcome " + _username;
 
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
             int radius = 30;
@@ -35,19 +35,83 @@ namespace HotelBooking
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
             if(sidebar.Width == 267)
             {
-                sidebar.Width = 87;
+                sidebar.Width = 82;
             }    
             else
             {
                 sidebar.Width = 267;
             }    
+        }
+
+        private void btnCollection_Click(object sender, EventArgs e)
+        {
+            Form_RoomList form = new Form_RoomList();
+
+            form.TopLevel = false;
+
+            flowPanel.Controls.Clear();
+
+            foreach (Control control in form.Controls)
+            {
+                flowPanel.Controls.Add(control);
+            }
+
+            form.Show();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Form_Home form = new Form_Home();
+
+            form.TopLevel = false;
+
+            flowPanel.Controls.Clear();
+
+            foreach (Control control in form.Controls)
+            {
+                flowPanel.Controls.Add(control);
+            }
+
+            form.Show();
+        }
+
+        private void btnHistoryBooking_Click(object sender, EventArgs e)
+        {
+            Form_HistoryBooking form = new Form_HistoryBooking();
+
+            form.TopLevel = false;
+
+            flowPanel.Controls.Clear();
+
+            foreach (Control control in form.Controls)
+            {
+                flowPanel.Controls.Add(control);
+            }
+
+            form.Show();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            Form_UserProfile form = new Form_UserProfile();
+
+            form.TopLevel = false;
+
+            flowPanel.Controls.Clear();
+
+            foreach (Control control in form.Controls)
+            {
+                flowPanel.Controls.Add(control);
+            }
+
+            form.Show();
         }
     }
 }
