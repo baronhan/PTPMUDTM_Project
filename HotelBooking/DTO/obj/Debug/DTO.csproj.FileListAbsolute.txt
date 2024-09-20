@@ -4,3 +4,9 @@ D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
 D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.dll
 D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.pdb
+D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\DTO.dll
+D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\DTO.pdb
+D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.dll
+D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.pdb
