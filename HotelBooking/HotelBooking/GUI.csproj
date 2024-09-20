@@ -33,8 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>C:\Users\LENOVO\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -110,6 +114,21 @@
       <Project>{2f818ea4-a590-4b1f-adde-8d0d73215cfe}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collection_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history_booking_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
