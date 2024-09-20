@@ -20,3 +20,11 @@ D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUD
 D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DAL\obj\Debug\DAL.dll
 D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DAL\obj\Debug\DAL.pdb
+D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DAL\bin\Debug\BCrypt.Net-Next.dll
+D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DAL\bin\Debug\System.Memory.dll
+D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DAL\bin\Debug\BCrypt.Net-Next.xml
+D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DAL\bin\Debug\System.Buffers.xml
+D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DAL\bin\Debug\System.Memory.xml
+D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DAL\bin\Debug\System.Numerics.Vectors.xml
+D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
