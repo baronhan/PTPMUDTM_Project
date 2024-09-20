@@ -30,6 +30,9 @@ namespace DAL
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertHinh_Anh_Phong(Hinh_Anh_Phong instance);
+    partial void UpdateHinh_Anh_Phong(Hinh_Anh_Phong instance);
+    partial void DeleteHinh_Anh_Phong(Hinh_Anh_Phong instance);
     partial void InsertCT_PDP_DV(CT_PDP_DV instance);
     partial void UpdateCT_PDP_DV(CT_PDP_DV instance);
     partial void DeleteCT_PDP_DV(CT_PDP_DV instance);
@@ -39,9 +42,6 @@ namespace DAL
     partial void InsertDM_Man_Hinh(DM_Man_Hinh instance);
     partial void UpdateDM_Man_Hinh(DM_Man_Hinh instance);
     partial void DeleteDM_Man_Hinh(DM_Man_Hinh instance);
-    partial void InsertHinh_Anh_Phong(Hinh_Anh_Phong instance);
-    partial void UpdateHinh_Anh_Phong(Hinh_Anh_Phong instance);
-    partial void DeleteHinh_Anh_Phong(Hinh_Anh_Phong instance);
     partial void InsertKhach_Hang(Khach_Hang instance);
     partial void UpdateKhach_Hang(Khach_Hang instance);
     partial void DeleteKhach_Hang(Khach_Hang instance);
@@ -63,7 +63,7 @@ namespace DAL
     #endregion
 		
 		public QL_KhachSanDataContext() : 
-				base(global::DAL.Properties.Settings.Default.DatPhongKhachSanConnectionString, mappingSource)
+				base(global::DAL.Properties.Settings.Default.DatPhongKhachSanConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -92,6 +92,14 @@ namespace DAL
 			OnCreated();
 		}
 		
+		public System.Data.Linq.Table<Hinh_Anh_Phong> Hinh_Anh_Phongs
+		{
+			get
+			{
+				return this.GetTable<Hinh_Anh_Phong>();
+			}
+		}
+		
 		public System.Data.Linq.Table<CT_PDP_DV> CT_PDP_DVs
 		{
 			get
@@ -113,14 +121,6 @@ namespace DAL
 			get
 			{
 				return this.GetTable<DM_Man_Hinh>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Hinh_Anh_Phong> Hinh_Anh_Phongs
-		{
-			get
-			{
-				return this.GetTable<Hinh_Anh_Phong>();
 			}
 		}
 		
@@ -169,6 +169,157 @@ namespace DAL
 			get
 			{
 				return this.GetTable<Phong>();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Hinh_Anh_Phong")]
+	public partial class Hinh_Anh_Phong : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _maHinhAnh;
+		
+		private string _url;
+		
+		private System.Nullable<int> _maPhong;
+		
+		private EntityRef<Phong> _Phong;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnmaHinhAnhChanging(int value);
+    partial void OnmaHinhAnhChanged();
+    partial void OnurlChanging(string value);
+    partial void OnurlChanged();
+    partial void OnmaPhongChanging(System.Nullable<int> value);
+    partial void OnmaPhongChanged();
+    #endregion
+		
+		public Hinh_Anh_Phong()
+		{
+			this._Phong = default(EntityRef<Phong>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maHinhAnh", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int maHinhAnh
+		{
+			get
+			{
+				return this._maHinhAnh;
+			}
+			set
+			{
+				if ((this._maHinhAnh != value))
+				{
+					this.OnmaHinhAnhChanging(value);
+					this.SendPropertyChanging();
+					this._maHinhAnh = value;
+					this.SendPropertyChanged("maHinhAnh");
+					this.OnmaHinhAnhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_url", DbType="VarChar(255)")]
+		public string url
+		{
+			get
+			{
+				return this._url;
+			}
+			set
+			{
+				if ((this._url != value))
+				{
+					this.OnurlChanging(value);
+					this.SendPropertyChanging();
+					this._url = value;
+					this.SendPropertyChanged("url");
+					this.OnurlChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maPhong", DbType="Int")]
+		public System.Nullable<int> maPhong
+		{
+			get
+			{
+				return this._maPhong;
+			}
+			set
+			{
+				if ((this._maPhong != value))
+				{
+					if (this._Phong.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnmaPhongChanging(value);
+					this.SendPropertyChanging();
+					this._maPhong = value;
+					this.SendPropertyChanged("maPhong");
+					this.OnmaPhongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Phong_Hinh_Anh_Phong", Storage="_Phong", ThisKey="maPhong", OtherKey="maPhong", IsForeignKey=true)]
+		public Phong Phong
+		{
+			get
+			{
+				return this._Phong.Entity;
+			}
+			set
+			{
+				Phong previousValue = this._Phong.Entity;
+				if (((previousValue != value) 
+							|| (this._Phong.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Phong.Entity = null;
+						previousValue.Hinh_Anh_Phongs.Remove(this);
+					}
+					this._Phong.Entity = value;
+					if ((value != null))
+					{
+						value.Hinh_Anh_Phongs.Add(this);
+						this._maPhong = value.maPhong;
+					}
+					else
+					{
+						this._maPhong = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Phong");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -662,157 +813,6 @@ namespace DAL
 		{
 			this.SendPropertyChanging();
 			entity.DM_Man_Hinh = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Hinh_Anh_Phong")]
-	public partial class Hinh_Anh_Phong : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _maHinhAnh;
-		
-		private string _url;
-		
-		private System.Nullable<int> _maPhong;
-		
-		private EntityRef<Phong> _Phong;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnmaHinhAnhChanging(int value);
-    partial void OnmaHinhAnhChanged();
-    partial void OnurlChanging(string value);
-    partial void OnurlChanged();
-    partial void OnmaPhongChanging(System.Nullable<int> value);
-    partial void OnmaPhongChanged();
-    #endregion
-		
-		public Hinh_Anh_Phong()
-		{
-			this._Phong = default(EntityRef<Phong>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maHinhAnh", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int maHinhAnh
-		{
-			get
-			{
-				return this._maHinhAnh;
-			}
-			set
-			{
-				if ((this._maHinhAnh != value))
-				{
-					this.OnmaHinhAnhChanging(value);
-					this.SendPropertyChanging();
-					this._maHinhAnh = value;
-					this.SendPropertyChanged("maHinhAnh");
-					this.OnmaHinhAnhChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_url", DbType="VarChar(255)")]
-		public string url
-		{
-			get
-			{
-				return this._url;
-			}
-			set
-			{
-				if ((this._url != value))
-				{
-					this.OnurlChanging(value);
-					this.SendPropertyChanging();
-					this._url = value;
-					this.SendPropertyChanged("url");
-					this.OnurlChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maPhong", DbType="Int")]
-		public System.Nullable<int> maPhong
-		{
-			get
-			{
-				return this._maPhong;
-			}
-			set
-			{
-				if ((this._maPhong != value))
-				{
-					if (this._Phong.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnmaPhongChanging(value);
-					this.SendPropertyChanging();
-					this._maPhong = value;
-					this.SendPropertyChanged("maPhong");
-					this.OnmaPhongChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Phong_Hinh_Anh_Phong", Storage="_Phong", ThisKey="maPhong", OtherKey="maPhong", IsForeignKey=true)]
-		public Phong Phong
-		{
-			get
-			{
-				return this._Phong.Entity;
-			}
-			set
-			{
-				Phong previousValue = this._Phong.Entity;
-				if (((previousValue != value) 
-							|| (this._Phong.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Phong.Entity = null;
-						previousValue.Hinh_Anh_Phongs.Remove(this);
-					}
-					this._Phong.Entity = value;
-					if ((value != null))
-					{
-						value.Hinh_Anh_Phongs.Add(this);
-						this._maPhong = value.maPhong;
-					}
-					else
-					{
-						this._maPhong = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Phong");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	

@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DatPhongKhachSan" Class="QL_KhachSanDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-3LQEMN31;Initial Catalog=DatPhongKhachSan;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="DatPhongKhachSanConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-3LQEMN31;Initial Catalog=DatPhongKhachSan;Persist Security Info=True;User ID=hotelbooking;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="DatPhongKhachSanConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Hinh_Anh_Phong" Member="Hinh_Anh_Phongs">
+    <Type Name="Hinh_Anh_Phong">
+      <Column Name="maHinhAnh" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="url" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="maPhong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Phong_Hinh_Anh_Phong" Member="Phong" ThisKey="maPhong" OtherKey="maPhong" Type="Phong" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.CT_PDP_DV" Member="CT_PDP_DVs">
     <Type Name="CT_PDP_DV">
       <Column Name="maDatPhong" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -24,14 +32,6 @@
       <Column Name="maManHinh" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="tenManHinh" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Association Name="DM_Man_Hinh_Phan_Quyen" Member="Phan_Quyens" ThisKey="maManHinh" OtherKey="maManHinh" Type="Phan_Quyen" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Hinh_Anh_Phong" Member="Hinh_Anh_Phongs">
-    <Type Name="Hinh_Anh_Phong">
-      <Column Name="maHinhAnh" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="url" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="maPhong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Phong_Hinh_Anh_Phong" Member="Phong" ThisKey="maPhong" OtherKey="maPhong" Type="Phong" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Khach_Hang" Member="Khach_Hangs">
