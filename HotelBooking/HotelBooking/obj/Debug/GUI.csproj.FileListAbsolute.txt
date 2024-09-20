@@ -17,3 +17,4 @@ D:\HotelBooking\HotelBooking\HotelBooking\bin\Debug\DAL.pdb
 D:\HotelBooking\HotelBooking\HotelBooking\bin\Debug\DAL.dll.config
 D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\GUI.csproj.Up2Date
 D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\HotelBooking.Form_Main.resources
+D:\HotelBooking\HotelBooking\HotelBooking\bin\Debug\Bunifu_UI_v1.52.dll

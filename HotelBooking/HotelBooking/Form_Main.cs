@@ -20,7 +20,7 @@ namespace HotelBooking
 
         private void Form_Main_Load(object sender, EventArgs e)
         {
-            label2.Text = "Welcome " + _username;
+            labelWelcome.Text = "Welcome" + _username;
 
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
             int radius = 30;
@@ -38,5 +38,16 @@ namespace HotelBooking
             Close();
         }
 
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            if(sidebar.Width == 267)
+            {
+                sidebar.Width = 87;
+            }    
+            else
+            {
+                sidebar.Width = 267;
+            }    
+        }
     }
 }
