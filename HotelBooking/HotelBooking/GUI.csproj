@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_HistoryBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HistoryBooking.Designer.cs">
+      <DependentUpon>Form_HistoryBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Home.Designer.cs">
+      <DependentUpon>Form_Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,13 +74,37 @@
     <Compile Include="Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_RoomList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_RoomList.Designer.cs">
+      <DependentUpon>Form_RoomList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_UserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UserProfile.Designer.cs">
+      <DependentUpon>Form_UserProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_HistoryBooking.resx">
+      <DependentUpon>Form_HistoryBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Home.resx">
+      <DependentUpon>Form_Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_RoomList.resx">
+      <DependentUpon>Form_RoomList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UserProfile.resx">
+      <DependentUpon>Form_UserProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -129,6 +165,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gift_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\service.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wedding.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
