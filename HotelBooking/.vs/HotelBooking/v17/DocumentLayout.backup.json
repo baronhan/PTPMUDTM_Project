@@ -1,40 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\HotelBooking\\HotelBooking\\",
-<<<<<<< HEAD
   "Documents": [],
-=======
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|d:\\hotelbooking\\hotelbooking\\hotelbooking\\form_roomlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_roomlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|D:\\HotelBooking\\HotelBooking\\hotelbooking\\form_roomlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_roomlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3128C397-AD01-4A3E-A8C5-25909F23FC91}|DAL\\DAL.csproj|D:\\HotelBooking\\HotelBooking\\dal\\phongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3128C397-AD01-4A3E-A8C5-25909F23FC91}|DAL\\DAL.csproj|solutionrelative:dal\\phongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|D:\\HotelBooking\\HotelBooking\\hotelbooking\\form_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3128C397-AD01-4A3E-A8C5-25909F23FC91}|DAL\\DAL.csproj|D:\\HotelBooking\\HotelBooking\\dal\\hinh_anh_phongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3128C397-AD01-4A3E-A8C5-25909F23FC91}|DAL\\DAL.csproj|solutionrelative:dal\\hinh_anh_phongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7161FB94-9E5A-42CE-B0A2-9A8D48ED2E0F}|BUL\\BUL.csproj|D:\\HotelBooking\\HotelBooking\\bul\\hinh_anh_phongbul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7161FB94-9E5A-42CE-B0A2-9A8D48ED2E0F}|BUL\\BUL.csproj|solutionrelative:bul\\hinh_anh_phongbul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7161FB94-9E5A-42CE-B0A2-9A8D48ED2E0F}|BUL\\BUL.csproj|D:\\HotelBooking\\HotelBooking\\bul\\phongbul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7161FB94-9E5A-42CE-B0A2-9A8D48ED2E0F}|BUL\\BUL.csproj|solutionrelative:bul\\phongbul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
->>>>>>> ecf93f639de96b9d8014259241523c0ccf2f8c62
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -42,103 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
           "SelectedChildIndex": -1,
-=======
-          "SelectedChildIndex": 5,
->>>>>>> ecf93f639de96b9d8014259241523c0ccf2f8c62
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-<<<<<<< HEAD
-=======
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Hinh_Anh_PhongBUL.cs",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\BUL\\Hinh_Anh_PhongBUL.cs",
-              "RelativeDocumentMoniker": "BUL\\Hinh_Anh_PhongBUL.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\BUL\\Hinh_Anh_PhongBUL.cs",
-              "RelativeToolTip": "BUL\\Hinh_Anh_PhongBUL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T09:47:27.379Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PhongDAL.cs",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\DAL\\PhongDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\PhongDAL.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\DAL\\PhongDAL.cs",
-              "RelativeToolTip": "DAL\\PhongDAL.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T09:22:16.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PhongBUL.cs",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\BUL\\PhongBUL.cs",
-              "RelativeDocumentMoniker": "BUL\\PhongBUL.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\BUL\\PhongBUL.cs",
-              "RelativeToolTip": "BUL\\PhongBUL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T09:21:55.79Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form_Main.cs [Design]",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Main.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_Main.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Main.cs [Design]",
-              "RelativeToolTip": "HotelBooking\\Form_Main.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T05:22:30.022Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form_RoomList.cs",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_RoomList.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_RoomList.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_RoomList.cs",
-              "RelativeToolTip": "HotelBooking\\Form_RoomList.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAqwCEAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T05:07:41.395Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form_RoomList.cs [Design]",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_RoomList.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_RoomList.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_RoomList.cs [Design]",
-              "RelativeToolTip": "HotelBooking\\Form_RoomList.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T05:07:39.922Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Hinh_Anh_PhongDAL.cs",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\DAL\\Hinh_Anh_PhongDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\Hinh_Anh_PhongDAL.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\DAL\\Hinh_Anh_PhongDAL.cs",
-              "RelativeToolTip": "DAL\\Hinh_Anh_PhongDAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T09:47:48.21Z"
->>>>>>> ecf93f639de96b9d8014259241523c0ccf2f8c62
             }
           ]
         }
