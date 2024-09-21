@@ -31,6 +31,10 @@ namespace HotelBooking
             path.AddArc(0, this.Height - radius, radius, radius, 90, 90);
 
             this.Region = new Region(path);
+
+            btnHome_Click(sender, e);
+
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -102,16 +106,14 @@ namespace HotelBooking
         {
             Form_UserProfile form = new Form_UserProfile();
 
-            form.TopLevel = false;
+            form.TopLevel = false; 
+            form.FormBorderStyle = FormBorderStyle.None; 
+            form.Dock = DockStyle.Fill; 
 
             flowPanel.Controls.Clear();
+            flowPanel.Controls.Add(form); 
 
-            foreach (Control control in form.Controls)
-            {
-                flowPanel.Controls.Add(control);
-            }
-
-            form.Show();
+            form.Show(); 
         }
     }
 }
