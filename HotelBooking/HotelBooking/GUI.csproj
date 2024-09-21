@@ -190,5 +190,11 @@
   <ItemGroup>
     <None Include="Resources\wedding.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defaultAvatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel_background_image.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

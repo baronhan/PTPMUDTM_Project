@@ -10,3 +10,9 @@ D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
 D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.dll
 D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.pdb
+D:\Study\nam4\ptpmudtm\doan\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\DTO.dll
+D:\Study\nam4\ptpmudtm\doan\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\DTO.pdb
+D:\Study\nam4\ptpmudtm\doan\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Study\nam4\ptpmudtm\doan\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Study\nam4\ptpmudtm\doan\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.dll
+D:\Study\nam4\ptpmudtm\doan\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.pdb
