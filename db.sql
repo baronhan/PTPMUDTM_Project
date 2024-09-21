@@ -91,10 +91,10 @@ CREATE TABLE Phan_Quyen (
 -- Dữ liệu cho bảng Loai_Phong
 INSERT INTO Loai_Phong (tenLoaiPhong, moTa)
 VALUES 
-('Phòng đơn', 'Phòng dành cho 1 người với 1 giường đơn.'),
-('Phòng đôi', 'Phòng dành cho 2 người với 1 giường đôi.'),
-('Phòng gia đình', 'Phòng dành cho gia đình với 2 giường đôi.'),
-('Phòng VIP', 'Phòng cao cấp với nhiều tiện nghi sang trọng.');
+(N'Phòng Deluxe', N'Phong danh cho 2 nguoi voi 1 giuong doi'),
+(N'Phòng Deluxe Suite', N'Phong danh cho 2 nguoi voi 2 giuong don'),
+(N'Phòng Executive', N'Phong danh cho 2 nguoi voi 1 giuong doi'),
+('Phòng President Suite', 'Phong danh cho 3 nguoi voi 1 giuong don va 1 giuong doi');
 
 -- Dữ liệu cho bảng DM_Man_Hinh
 INSERT INTO DM_Man_Hinh (tenManHinh)
@@ -107,20 +107,38 @@ VALUES
 ('Quản lý phân quyền');
 
 -- Dữ liệu cho bảng Phong
-INSERT INTO Phong (tenPhong, soLuongNguoi, donGia, moTa, maLoaiPhong, trangThai)
-VALUES 
-('Phòng 101', 2, 500000, 'Phòng có giường đôi, máy lạnh, TV.', 2, 0),
-('Phòng 102', 4, 1200000, 'Phòng gia đình, 2 giường đôi, máy lạnh, TV, minibar.', 3, 1),
-('Phòng 103', 1, 300000, 'Phòng đơn, 1 giường đơn, máy lạnh, TV.', 1, 0),
-('Phòng VIP 201', 2, 2000000, 'Phòng VIP, giường king-size, phòng tắm riêng, TV, minibar, view đẹp.', 4, 0);
+insert into Phong values 
+(N'Phòng Deluxe', 2, 2500000, N'Phòng Deluxe (Huong Thanh pho)', 1, 1),
+(N'Phòng Deluxe', 2, 3000000, N'Phòng Deluxe (Huong Song)', 1, 1),
+(N'Phòng Executive', 2, 3500000, N'Phòng Executive (Huong Thanh pho)', 4, 1),
+(N'Phòng Executive', 2, 4000000, N'Phòng Executive (Huong Song)', 4, 1),
+(N'Phòng Deluxe Suite', 2, 3250000, N'Phòng Deluxe Suite (Huong Thanh pho)', 2, 1),
+(N'Phòng Deluxe Suite', 2, 3750000, N'Phòng Deluxe Suite (Huong Song)', 2, 1),
+(N'Phòng President Suite', 3, 4950000, N'Phòng President Suite', 3, 1);
 
 -- Dữ liệu cho bảng Hinh_Anh_Phong
 INSERT INTO Hinh_Anh_Phong (url, maPhong)
 VALUES 
-('http://example.com/room101.jpg', 1),
-('http://example.com/room102.jpg', 2),
-('http://example.com/room103.jpg', 3),
-('http://example.com/vip201.jpg', 4);
+  (N'..\..\Images\room_001.jpeg', 1),
+  (N'..\..\Images\room_002.jpeg', 1),
+
+  (N'..\..\Images\room_003.jpeg', 2),
+  (N'..\..\Images\room_004.jpeg', 2),
+
+  (N'..\..\Images\room_005.jpeg', 3),
+  (N'..\..\Images\room_006.jpeg', 3),
+
+  (N'..\..\Images\room_007.jpeg', 4),
+  (N'..\..\Images\room_008.jpeg', 4),
+
+  (N'..\..\Images\room_009.jpeg', 5),
+  (N'..\..\Images\room_010.jpeg', 5),
+
+  (N'..\..\Images\room_011.jpeg', 6),
+  (N'..\..\Images\room_012.jpeg', 6),
+
+  (N'..\..\Images\room_013.jpeg', 7),
+  (N'..\..\Images\room_014.jpeg', 7);
 
 -- Dữ liệu cho bảng Dich_Vu
 INSERT INTO Dich_Vu (tenDich, acronym, donGia)
