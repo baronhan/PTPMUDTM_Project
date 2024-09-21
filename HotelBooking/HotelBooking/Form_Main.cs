@@ -59,13 +59,11 @@ namespace HotelBooking
             Form_RoomList form = new Form_RoomList();
 
             form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
 
             flowPanel.Controls.Clear();
-
-            foreach (Control control in form.Controls)
-            {
-                flowPanel.Controls.Add(control);
-            }
+            flowPanel.Controls.Add(form);
 
             form.Show();
         }
@@ -91,13 +89,11 @@ namespace HotelBooking
             Form_HistoryBooking form = new Form_HistoryBooking();
 
             form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
 
             flowPanel.Controls.Clear();
-
-            foreach (Control control in form.Controls)
-            {
-                flowPanel.Controls.Add(control);
-            }
+            flowPanel.Controls.Add(form);
 
             form.Show();
         }

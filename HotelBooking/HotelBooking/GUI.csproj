@@ -190,5 +190,22 @@
   <ItemGroup>
     <None Include="Resources\wedding.jpg" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\room_001.jpeg" />
+    <Content Include="Images\room_002.jpeg" />
+    <Content Include="Images\room_003.jpeg" />
+    <Content Include="Images\room_004.jpeg" />
+    <Content Include="Images\room_005.jpeg" />
+    <Content Include="Images\room_006.jpeg" />
+    <Content Include="Images\room_007.jpeg" />
+    <Content Include="Images\room_008.jpeg" />
+    <Content Include="Images\room_009.jpeg" />
+    <Content Include="Images\room_010.jpeg" />
+    <Content Include="Images\room_011.jpeg" />
+    <Content Include="Images\room_012.jpeg" />
+    <Content Include="Images\room_013.jpeg" />
+    <Content Include="Images\room_014.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
