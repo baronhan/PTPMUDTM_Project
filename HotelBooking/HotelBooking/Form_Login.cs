@@ -98,5 +98,12 @@ namespace HotelBooking
 
             MessageBox.Show(tb); 
         }
+
+        private void llCreateNewAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Form_Register form = new Form_Register();
+            form.Show();
+        }
     }
 }

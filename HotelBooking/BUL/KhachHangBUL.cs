@@ -15,7 +15,9 @@ namespace BUL
         {
             return dal.VerifyLogin(username, password);
         }
-
-
+        public bool RegisterNewUser(string username, string password, string fullName, string email, string address, string phone)
+        {
+            return dal.Register(username, password, fullName, email, address, phone);
+        }
     }
 }
