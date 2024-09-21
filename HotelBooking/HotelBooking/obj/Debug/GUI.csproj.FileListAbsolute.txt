@@ -46,3 +46,4 @@ D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUD
 D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\HotelBooking\obj\Debug\HotelBooking.exe
 D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\HotelBooking\obj\Debug\HotelBooking.pdb
 D:\Document\Documents\HUFI(2021-2015)\HK7\PTPhanMemUDThongMinh\00_project\PTPMUDTM_Project\PTPMUDTM_Project\HotelBooking\HotelBooking\obj\Debug\HotelBooking.Form_Register.resources
+D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\HotelBooking.Form_Register.resources
