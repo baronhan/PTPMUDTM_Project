@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CT_PDP_DVDTO.cs" />
+    <Compile Include="Dich_VuDTO.cs" />
     <Compile Include="Hinh_Anh_PhongDTO.cs" />
     <Compile Include="KhachHangDTO.cs" />
     <Compile Include="Loai_PhongDTO.cs" />

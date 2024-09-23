@@ -69,7 +69,7 @@
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(12, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 30);
+            this.label1.Size = new System.Drawing.Size(121, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "HotelBooking";
             // 
@@ -91,7 +91,7 @@
             // 
             this.txtUserName.Location = new System.Drawing.Point(75, 120);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(305, 31);
+            this.txtUserName.Size = new System.Drawing.Size(305, 27);
             this.txtUserName.TabIndex = 1;
             // 
             // btnLogin
@@ -152,7 +152,7 @@
             this.llCreateNewAccount.LinkColor = System.Drawing.Color.White;
             this.llCreateNewAccount.Location = new System.Drawing.Point(154, 349);
             this.llCreateNewAccount.Name = "llCreateNewAccount";
-            this.llCreateNewAccount.Size = new System.Drawing.Size(172, 25);
+            this.llCreateNewAccount.Size = new System.Drawing.Size(144, 20);
             this.llCreateNewAccount.TabIndex = 5;
             this.llCreateNewAccount.TabStop = true;
             this.llCreateNewAccount.Text = "Create New Account";
@@ -165,7 +165,7 @@
             this.llForgetPassword.LinkColor = System.Drawing.Color.White;
             this.llForgetPassword.Location = new System.Drawing.Point(167, 252);
             this.llForgetPassword.Name = "llForgetPassword";
-            this.llForgetPassword.Size = new System.Drawing.Size(146, 25);
+            this.llForgetPassword.Size = new System.Drawing.Size(118, 20);
             this.llForgetPassword.TabIndex = 4;
             this.llForgetPassword.TabStop = true;
             this.llForgetPassword.Text = "Forgot Password";
@@ -176,7 +176,7 @@
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.Location = new System.Drawing.Point(71, 171);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(112, 30);
+            this.lblPassword.Size = new System.Drawing.Size(92, 25);
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Password";
             // 
@@ -184,8 +184,10 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(75, 205);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(305, 31);
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(305, 27);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // lblUsername
             // 
@@ -193,7 +195,7 @@
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.Location = new System.Drawing.Point(71, 86);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(127, 30);
+            this.lblUsername.Size = new System.Drawing.Size(105, 25);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "User Name";
             // 
@@ -203,7 +205,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(148, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 70);
+            this.label2.Size = new System.Drawing.Size(138, 59);
             this.label2.TabIndex = 0;
             this.label2.Text = "Login";
             // 
@@ -221,7 +223,7 @@
             // 
             // Form_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::HotelBooking.Properties.Resources.background_img;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -231,7 +233,6 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form_Login";
             this.ShowIcon = false;

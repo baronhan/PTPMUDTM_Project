@@ -12,6 +12,11 @@ namespace BUL
     {
         PhongDAL dal = new PhongDAL();
 
+        public bool checkRoomStatus(int idPhong)
+        {
+            return dal.checkRoomStatus(idPhong);
+        }
+
         public DataTable selectedPhong()
         {
             return dal.selectedPhong();

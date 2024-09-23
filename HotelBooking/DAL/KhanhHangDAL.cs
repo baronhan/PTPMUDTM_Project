@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BCrypt.Net;
+using DTO;
 
 namespace DAL
 {
@@ -16,15 +17,23 @@ namespace DAL
         {
             try
             {
-                Khach_Hang kh = qlks.Khach_Hangs.Where(t => t.userName == username && t.password == password).FirstOrDefault();
+                Khach_Hang kh = qlks.Khach_Hangs.Where(t => t.userName == username).FirstOrDefault();
 
                 if (kh != null)
-                    return true;
+                {
+                    bool isPasswordValid = BCrypt.Net.BCrypt.Verify(password, kh.password);
+
+                    if (isPasswordValid)
+                    {
+                        return true;
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
             return false;
         }
         public bool Register(string username, string password, string fullName, string email, string address, string phone)
@@ -62,6 +71,53 @@ namespace DAL
                 MessageBox.Show(ex.Message);
                 return false;
             }
+        }
+
+        public KhachHangDTO GetKhachHangByUsername(string username)
+        {
+            var khachHang = qlks.Khach_Hangs
+                            .Where(kh => kh.userName == username)
+                            .Select(kh => new KhachHangDTO
+                            {
+                                maKH = kh.maKH,
+                                username = kh.userName,
+                                password = kh.password,
+                                hoTen = kh.hoTen,
+                                email = kh.email,
+                                diaChi = kh.diaChi,
+                                soDienThoai = kh.soDienThoai,
+                                maNhomNguoiDung = (int)kh.maNhomNguoiDung
+                            }).FirstOrDefault();
+            return khachHang;
+        }
+
+        public bool UpdateKhachHang(KhachHangDTO khachHang)
+        {
+            var khachHangDb = qlks.Khach_Hangs.FirstOrDefault(kh => kh.maKH == khachHang.maKH);
+            if(khachHangDb != null)
+            {
+                khachHangDb.hoTen = khachHang.hoTen;
+                khachHangDb.email = khachHang.email;
+                khachHangDb.diaChi = khachHang.diaChi;
+                khachHangDb.soDienThoai = khachHang.soDienThoai;
+
+                qlks.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool DeleteKhachHang(int maKH)
+        {
+            var khachHang = qlks.Khach_Hangs.FirstOrDefault(kh => kh.maKH == maKH);
+            if (khachHang != null)
+            {
+                qlks.Khach_Hangs.DeleteOnSubmit(khachHang);
+                qlks.SubmitChanges();
+                return true;
+            }
+            return false;
+
         }
     }
 }

@@ -18,6 +18,14 @@ namespace HotelBooking
             InitializeComponent();
         }
 
+        public void AddControls(Control control)
+        {
+            flowPanel.Controls.Clear();
+            flowPanel.Controls.Add(control);
+            control.Show();
+        }
+
+
         private void Form_Main_Load(object sender, EventArgs e)
         {
             labelWelcome.Text = "Welcome " + _username;
@@ -56,14 +64,13 @@ namespace HotelBooking
 
         private void btnCollection_Click(object sender, EventArgs e)
         {
-            Form_RoomList form = new Form_RoomList();
+            Form_RoomList form = new Form_RoomList(this);
 
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
 
-            flowPanel.Controls.Clear();
-            flowPanel.Controls.Add(form);
+            AddControls(form);
 
             form.Show();
         }
@@ -73,13 +80,10 @@ namespace HotelBooking
             Form_Home form = new Form_Home();
 
             form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
 
-            flowPanel.Controls.Clear();
-
-            foreach (Control control in form.Controls)
-            {
-                flowPanel.Controls.Add(control);
-            }
+            AddControls(form);
 
             form.Show();
         }
@@ -92,8 +96,7 @@ namespace HotelBooking
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
 
-            flowPanel.Controls.Clear();
-            flowPanel.Controls.Add(form);
+            AddControls(form);
 
             form.Show();
         }
@@ -104,10 +107,9 @@ namespace HotelBooking
 
             form.TopLevel = false; 
             form.FormBorderStyle = FormBorderStyle.None; 
-            form.Dock = DockStyle.Fill; 
+            form.Dock = DockStyle.Fill;
 
-            flowPanel.Controls.Clear();
-            flowPanel.Controls.Add(form); 
+            AddControls(form);
 
             form.Show(); 
         }

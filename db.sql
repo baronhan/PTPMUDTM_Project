@@ -141,12 +141,12 @@ VALUES
   (N'..\..\Images\room_014.jpeg', 7);
 
 -- Dữ liệu cho bảng Dich_Vu
-INSERT INTO Dich_Vu (tenDich, acronym, donGia)
-VALUES 
-('Giặt ủi', 'GU', 50000),
-('Thuê xe', 'TX', 200000),
-('Đưa đón sân bay', 'DDSB', 500000),
-('Bữa sáng', 'BS', 100000);
+INSERT INTO Dich_Vu (TenDich, Acronym, DonGia) VALUES
+(N'Dich vu giat la', 'DVGL', 50000.00),
+(N'Dich vu don phong', 'DVDP', 70000.00),
+(N'Dich vu dua don', 'DVDD', 200000.00),
+(N'Dich vu an uong', 'DVAU', 150000.00),
+(N'Dich vu spa', 'DVSP', 300000.00);
 
 -- Dữ liệu cho bảng Nhom_Nguoi_Dung
 INSERT INTO Nhom_Nguoi_Dung (tenNhom, ghiChu)

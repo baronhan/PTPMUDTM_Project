@@ -12,6 +12,25 @@ namespace DAL
     {
         QL_KhachSanDataContext qlks = new QL_KhachSanDataContext();
 
+        public bool checkRoomStatus(int idPhong)
+        {
+            try
+            {
+                Phong phong = qlks.Phongs.Where(t => t.maLoaiPhong == idPhong).FirstOrDefault();
+
+                if (phong != null && phong.trangThai == 1)
+                {
+                    return true;
+                }    
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+            return false;
+        }
+
         public DataTable selectedPhong()
         {
             DataTable roomList = new DataTable();
