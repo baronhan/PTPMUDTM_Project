@@ -206,6 +206,7 @@
     <Content Include="Images\room_012.jpeg" />
     <Content Include="Images\room_013.jpeg" />
     <Content Include="Images\room_014.jpeg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\defaultAvatar.png" />
   </ItemGroup>
