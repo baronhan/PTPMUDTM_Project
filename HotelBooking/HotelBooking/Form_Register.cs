@@ -126,5 +126,10 @@ namespace HotelBooking
             Form_Login form = new Form_Login();
             form.Show();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
