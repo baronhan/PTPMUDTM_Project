@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace HotelBooking
 {
     public partial class Form_PhieuDatPhong : Form
     {
-        public Form_PhieuDatPhong()
+        public Form_PhieuDatPhong(Form form, List<Dich_VuDTO> list, int idPhong)
         {
             InitializeComponent();
         }

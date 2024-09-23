@@ -17,15 +17,23 @@ namespace DAL
         {
             try
             {
-                Khach_Hang kh = qlks.Khach_Hangs.Where(t => t.userName == username && t.password == password).FirstOrDefault();
+                Khach_Hang kh = qlks.Khach_Hangs.Where(t => t.userName == username).FirstOrDefault();
 
                 if (kh != null)
-                    return true;
+                {
+                    bool isPasswordValid = BCrypt.Net.BCrypt.Verify(password, kh.password);
+
+                    if (isPasswordValid)
+                    {
+                        return true;
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
             return false;
         }
         public bool Register(string username, string password, string fullName, string email, string address, string phone)

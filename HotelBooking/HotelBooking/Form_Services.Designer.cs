@@ -301,6 +301,7 @@
             this.btnContinueBooking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnContinueBooking.Textcolor = System.Drawing.Color.White;
             this.btnContinueBooking.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinueBooking.Click += new System.EventHandler(this.btnContinueBooking_Click);
             // 
             // btnAddNewService
             // 

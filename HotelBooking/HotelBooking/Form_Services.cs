@@ -1,4 +1,5 @@
 ﻿using BUL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,8 @@ namespace HotelBooking
     public partial class Form_Services : Form
     {
         private Form_Main formMain;
-        private int idPhong;
+        private List<Dich_VuDTO> serviceList = new List<Dich_VuDTO>();
+        private int idPhong = 0;
 
         Dich_VuBUL bul = new Dich_VuBUL();
         public Form_Services(Form_Main formMain, int idPhong)
@@ -84,7 +86,9 @@ namespace HotelBooking
                     string acronym = selectedRow.Cells["Acronym"].Value.ToString();
                     decimal price = Convert.ToDecimal(selectedRow.Cells["Prices"].Value);
 
-                    // Thêm dòng vào dgvSelectedServices
+                    Dich_VuDTO service = new Dich_VuDTO(id, serviceName, acronym, price);
+                    serviceList.Add(service);
+
                     dgvSelectedServices.Rows.Add(id, serviceName, acronym, price);
                 }
 
@@ -107,6 +111,46 @@ namespace HotelBooking
             formMain.AddControls(form);
 
             form.Show();
+        }
+
+        private void btnContinueBooking_Click(object sender, EventArgs e)
+        {
+            if (idPhong != 0 && serviceList.Count == 0)
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn đặt phòng không có sử dụng thêm dịch vụ không?",
+                                                      "Xác nhận",
+                                                      MessageBoxButtons.YesNo,
+                                                      MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    Form_PhieuDatPhong form = new Form_PhieuDatPhong(formMain, serviceList, idPhong);
+
+                    form.TopLevel = false;
+                    form.FormBorderStyle = FormBorderStyle.None;
+                    form.Dock = DockStyle.Fill;
+
+                    formMain.AddControls(form);
+
+                    form.Show();
+                }
+            }
+            else if (idPhong != 0 && serviceList.Count > 0)
+            {
+                Form_PhieuDatPhong form = new Form_PhieuDatPhong(formMain, serviceList, idPhong);
+
+                form.TopLevel = false;
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Dock = DockStyle.Fill;
+
+                formMain.AddControls(form);
+
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy phòng tương ứng");
+            }
         }
     }
 }
