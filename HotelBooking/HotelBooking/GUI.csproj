@@ -190,6 +190,7 @@
   <ItemGroup>
     <None Include="Resources\wedding.jpg" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup />
   <ItemGroup>
     <Content Include="Images\room_001.jpeg" />
@@ -206,6 +207,13 @@
     <Content Include="Images\room_012.jpeg" />
     <Content Include="Images\room_013.jpeg" />
     <Content Include="Images\room_014.jpeg" />
+=======
+  <ItemGroup>
+    <None Include="Resources\defaultAvatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel_background_image.jpg" />
+>>>>>>> ecc92060b2a4488cff235229e89ea8255023810c
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
