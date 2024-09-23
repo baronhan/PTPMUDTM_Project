@@ -74,6 +74,12 @@
     <Compile Include="Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_PhieuDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PhieuDatPhong.Designer.cs">
+      <DependentUpon>Form_PhieuDatPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     </Compile>
     <Compile Include="Form_RoomList.Designer.cs">
       <DependentUpon>Form_RoomList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Services.Designer.cs">
+      <DependentUpon>Form_Services.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_UserProfile.cs">
       <SubType>Form</SubType>
@@ -106,11 +118,17 @@
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_PhieuDatPhong.resx">
+      <DependentUpon>Form_PhieuDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Register.resx">
       <DependentUpon>Form_Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_RoomList.resx">
       <DependentUpon>Form_RoomList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Services.resx">
+      <DependentUpon>Form_Services.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_UserProfile.resx">
       <DependentUpon>Form_UserProfile.cs</DependentUpon>
@@ -206,6 +224,9 @@
     <Content Include="Images\room_012.jpeg" />
     <Content Include="Images\room_013.jpeg" />
     <Content Include="Images\room_014.jpeg" />
+    <None Include="Resources\return_icon.png" />
+    <None Include="Resources\remove_icon.png" />
+    <None Include="Resources\add_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\defaultAvatar.png" />

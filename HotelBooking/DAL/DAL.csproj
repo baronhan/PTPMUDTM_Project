@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dich_VuDAL.cs" />
     <Compile Include="Hinh_Anh_PhongDAL.cs" />
     <Compile Include="KhanhHangDAL.cs" />
     <Compile Include="PhongDAL.cs" />

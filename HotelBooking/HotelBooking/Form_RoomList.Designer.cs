@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnDatPhong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTrangThai = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvRoomList = new System.Windows.Forms.DataGridView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnDatPhong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoomList)).BeginInit();
@@ -107,42 +107,6 @@
             this.label7.Size = new System.Drawing.Size(65, 25);
             this.label7.TabIndex = 25;
             this.label7.Text = "Image";
-            // 
-            // btnDatPhong
-            // 
-            this.btnDatPhong.Activecolor = System.Drawing.Color.BurlyWood;
-            this.btnDatPhong.AutoSize = true;
-            this.btnDatPhong.BackColor = System.Drawing.Color.Tan;
-            this.btnDatPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDatPhong.BorderRadius = 5;
-            this.btnDatPhong.ButtonText = "   Book Now";
-            this.btnDatPhong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDatPhong.DisabledColor = System.Drawing.Color.Gray;
-            this.btnDatPhong.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnDatPhong.Iconimage = global::HotelBooking.Properties.Resources.home_icon;
-            this.btnDatPhong.Iconimage_right = null;
-            this.btnDatPhong.Iconimage_right_Selected = null;
-            this.btnDatPhong.Iconimage_Selected = null;
-            this.btnDatPhong.IconMarginLeft = 0;
-            this.btnDatPhong.IconMarginRight = 0;
-            this.btnDatPhong.IconRightVisible = true;
-            this.btnDatPhong.IconRightZoom = 0D;
-            this.btnDatPhong.IconVisible = true;
-            this.btnDatPhong.IconZoom = 40D;
-            this.btnDatPhong.IsTab = false;
-            this.btnDatPhong.Location = new System.Drawing.Point(721, 66);
-            this.btnDatPhong.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btnDatPhong.Name = "btnDatPhong";
-            this.btnDatPhong.Normalcolor = System.Drawing.Color.Tan;
-            this.btnDatPhong.OnHovercolor = System.Drawing.Color.Silver;
-            this.btnDatPhong.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnDatPhong.selected = false;
-            this.btnDatPhong.Size = new System.Drawing.Size(212, 92);
-            this.btnDatPhong.TabIndex = 24;
-            this.btnDatPhong.Text = "   Book Now";
-            this.btnDatPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDatPhong.Textcolor = System.Drawing.Color.White;
-            this.btnDatPhong.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txtMoTa
             // 
@@ -238,34 +202,34 @@
             // dgvRoomList
             // 
             this.dgvRoomList.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Tan;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.BurlyWood;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRoomList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Tan;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRoomList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvRoomList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Tan;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.BurlyWood;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRoomList.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Tan;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRoomList.DefaultCellStyle = dataGridViewCellStyle17;
             this.dgvRoomList.GridColor = System.Drawing.Color.Tan;
             this.dgvRoomList.Location = new System.Drawing.Point(370, 259);
             this.dgvRoomList.Name = "dgvRoomList";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Tan;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.BurlyWood;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRoomList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Tan;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRoomList.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvRoomList.RowHeadersWidth = 51;
             this.dgvRoomList.RowTemplate.Height = 24;
             this.dgvRoomList.Size = new System.Drawing.Size(607, 348);
@@ -277,6 +241,43 @@
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // btnDatPhong
+            // 
+            this.btnDatPhong.Activecolor = System.Drawing.Color.BurlyWood;
+            this.btnDatPhong.AutoSize = true;
+            this.btnDatPhong.BackColor = System.Drawing.Color.Tan;
+            this.btnDatPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDatPhong.BorderRadius = 5;
+            this.btnDatPhong.ButtonText = "   Book Now";
+            this.btnDatPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDatPhong.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDatPhong.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDatPhong.Iconimage = global::HotelBooking.Properties.Resources.home_icon;
+            this.btnDatPhong.Iconimage_right = null;
+            this.btnDatPhong.Iconimage_right_Selected = null;
+            this.btnDatPhong.Iconimage_Selected = null;
+            this.btnDatPhong.IconMarginLeft = 0;
+            this.btnDatPhong.IconMarginRight = 0;
+            this.btnDatPhong.IconRightVisible = true;
+            this.btnDatPhong.IconRightZoom = 0D;
+            this.btnDatPhong.IconVisible = true;
+            this.btnDatPhong.IconZoom = 40D;
+            this.btnDatPhong.IsTab = false;
+            this.btnDatPhong.Location = new System.Drawing.Point(720, 86);
+            this.btnDatPhong.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnDatPhong.Name = "btnDatPhong";
+            this.btnDatPhong.Normalcolor = System.Drawing.Color.Tan;
+            this.btnDatPhong.OnHovercolor = System.Drawing.Color.Silver;
+            this.btnDatPhong.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnDatPhong.selected = false;
+            this.btnDatPhong.Size = new System.Drawing.Size(198, 82);
+            this.btnDatPhong.TabIndex = 24;
+            this.btnDatPhong.Text = "   Book Now";
+            this.btnDatPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDatPhong.Textcolor = System.Drawing.Color.White;
+            this.btnDatPhong.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
             // 
             // Form_RoomList
             // 

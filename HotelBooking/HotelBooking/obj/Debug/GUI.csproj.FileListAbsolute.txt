@@ -91,3 +91,5 @@ D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\GUI.csproj.CoreCompileInputs
 D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\GUI.csproj.Up2Date
 D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\HotelBooking.exe
 D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\HotelBooking.pdb
+D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\HotelBooking.Form_Services.resources
+D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\HotelBooking.Form_PhieuDatPhong.resources

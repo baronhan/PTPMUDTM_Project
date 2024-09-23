@@ -15,16 +15,19 @@ namespace HotelBooking
 {
     public partial class Form_RoomList : Form
     {
+        public static int idPhong = 0;
+        private Form_Main mainForm;
         PhongBUL PhongBul = new PhongBUL();
         Hinh_Anh_PhongBUL HinhAnhBul = new Hinh_Anh_PhongBUL();
         
         private int currentImageIndex = 0;
         private Timer timer;
 
-        public Form_RoomList()
+        public Form_RoomList(Form_Main formMain)
         {
             InitializeComponent();
             panel1.Paint += panel1_Paint;
+            this.mainForm = formMain;
         }
 
         private void Form_RoomList_Load(object sender, EventArgs e)
@@ -72,20 +75,17 @@ namespace HotelBooking
                     string moTa = selected.Cells["Description"].Value.ToString();
                     int trangThai = (int)selected.Cells["Status"].Value;
 
-                    // Cập nhật thông tin phòng
+                    idPhong = maPhong;
                     txtTenPhong.Text = tenPhong;
                     txtSoLuongNguoi.Text = soLuong.ToString();
                     txtMoTa.Text = moTa;
                     txtDonGia.Text = donGia.ToString();
                     txtTrangThai.Text = (trangThai == 0) ? "Not Available" : "Available";
 
-                    // Xóa các hình ảnh cũ trước khi thêm hình ảnh mới
                     imageList1.Images.Clear();
 
-                    // Lấy danh sách hình ảnh từ cơ sở dữ liệu theo maPhong
                     List<Hinh_Anh_PhongDTO> imageListFromDB = HinhAnhBul.getImageListByRoomID(maPhong);
 
-                    // Thêm hình ảnh vào ImageList
                     foreach (var imageDTO in imageListFromDB)
                     {
                         string imagePath = imageDTO.url;
@@ -100,18 +100,40 @@ namespace HotelBooking
                         }
                     }
 
-                    // Khởi động lại Timer
                     timer = new Timer();
                     timer.Interval = 3000;
                     timer.Tick += Timer_Tick;
                     if (imageList1.Images.Count > 0)
                     {
-                        timer.Start(); // Khởi động timer chỉ khi có hình ảnh
+                        timer.Start(); 
                     }
 
 
                 }
             }
+        }
+
+        private void btnDatPhong_Click(object sender, EventArgs e)
+        {
+            Form_Services form = new Form_Services(mainForm, idPhong);
+
+            bool kq = PhongBul.checkRoomStatus(idPhong);
+            if (kq)
+            {
+                form.TopLevel = false;
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Dock = DockStyle.Fill;
+
+                mainForm.AddControls(form);
+
+                form.Show();
+                idPhong = 0;
+            }
+            else
+            {
+                MessageBox.Show("Phòng không có sẵn! Vui lòng chọn phòng khác!");
+            }    
+            
         }
     }
 }
