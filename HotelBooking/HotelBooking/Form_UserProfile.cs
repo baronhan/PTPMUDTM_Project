@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace HotelBooking
 {
     public partial class Form_UserProfile : Form
     {
+      
         string _username = Form_Login._username;
         KhachHangBUL bul = new KhachHangBUL();
         KhachHangDTO kh;
@@ -21,12 +23,13 @@ namespace HotelBooking
         {
             InitializeComponent();
             LoadUserProfile();
+    
         }
         private void Form_UserProfile_Load(object sender, EventArgs e)
         {
             pictureBoxUser.Image = Properties.Resources.defaultAvatar;
             pictureBoxUser.SizeMode = PictureBoxSizeMode.Zoom;
-
+            //pictureBoxUser.Region = GetRoundedImagePicturebox(pictureBoxUser);
             lblUser.Text = _username;
             lblUser.Font = new Font(lblUser.Font.FontFamily, 20);
         }
@@ -47,6 +50,45 @@ namespace HotelBooking
             }
         }
 
+    
+        private void SetRoundedImageInPictureBox(PictureBox pictureBox, Image image)
+        {
+
+            Bitmap bitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
+            using (Graphics g = Graphics.FromImage(bitmap))
+            {
+                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+               
+                float boxRatio = (float)pictureBox.Width / pictureBox.Height;
+                float imageRatio = (float)image.Width / image.Height;
+
+                Rectangle srcRect;
+                if (imageRatio > boxRatio) 
+                {
+                    int newWidth = (int)(image.Height * boxRatio);
+                    int cropX = (image.Width - newWidth) / 2;
+                    srcRect = new Rectangle(cropX, 0, newWidth, image.Height);
+                }
+                else 
+                {
+                    int newHeight = (int)(image.Width / boxRatio);
+                    int cropY = (image.Height - newHeight) / 2;
+                    srcRect = new Rectangle(0, cropY, image.Width, newHeight);
+                }
+
+                Rectangle destRect = new Rectangle(0, 0, pictureBox.Width, pictureBox.Height);
+                g.DrawImage(image, destRect, srcRect, GraphicsUnit.Pixel);
+
+                using (GraphicsPath path = new GraphicsPath())
+                {
+                    path.AddEllipse(0, 0, pictureBox.Width, pictureBox.Height);
+                    Region region = new Region(path);
+                    pictureBox.Region = region;
+                }
+            }
+            pictureBox.Image = bitmap;
+        }
+
 
         private void btnUploadImage_Click(object sender, EventArgs e)
         {
@@ -56,7 +98,11 @@ namespace HotelBooking
                 openFileDialog.Title = "Hãy chọn 1 bức ảnh đẹp nhất";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    pictureBoxUser.Image = Image.FromFile(openFileDialog.FileName);
+                    Image image = Image.FromFile(openFileDialog.FileName);
+                    //pictureBoxUser.Image = image;
+
+                    SetRoundedImageInPictureBox(pictureBoxUser, image);
+
                     pictureBoxUser.SizeMode = PictureBoxSizeMode.Zoom;
                 }
             }
@@ -84,7 +130,7 @@ namespace HotelBooking
 
             }
         }
-     
+
         private void EnabledTrueTXT()
         {
             txtAddress.Enabled = true;
@@ -224,7 +270,7 @@ namespace HotelBooking
                         this.Close();
                         Form_Login form_Login = new Form_Login();
                         form_Login.Show();
-                      
+
 
                     }
                     else
@@ -239,6 +285,19 @@ namespace HotelBooking
             }
         }
 
-
+        private void btnzChangePassword_Click(object sender, EventArgs e)
+        {
+            if (kh != null) // Kiểm tra nếu kh không null
+            {
+                Form_ChangePassword form = new Form_ChangePassword(kh.maKH); // Truyền maKH vào form
+           
+                form.ShowDialog();
+                form.BringToFront();
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy mã khách hàng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

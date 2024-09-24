@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ChangePassword.Designer.cs">
+      <DependentUpon>Form_ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_HistoryBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_ChangePassword.resx">
+      <DependentUpon>Form_ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_HistoryBooking.resx">
       <DependentUpon>Form_HistoryBooking.cs</DependentUpon>
     </EmbeddedResource>

@@ -22,3 +22,9 @@ C:\Users\thinkbook\Downloads\project_ptpmudtm\PTPMUDTM_Project\HotelBooking\DTO\
 C:\Users\thinkbook\Downloads\project_ptpmudtm\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\thinkbook\Downloads\project_ptpmudtm\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.dll
 C:\Users\thinkbook\Downloads\project_ptpmudtm\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.pdb
+D:\Study\nam4\ptpmudtm\doan_new24.9\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\DTO.dll
+D:\Study\nam4\ptpmudtm\doan_new24.9\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\DTO.pdb
+D:\Study\nam4\ptpmudtm\doan_new24.9\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Study\nam4\ptpmudtm\doan_new24.9\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Study\nam4\ptpmudtm\doan_new24.9\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.dll
+D:\Study\nam4\ptpmudtm\doan_new24.9\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.pdb
