@@ -8,13 +8,13 @@ namespace DTO
 {
     public class KhachHangDTO
     {
-        public int maKH {  get; set; }
+        public int maKH { get; set; }
         public string username { get; set; }
         public string password { get; set; }
         public string hoTen { get; set; }
         public string email { get; set; }
         public string diaChi { get; set; }
-        public string soDienThoai {  get; set; }
+        public string soDienThoai { get; set; }
         public int maNhomNguoiDung { get; set; }
 
         public KhachHangDTO() { }
