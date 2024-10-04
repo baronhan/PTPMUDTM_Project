@@ -79,7 +79,6 @@ namespace HotelBooking
 
             
             bool kq = bul.VerifyLogin(username, password);
-
            
             string tb = "";
 
@@ -88,8 +87,17 @@ namespace HotelBooking
                 tb = "Bạn đã đăng nhập thành công!";
                 _username = username;
                 this.Hide();
-                Form_Main form = new Form_Main();
-                form.Show();
+
+                if (bul.GetMaNhom(username)==2) //
+                {
+                    Form_Management form = new Form_Management();
+                    form.Show();
+                }
+                else
+                {
+                    Form_Main form = new Form_Main();
+                    form.Show();
+                }
             }
             else
             {

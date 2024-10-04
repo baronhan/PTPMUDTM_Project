@@ -63,8 +63,9 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1008, 47);
+            this.panel2.Size = new System.Drawing.Size(1134, 59);
             this.panel2.TabIndex = 2;
             // 
             // label3
@@ -72,9 +73,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mistral", 34.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Tan;
-            this.label3.Location = new System.Drawing.Point(399, 0);
+            this.label3.Location = new System.Drawing.Point(449, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(233, 69);
+            this.label3.Size = new System.Drawing.Size(281, 83);
             this.label3.TabIndex = 0;
             this.label3.Text = "Service List";
             // 
@@ -99,7 +100,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvServiceList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvServiceList.GridColor = System.Drawing.Color.Tan;
-            this.dgvServiceList.Location = new System.Drawing.Point(28, 137);
+            this.dgvServiceList.Location = new System.Drawing.Point(32, 171);
+            this.dgvServiceList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvServiceList.Name = "dgvServiceList";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -112,7 +114,7 @@
             this.dgvServiceList.RowHeadersWidth = 51;
             this.dgvServiceList.RowTemplate.Height = 24;
             this.dgvServiceList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvServiceList.Size = new System.Drawing.Size(607, 152);
+            this.dgvServiceList.Size = new System.Drawing.Size(683, 190);
             this.dgvServiceList.TabIndex = 11;
             this.dgvServiceList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServiceList_CellClick);
             // 
@@ -121,17 +123,18 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Tan;
-            this.label1.Location = new System.Drawing.Point(23, 14);
+            this.label1.Location = new System.Drawing.Point(26, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 25);
+            this.label1.Size = new System.Drawing.Size(155, 30);
             this.label1.TabIndex = 12;
             this.label1.Text = "Service Name";
             // 
             // txtServiceName
             // 
-            this.txtServiceName.Location = new System.Drawing.Point(28, 58);
+            this.txtServiceName.Location = new System.Drawing.Point(32, 72);
+            this.txtServiceName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtServiceName.Name = "txtServiceName";
-            this.txtServiceName.Size = new System.Drawing.Size(257, 22);
+            this.txtServiceName.Size = new System.Drawing.Size(289, 26);
             this.txtServiceName.TabIndex = 13;
             // 
             // label2
@@ -139,17 +142,18 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Tan;
-            this.label2.Location = new System.Drawing.Point(353, 14);
+            this.label2.Location = new System.Drawing.Point(397, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 25);
+            this.label2.Size = new System.Drawing.Size(106, 30);
             this.label2.TabIndex = 14;
             this.label2.Text = "Acronym";
             // 
             // txtAcronym
             // 
-            this.txtAcronym.Location = new System.Drawing.Point(357, 58);
+            this.txtAcronym.Location = new System.Drawing.Point(402, 72);
+            this.txtAcronym.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAcronym.Name = "txtAcronym";
-            this.txtAcronym.Size = new System.Drawing.Size(274, 22);
+            this.txtAcronym.Size = new System.Drawing.Size(308, 26);
             this.txtAcronym.TabIndex = 15;
             // 
             // label4
@@ -157,17 +161,18 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Tan;
-            this.label4.Location = new System.Drawing.Point(701, 14);
+            this.label4.Location = new System.Drawing.Point(789, 18);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 25);
+            this.label4.Size = new System.Drawing.Size(75, 30);
             this.label4.TabIndex = 16;
             this.label4.Text = "Prices";
             // 
             // txtPrices
             // 
-            this.txtPrices.Location = new System.Drawing.Point(706, 58);
+            this.txtPrices.Location = new System.Drawing.Point(794, 72);
+            this.txtPrices.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPrices.Name = "txtPrices";
-            this.txtPrices.Size = new System.Drawing.Size(257, 22);
+            this.txtPrices.Size = new System.Drawing.Size(289, 26);
             this.txtPrices.TabIndex = 17;
             // 
             // label5
@@ -175,9 +180,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Tan;
-            this.label5.Location = new System.Drawing.Point(23, 97);
+            this.label5.Location = new System.Drawing.Point(26, 121);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 25);
+            this.label5.Size = new System.Drawing.Size(130, 30);
             this.label5.TabIndex = 25;
             this.label5.Text = "Service List";
             // 
@@ -202,7 +207,8 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSelectedServices.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSelectedServices.GridColor = System.Drawing.Color.Tan;
-            this.dgvSelectedServices.Location = new System.Drawing.Point(30, 371);
+            this.dgvSelectedServices.Location = new System.Drawing.Point(34, 464);
+            this.dgvSelectedServices.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvSelectedServices.Name = "dgvSelectedServices";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
@@ -215,7 +221,7 @@
             this.dgvSelectedServices.RowHeadersWidth = 51;
             this.dgvSelectedServices.RowTemplate.Height = 24;
             this.dgvSelectedServices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSelectedServices.Size = new System.Drawing.Size(607, 158);
+            this.dgvSelectedServices.Size = new System.Drawing.Size(683, 198);
             this.dgvSelectedServices.TabIndex = 26;
             // 
             // label6
@@ -223,9 +229,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Tan;
-            this.label6.Location = new System.Drawing.Point(25, 333);
+            this.label6.Location = new System.Drawing.Point(28, 416);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(219, 25);
+            this.label6.Size = new System.Drawing.Size(265, 30);
             this.label6.TabIndex = 27;
             this.label6.Text = "List Of Selected Services";
             // 
@@ -251,14 +257,14 @@
             this.btnRemoveService.IconVisible = true;
             this.btnRemoveService.IconZoom = 40D;
             this.btnRemoveService.IsTab = false;
-            this.btnRemoveService.Location = new System.Drawing.Point(708, 252);
-            this.btnRemoveService.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnRemoveService.Location = new System.Drawing.Point(796, 315);
+            this.btnRemoveService.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnRemoveService.Name = "btnRemoveService";
             this.btnRemoveService.Normalcolor = System.Drawing.Color.Tan;
             this.btnRemoveService.OnHovercolor = System.Drawing.Color.Silver;
             this.btnRemoveService.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRemoveService.selected = false;
-            this.btnRemoveService.Size = new System.Drawing.Size(257, 59);
+            this.btnRemoveService.Size = new System.Drawing.Size(289, 91);
             this.btnRemoveService.TabIndex = 28;
             this.btnRemoveService.Text = "      Remove Service";
             this.btnRemoveService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -288,14 +294,14 @@
             this.btnContinueBooking.IconVisible = true;
             this.btnContinueBooking.IconZoom = 40D;
             this.btnContinueBooking.IsTab = false;
-            this.btnContinueBooking.Location = new System.Drawing.Point(708, 446);
-            this.btnContinueBooking.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnContinueBooking.Location = new System.Drawing.Point(796, 558);
+            this.btnContinueBooking.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnContinueBooking.Name = "btnContinueBooking";
             this.btnContinueBooking.Normalcolor = System.Drawing.Color.Tan;
             this.btnContinueBooking.OnHovercolor = System.Drawing.Color.Silver;
             this.btnContinueBooking.OnHoverTextColor = System.Drawing.Color.White;
             this.btnContinueBooking.selected = false;
-            this.btnContinueBooking.Size = new System.Drawing.Size(257, 59);
+            this.btnContinueBooking.Size = new System.Drawing.Size(289, 91);
             this.btnContinueBooking.TabIndex = 29;
             this.btnContinueBooking.Text = "      Continue Booking";
             this.btnContinueBooking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -325,14 +331,14 @@
             this.btnAddNewService.IconVisible = true;
             this.btnAddNewService.IconZoom = 40D;
             this.btnAddNewService.IsTab = false;
-            this.btnAddNewService.Location = new System.Drawing.Point(708, 155);
-            this.btnAddNewService.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnAddNewService.Location = new System.Drawing.Point(796, 194);
+            this.btnAddNewService.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnAddNewService.Name = "btnAddNewService";
             this.btnAddNewService.Normalcolor = System.Drawing.Color.Tan;
             this.btnAddNewService.OnHovercolor = System.Drawing.Color.Silver;
             this.btnAddNewService.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAddNewService.selected = false;
-            this.btnAddNewService.Size = new System.Drawing.Size(257, 59);
+            this.btnAddNewService.Size = new System.Drawing.Size(289, 91);
             this.btnAddNewService.TabIndex = 30;
             this.btnAddNewService.Text = "      Add New Service";
             this.btnAddNewService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -362,14 +368,14 @@
             this.btnReturnRoomList.IconVisible = true;
             this.btnReturnRoomList.IconZoom = 40D;
             this.btnReturnRoomList.IsTab = false;
-            this.btnReturnRoomList.Location = new System.Drawing.Point(708, 347);
-            this.btnReturnRoomList.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnReturnRoomList.Location = new System.Drawing.Point(796, 434);
+            this.btnReturnRoomList.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnReturnRoomList.Name = "btnReturnRoomList";
             this.btnReturnRoomList.Normalcolor = System.Drawing.Color.Tan;
             this.btnReturnRoomList.OnHovercolor = System.Drawing.Color.Silver;
             this.btnReturnRoomList.OnHoverTextColor = System.Drawing.Color.White;
             this.btnReturnRoomList.selected = false;
-            this.btnReturnRoomList.Size = new System.Drawing.Size(257, 59);
+            this.btnReturnRoomList.Size = new System.Drawing.Size(289, 91);
             this.btnReturnRoomList.TabIndex = 31;
             this.btnReturnRoomList.Text = "      Return Room List";
             this.btnReturnRoomList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -395,19 +401,21 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dgvServiceList);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 47);
+            this.panel1.Location = new System.Drawing.Point(0, 59);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1008, 661);
+            this.panel1.Size = new System.Drawing.Size(1134, 826);
             this.panel1.TabIndex = 3;
             // 
             // Form_Services
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 708);
+            this.ClientSize = new System.Drawing.Size(1134, 885);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form_Services";
             this.Text = "Form_Services";
             this.Load += new System.EventHandler(this.Form_Services_Load);
