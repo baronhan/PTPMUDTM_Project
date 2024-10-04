@@ -1,4 +1,5 @@
-﻿using DAL;
+﻿using BCrypt.Net;
+using DAL;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -35,5 +36,26 @@ namespace BUL
         {
             return dal.DeleteKhachHang(maKH);
         }
+
+        public bool ChangePassword(string username, string currentPassword, string newPassword)
+        {
+            var user = dal.GetKhachHangByUsername(username);
+            if (user == null)
+            {
+                throw new Exception("Người dùng không tồn tại.");
+            }
+
+       
+            bool isPasswordMatch = BCrypt.Net.BCrypt.Verify(currentPassword, user.password);
+            if (!isPasswordMatch)
+            {
+                throw new Exception("Mật khẩu hiện tại không chính xác.");
+            }
+            string hashedNewPassword = BCrypt.Net.BCrypt.HashPassword(newPassword);
+
+            bool isUpdated = dal.UpdatePassword(username, hashedNewPassword);
+            return isUpdated;
+        }
+
     }
 }

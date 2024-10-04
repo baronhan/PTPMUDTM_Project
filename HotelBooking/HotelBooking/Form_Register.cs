@@ -127,5 +127,12 @@ namespace HotelBooking
             form.Show();
         }
 
+<<<<<<< HEAD
+=======
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+>>>>>>> ed61d68dc2a6cabd7b6f68ceb6a13aff424753c7
     }
 }

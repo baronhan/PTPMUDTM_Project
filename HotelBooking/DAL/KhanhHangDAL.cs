@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BCrypt.Net;
 using DTO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DAL
 {
@@ -95,7 +96,7 @@ namespace DAL
         public bool UpdateKhachHang(KhachHangDTO khachHang)
         {
             var khachHangDb = qlks.Khach_Hangs.FirstOrDefault(kh => kh.maKH == khachHang.maKH);
-            if(khachHangDb != null)
+            if (khachHangDb != null)
             {
                 khachHangDb.hoTen = khachHang.hoTen;
                 khachHangDb.email = khachHang.email;
@@ -120,5 +121,21 @@ namespace DAL
             return false;
 
         }
+
+        public bool UpdatePassword(string username, string hashedPassword)
+        {
+            var user = qlks.Khach_Hangs.FirstOrDefault(kh => kh.userName == username);
+            if (user != null)
+            {
+                user.password = hashedPassword;
+                qlks.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
+
+
+
     }
 }

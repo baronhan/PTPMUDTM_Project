@@ -46,8 +46,9 @@
             this.txtFullname = new System.Windows.Forms.TextBox();
             this.btnDeleteImage = new System.Windows.Forms.Button();
             this.btnUploadImage = new System.Windows.Forms.Button();
-            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.Label();
+            this.btnzChangePassword = new System.Windows.Forms.Button();
+            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -59,7 +60,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1008, 112);
             this.panel2.TabIndex = 3;
@@ -78,7 +79,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.panel1.BackColor = System.Drawing.Color.BurlyWood;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnDeleteImage);
             this.panel1.Controls.Add(this.btnUploadImage);
@@ -95,7 +96,8 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Tan;
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.btnzChangePassword);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.lblFullname);
             this.panel3.Controls.Add(this.btnDelete);
@@ -109,18 +111,18 @@
             this.panel3.Controls.Add(this.lblPhone);
             this.panel3.Controls.Add(this.txtFullname);
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(374, 109);
+            this.panel3.Location = new System.Drawing.Point(249, 109);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(634, 599);
+            this.panel3.Size = new System.Drawing.Size(759, 599);
             this.panel3.TabIndex = 16;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(29, 162);
+            this.label2.ForeColor = System.Drawing.Color.BurlyWood;
+            this.label2.Location = new System.Drawing.Point(78, 54);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 28);
@@ -131,8 +133,8 @@
             // 
             this.lblFullname.AutoSize = true;
             this.lblFullname.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullname.ForeColor = System.Drawing.Color.White;
-            this.lblFullname.Location = new System.Drawing.Point(29, 212);
+            this.lblFullname.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lblFullname.Location = new System.Drawing.Point(78, 193);
             this.lblFullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFullname.Name = "lblFullname";
             this.lblFullname.Size = new System.Drawing.Size(112, 28);
@@ -141,12 +143,12 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.SandyBrown;
-            this.btnDelete.ForeColor = System.Drawing.Color.Red;
-            this.btnDelete.Location = new System.Drawing.Point(347, 532);
+            this.btnDelete.BackColor = System.Drawing.Color.Sienna;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(601, 528);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(109, 40);
+            this.btnDelete.Size = new System.Drawing.Size(109, 47);
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -156,8 +158,8 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(29, 264);
+            this.lblEmail.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lblEmail.Location = new System.Drawing.Point(78, 244);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(69, 28);
@@ -166,11 +168,11 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.BackColor = System.Drawing.Color.White;
+            this.txtPhone.BackColor = System.Drawing.Color.Tan;
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.Enabled = false;
-            this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txtPhone.Location = new System.Drawing.Point(255, 366);
+            this.txtPhone.ForeColor = System.Drawing.Color.White;
+            this.txtPhone.Location = new System.Drawing.Point(376, 346);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(334, 27);
@@ -181,10 +183,10 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Sienna;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(480, 532);
+            this.btnCancel.Location = new System.Drawing.Point(488, 32);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(109, 40);
+            this.btnCancel.Size = new System.Drawing.Size(109, 50);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -192,11 +194,11 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.BackColor = System.Drawing.Color.White;
+            this.txtAddress.BackColor = System.Drawing.Color.Tan;
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAddress.Enabled = false;
-            this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txtAddress.Location = new System.Drawing.Point(255, 316);
+            this.txtAddress.ForeColor = System.Drawing.Color.White;
+            this.txtAddress.Location = new System.Drawing.Point(376, 295);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(334, 27);
@@ -206,10 +208,10 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Sienna;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(480, 156);
+            this.btnUpdate.Location = new System.Drawing.Point(601, 32);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(109, 35);
+            this.btnUpdate.Size = new System.Drawing.Size(109, 50);
             this.btnUpdate.TabIndex = 0;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -219,8 +221,8 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.ForeColor = System.Drawing.Color.White;
-            this.lblAddress.Location = new System.Drawing.Point(29, 315);
+            this.lblAddress.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lblAddress.Location = new System.Drawing.Point(78, 295);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(97, 28);
@@ -229,11 +231,11 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.BackColor = System.Drawing.Color.Tan;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Enabled = false;
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txtEmail.Location = new System.Drawing.Point(255, 265);
+            this.txtEmail.ForeColor = System.Drawing.Color.White;
+            this.txtEmail.Location = new System.Drawing.Point(376, 244);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(334, 27);
@@ -243,8 +245,8 @@
             // 
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.ForeColor = System.Drawing.Color.White;
-            this.lblPhone.Location = new System.Drawing.Point(29, 365);
+            this.lblPhone.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lblPhone.Location = new System.Drawing.Point(78, 346);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(166, 28);
@@ -253,11 +255,11 @@
             // 
             // txtFullname
             // 
-            this.txtFullname.BackColor = System.Drawing.Color.White;
+            this.txtFullname.BackColor = System.Drawing.Color.Tan;
             this.txtFullname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFullname.Enabled = false;
-            this.txtFullname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txtFullname.Location = new System.Drawing.Point(255, 214);
+            this.txtFullname.ForeColor = System.Drawing.Color.White;
+            this.txtFullname.Location = new System.Drawing.Point(376, 193);
             this.txtFullname.Margin = new System.Windows.Forms.Padding(2);
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.Size = new System.Drawing.Size(334, 27);
@@ -265,12 +267,12 @@
             // 
             // btnDeleteImage
             // 
-            this.btnDeleteImage.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnDeleteImage.BackColor = System.Drawing.Color.Sienna;
             this.btnDeleteImage.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteImage.Location = new System.Drawing.Point(-10, 527);
+            this.btnDeleteImage.Location = new System.Drawing.Point(28, 417);
             this.btnDeleteImage.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteImage.Name = "btnDeleteImage";
-            this.btnDeleteImage.Size = new System.Drawing.Size(389, 41);
+            this.btnDeleteImage.Size = new System.Drawing.Size(200, 39);
             this.btnDeleteImage.TabIndex = 15;
             this.btnDeleteImage.Text = "Delete Image";
             this.btnDeleteImage.UseVisualStyleBackColor = false;
@@ -278,40 +280,53 @@
             // 
             // btnUploadImage
             // 
-            this.btnUploadImage.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnUploadImage.BackColor = System.Drawing.Color.Sienna;
             this.btnUploadImage.ForeColor = System.Drawing.Color.White;
-            this.btnUploadImage.Location = new System.Drawing.Point(-10, 475);
+            this.btnUploadImage.Location = new System.Drawing.Point(28, 368);
             this.btnUploadImage.Margin = new System.Windows.Forms.Padding(2);
             this.btnUploadImage.Name = "btnUploadImage";
-            this.btnUploadImage.Size = new System.Drawing.Size(389, 48);
+            this.btnUploadImage.Size = new System.Drawing.Size(200, 41);
             this.btnUploadImage.TabIndex = 10;
             this.btnUploadImage.Text = "Upload Image";
             this.btnUploadImage.UseVisualStyleBackColor = false;
             this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
             // 
-            // pictureBoxUser
-            // 
-            this.pictureBoxUser.Image = global::HotelBooking.Properties.Resources.defaultAvatar;
-            this.pictureBoxUser.Location = new System.Drawing.Point(50, 133);
-            this.pictureBoxUser.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBoxUser.Name = "pictureBoxUser";
-            this.pictureBoxUser.Size = new System.Drawing.Size(268, 268);
-            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxUser.TabIndex = 3;
-            this.pictureBoxUser.TabStop = false;
-            // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.lblUser.BackColor = System.Drawing.Color.BurlyWood;
             this.lblUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.Color.SandyBrown;
-            this.lblUser.Location = new System.Drawing.Point(146, 424);
+            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Location = new System.Drawing.Point(86, 318);
             this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(76, 28);
             this.lblUser.TabIndex = 2;
             this.lblUser.Text = "Chi Chi";
+            // 
+            // btnzChangePassword
+            // 
+            this.btnzChangePassword.BackColor = System.Drawing.Color.Sienna;
+            this.btnzChangePassword.ForeColor = System.Drawing.Color.White;
+            this.btnzChangePassword.Location = new System.Drawing.Point(51, 528);
+            this.btnzChangePassword.Margin = new System.Windows.Forms.Padding(2);
+            this.btnzChangePassword.Name = "btnzChangePassword";
+            this.btnzChangePassword.Size = new System.Drawing.Size(200, 41);
+            this.btnzChangePassword.TabIndex = 17;
+            this.btnzChangePassword.Text = "Change Password";
+            this.btnzChangePassword.UseVisualStyleBackColor = false;
+            this.btnzChangePassword.Click += new System.EventHandler(this.btnzChangePassword_Click);
+            // 
+            // pictureBoxUser
+            // 
+            this.pictureBoxUser.Image = global::HotelBooking.Properties.Resources.defaultAvatar;
+            this.pictureBoxUser.Location = new System.Drawing.Point(38, 141);
+            this.pictureBoxUser.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxUser.Name = "pictureBoxUser";
+            this.pictureBoxUser.Size = new System.Drawing.Size(172, 166);
+            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxUser.TabIndex = 3;
+            this.pictureBoxUser.TabStop = false;
             // 
             // Form_UserProfile
             // 
@@ -359,5 +374,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDeleteImage;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnzChangePassword;
     }
 }
