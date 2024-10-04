@@ -3,72 +3,24 @@
   "WorkspaceRootPath": "D:\\HotelBooking\\HotelBooking\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|D:\\HotelBooking\\HotelBooking\\hotelbooking\\form_register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|d:\\hotelbooking\\hotelbooking\\hotelbooking\\form_userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|D:\\HotelBooking\\HotelBooking\\hotelbooking\\form_register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|d:\\hotelbooking\\hotelbooking\\hotelbooking\\form_userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|d:\\hotelbooking\\hotelbooking\\hotelbooking\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|D:\\HotelBooking\\HotelBooking\\hotelbooking\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|d:\\hotelbooking\\hotelbooking\\hotelbooking\\form_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|D:\\HotelBooking\\HotelBooking\\hotelbooking\\form_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|d:\\hotelbooking\\hotelbooking\\hotelbooking\\form_userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|D:\\HotelBooking\\HotelBooking\\hotelbooking\\form_userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|D:\\HotelBooking\\HotelBooking\\hotelbooking\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|d:\\hotelbooking\\hotelbooking\\hotelbooking\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|d:\\hotelbooking\\hotelbooking\\hotelbooking\\form_register.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_register.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|d:\\hotelbooking\\hotelbooking\\hotelbooking\\form_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|D:\\HotelBooking\\HotelBooking\\hotelbooking\\form_roomlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_roomlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|D:\\HotelBooking\\HotelBooking\\hotelbooking\\form_services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3128C397-AD01-4A3E-A8C5-25909F23FC91}|DAL\\DAL.csproj|D:\\HotelBooking\\HotelBooking\\dal\\khanhhangdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3128C397-AD01-4A3E-A8C5-25909F23FC91}|DAL\\DAL.csproj|solutionrelative:dal\\khanhhangdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F818EA4-A590-4B1F-ADDE-8D0D73215CFE}|DTO\\DTO.csproj|D:\\HotelBooking\\HotelBooking\\dto\\khachhangdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F818EA4-A590-4B1F-ADDE-8D0D73215CFE}|DTO\\DTO.csproj|solutionrelative:dto\\khachhangdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|D:\\HotelBooking\\HotelBooking\\hotelbooking\\form_historybooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_historybooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|D:\\HotelBooking\\HotelBooking\\hotelbooking\\form_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|D:\\HotelBooking\\HotelBooking\\hotelbooking\\form_roomlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_roomlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|d:\\hotelbooking\\hotelbooking\\hotelbooking\\form_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A1FAA244-0488-4F0E-A8BE-38433EA9ADC6}|HotelBooking\\GUI.csproj|solutionrelative:hotelbooking\\form_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,223 +30,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form_Login.cs",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Login.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_Login.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Login.cs",
-              "RelativeToolTip": "HotelBooking\\Form_Login.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBwAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T15:32:24.801Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form_Main.cs",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Main.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_Main.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Main.cs",
-              "RelativeToolTip": "HotelBooking\\Form_Main.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAuwDgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T15:31:06.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form_Main.cs [Design]",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Main.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_Main.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Main.cs [Design]",
-              "RelativeToolTip": "HotelBooking\\Form_Main.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T11:07:26.205Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form_Register.cs [Design]",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Register.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_Register.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Register.cs [Design]",
-              "RelativeToolTip": "HotelBooking\\Form_Register.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T11:07:22.431Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Form_RoomList.cs [Design]",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_RoomList.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_RoomList.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_RoomList.cs [Design]",
-              "RelativeToolTip": "HotelBooking\\Form_RoomList.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T15:43:25.472Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form_Register.cs",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Register.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_Register.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Register.cs",
-              "RelativeToolTip": "HotelBooking\\Form_Register.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAuwIkAAAArAAAAAAAAAA==",
+              "Title": "Form_UserList.cs",
+              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_UserList.cs",
+              "RelativeDocumentMoniker": "HotelBooking\\Form_UserList.cs",
+              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_UserList.cs",
+              "RelativeToolTip": "HotelBooking\\Form_UserList.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAACQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T12:01:29.593Z",
+              "WhenOpened": "2024-10-04T15:53:17.392Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Form_Register.Designer.cs",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Register.Designer.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_Register.Designer.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Register.Designer.cs",
-              "RelativeToolTip": "HotelBooking\\Form_Register.Designer.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAmwF4AAAAVAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Form_UserList.cs [Design]",
+              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_UserList.cs",
+              "RelativeDocumentMoniker": "HotelBooking\\Form_UserList.cs",
+              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_UserList.cs [Design]",
+              "RelativeToolTip": "HotelBooking\\Form_UserList.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T15:03:28.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form_Login.cs [Design]",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Login.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_Login.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Login.cs [Design]",
-              "RelativeToolTip": "HotelBooking\\Form_Login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T11:07:17.372Z",
+              "WhenOpened": "2024-10-04T15:52:48.252Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form_UserProfile.cs",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_UserProfile.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_UserProfile.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_UserProfile.cs",
-              "RelativeToolTip": "HotelBooking\\Form_UserProfile.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T15:14:52.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Form_UserProfile.cs [Design]",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_UserProfile.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_UserProfile.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_UserProfile.cs [Design]",
-              "RelativeToolTip": "HotelBooking\\Form_UserProfile.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T11:06:04.854Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Program.cs",
               "RelativeDocumentMoniker": "HotelBooking\\Program.cs",
               "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Program.cs",
               "RelativeToolTip": "HotelBooking\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAsAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T11:07:32.305Z",
+              "WhenOpened": "2024-10-04T15:40:20.108Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "KhanhHangDAL.cs",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\DAL\\KhanhHangDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\KhanhHangDAL.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\DAL\\KhanhHangDAL.cs",
-              "RelativeToolTip": "DAL\\KhanhHangDAL.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAWwDUAAAA4AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Form_Management.cs",
+              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Management.cs",
+              "RelativeDocumentMoniker": "HotelBooking\\Form_Management.cs",
+              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Management.cs",
+              "RelativeToolTip": "HotelBooking\\Form_Management.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T11:13:14.046Z"
+              "WhenOpened": "2024-10-04T15:39:12.939Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Form_Services.cs [Design]",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Services.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_Services.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Services.cs [Design]",
-              "RelativeToolTip": "HotelBooking\\Form_Services.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "Form_Management.cs [Design]",
+              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Management.cs",
+              "RelativeDocumentMoniker": "HotelBooking\\Form_Management.cs",
+              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Management.cs [Design]",
+              "RelativeToolTip": "HotelBooking\\Form_Management.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T12:05:19.069Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "KhachHangDTO.cs",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\DTO\\KhachHangDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\KhachHangDTO.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\DTO\\KhachHangDTO.cs",
-              "RelativeToolTip": "DTO\\KhachHangDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T12:02:37.913Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Form_HistoryBooking.cs [Design]",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_HistoryBooking.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_HistoryBooking.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_HistoryBooking.cs [Design]",
-              "RelativeToolTip": "HotelBooking\\Form_HistoryBooking.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T11:07:20.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Form_Home.cs [Design]",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Home.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_Home.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_Home.cs [Design]",
-              "RelativeToolTip": "HotelBooking\\Form_Home.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T11:07:18.99Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Form_RoomList.cs",
-              "DocumentMoniker": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_RoomList.cs",
-              "RelativeDocumentMoniker": "HotelBooking\\Form_RoomList.cs",
-              "ToolTip": "D:\\HotelBooking\\HotelBooking\\HotelBooking\\Form_RoomList.cs",
-              "RelativeToolTip": "HotelBooking\\Form_RoomList.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwDsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T15:46:32.185Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 1144,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2024-10-04T15:39:00.552Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
