@@ -22,7 +22,16 @@ namespace HotelBooking
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show(
+                                     "Bạn có chắc chắn muốn đăng xuất không?",
+                                     "Xác nhận",
+                                     MessageBoxButtons.YesNo,
+                                     MessageBoxIcon.Question
+                                 );
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void Form_Login_Load(object sender, EventArgs e)

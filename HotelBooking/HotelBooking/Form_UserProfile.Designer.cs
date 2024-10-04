@@ -32,6 +32,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnzChangePassword = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblFullname = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -46,9 +47,8 @@
             this.txtFullname = new System.Windows.Forms.TextBox();
             this.btnDeleteImage = new System.Windows.Forms.Button();
             this.btnUploadImage = new System.Windows.Forms.Button();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.btnzChangePassword = new System.Windows.Forms.Button();
             this.pictureBoxUser = new System.Windows.Forms.PictureBox();
+            this.lblUser = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -116,6 +116,19 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(759, 599);
             this.panel3.TabIndex = 16;
+            // 
+            // btnzChangePassword
+            // 
+            this.btnzChangePassword.BackColor = System.Drawing.Color.Sienna;
+            this.btnzChangePassword.ForeColor = System.Drawing.Color.White;
+            this.btnzChangePassword.Location = new System.Drawing.Point(51, 528);
+            this.btnzChangePassword.Margin = new System.Windows.Forms.Padding(2);
+            this.btnzChangePassword.Name = "btnzChangePassword";
+            this.btnzChangePassword.Size = new System.Drawing.Size(200, 41);
+            this.btnzChangePassword.TabIndex = 17;
+            this.btnzChangePassword.Text = "Change Password";
+            this.btnzChangePassword.UseVisualStyleBackColor = false;
+            this.btnzChangePassword.Click += new System.EventHandler(this.btnzChangePassword_Click);
             // 
             // label2
             // 
@@ -291,6 +304,17 @@
             this.btnUploadImage.UseVisualStyleBackColor = false;
             this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
             // 
+            // pictureBoxUser
+            // 
+            this.pictureBoxUser.Image = global::HotelBooking.Properties.Resources.defaultAvatar;
+            this.pictureBoxUser.Location = new System.Drawing.Point(38, 141);
+            this.pictureBoxUser.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxUser.Name = "pictureBoxUser";
+            this.pictureBoxUser.Size = new System.Drawing.Size(172, 166);
+            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxUser.TabIndex = 3;
+            this.pictureBoxUser.TabStop = false;
+            // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
@@ -303,30 +327,6 @@
             this.lblUser.Size = new System.Drawing.Size(76, 28);
             this.lblUser.TabIndex = 2;
             this.lblUser.Text = "Chi Chi";
-            // 
-            // btnzChangePassword
-            // 
-            this.btnzChangePassword.BackColor = System.Drawing.Color.Sienna;
-            this.btnzChangePassword.ForeColor = System.Drawing.Color.White;
-            this.btnzChangePassword.Location = new System.Drawing.Point(51, 528);
-            this.btnzChangePassword.Margin = new System.Windows.Forms.Padding(2);
-            this.btnzChangePassword.Name = "btnzChangePassword";
-            this.btnzChangePassword.Size = new System.Drawing.Size(200, 41);
-            this.btnzChangePassword.TabIndex = 17;
-            this.btnzChangePassword.Text = "Change Password";
-            this.btnzChangePassword.UseVisualStyleBackColor = false;
-            this.btnzChangePassword.Click += new System.EventHandler(this.btnzChangePassword_Click);
-            // 
-            // pictureBoxUser
-            // 
-            this.pictureBoxUser.Image = global::HotelBooking.Properties.Resources.defaultAvatar;
-            this.pictureBoxUser.Location = new System.Drawing.Point(38, 141);
-            this.pictureBoxUser.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBoxUser.Name = "pictureBoxUser";
-            this.pictureBoxUser.Size = new System.Drawing.Size(172, 166);
-            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxUser.TabIndex = 3;
-            this.pictureBoxUser.TabStop = false;
             // 
             // Form_UserProfile
             // 

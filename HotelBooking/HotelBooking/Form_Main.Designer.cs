@@ -363,8 +363,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form_Main";
-            this.TopMost = true;
+            this.Text = "Home";
             this.Load += new System.EventHandler(this.Form_Main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

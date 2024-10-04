@@ -127,12 +127,18 @@ namespace HotelBooking
             form.Show();
         }
 
-<<<<<<< HEAD
-=======
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnClose_Click_1(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show(
+                                    "Bạn có chắc chắn muốn đăng xuất không?",
+                                    "Xác nhận",
+                                    MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Question
+                                );
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
->>>>>>> ed61d68dc2a6cabd7b6f68ceb6a13aff424753c7
     }
 }
