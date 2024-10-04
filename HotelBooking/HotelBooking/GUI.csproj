@@ -80,6 +80,12 @@
     <Compile Include="Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Management.Designer.cs">
+      <DependentUpon>Form_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_PhieuDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,12 @@
     <Compile Include="Form_Services.Designer.cs">
       <DependentUpon>Form_Services.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UserList.Designer.cs">
+      <DependentUpon>Form_UserList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_UserProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +139,9 @@
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Management.resx">
+      <DependentUpon>Form_Management.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_PhieuDatPhong.resx">
       <DependentUpon>Form_PhieuDatPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Services.resx">
       <DependentUpon>Form_Services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UserList.resx">
+      <DependentUpon>Form_UserList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_UserProfile.resx">
       <DependentUpon>Form_UserProfile.cs</DependentUpon>
