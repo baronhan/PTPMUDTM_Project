@@ -58,7 +58,8 @@ namespace DAL
                     hoTen = fullName,
                     email = email,
                     diaChi = address,
-                    soDienThoai = phone
+                    soDienThoai = phone,
+                    maNhomNguoiDung = 1
                 };
 
                 qlks.Khach_Hangs.InsertOnSubmit(newKhachHang);
