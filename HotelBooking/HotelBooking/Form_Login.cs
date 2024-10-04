@@ -22,7 +22,16 @@ namespace HotelBooking
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show(
+                                     "Bạn có chắc chắn muốn đăng xuất không?",
+                                     "Xác nhận",
+                                     MessageBoxButtons.YesNo,
+                                     MessageBoxIcon.Question
+                                 );
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void Form_Login_Load(object sender, EventArgs e)
@@ -40,7 +49,7 @@ namespace HotelBooking
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-         
+
             if (txtUserName.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn cần nhập vào " + lblUsername.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -48,7 +57,7 @@ namespace HotelBooking
                 return;
             }
 
-         
+
             if (txtPassword.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn cần nhập vào " + lblPassword.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -56,7 +65,7 @@ namespace HotelBooking
                 return;
             }
 
-        
+
             if (txtPassword.Text.Trim().Length < 8)
             {
                 MessageBox.Show("Mật khẩu phải có ít nhất 8 ký tự.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -77,10 +86,9 @@ namespace HotelBooking
             string username = txtUserName.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            
+
             bool kq = bul.VerifyLogin(username, password);
 
-           
             string tb = "";
 
             if (kq)
@@ -88,15 +96,24 @@ namespace HotelBooking
                 tb = "Bạn đã đăng nhập thành công!";
                 _username = username;
                 this.Hide();
-                Form_Main form = new Form_Main();
-                form.Show();
+
+                if (bul.GetMaNhom(username) == 2) //
+                {
+                    Form_Management form = new Form_Management();
+                    form.Show();
+                }
+                else
+                {
+                    Form_Main form = new Form_Main();
+                    form.Show();
+                }
             }
             else
             {
                 tb = "Bạn đăng nhập không thành công!";
             }
 
-            MessageBox.Show(tb); 
+            MessageBox.Show(tb);
         }
 
         private void llCreateNewAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

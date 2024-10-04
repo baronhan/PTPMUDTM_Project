@@ -1,7 +1,9 @@
-﻿using DAL;
+﻿using BCrypt.Net;
+using DAL;
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,12 +22,27 @@ namespace BUL
         {
             return dal.Register(username, password, fullName, email, address, phone);
         }
+        public List<KhachHangDTO> GetAllKhachHang()
+        {
+            return dal.GetAllKhachHang();
+        }
 
+        public DataTable GetKhachHangDataTable()
+        {
+            return dal.GetKhachHangDataTable();
+        }
         public KhachHangDTO GetKhachHangByUsername(string username)
         {
             return dal.GetKhachHangByUsername(username);
         }
-
+        public int GetMaNhom(string username)
+        {
+            return dal.GetMaNhom(username);
+        }
+        public bool AddKhachHang(KhachHangDTO khachHang)
+        {
+            return dal.AddKhachHang(khachHang);
+        }
         public bool UpdateKhachHang(KhachHangDTO khachHang)
         {
             return dal.UpdateKhachHang(khachHang);
@@ -35,5 +52,26 @@ namespace BUL
         {
             return dal.DeleteKhachHang(maKH);
         }
+
+        public bool ChangePassword(string username, string currentPassword, string newPassword)
+        {
+            var user = dal.GetKhachHangByUsername(username);
+            if (user == null)
+            {
+                throw new Exception("Người dùng không tồn tại.");
+            }
+
+       
+            bool isPasswordMatch = BCrypt.Net.BCrypt.Verify(currentPassword, user.password);
+            if (!isPasswordMatch)
+            {
+                throw new Exception("Mật khẩu hiện tại không chính xác.");
+            }
+            string hashedNewPassword = BCrypt.Net.BCrypt.HashPassword(newPassword);
+
+            bool isUpdated = dal.UpdatePassword(username, hashedNewPassword);
+            return isUpdated;
+        }
+
     }
 }
