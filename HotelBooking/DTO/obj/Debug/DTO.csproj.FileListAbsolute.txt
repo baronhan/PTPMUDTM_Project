@@ -35,3 +35,16 @@ D:\HotelBooking\HotelBooking\DTO\bin\Debug\zxing.presentation.xml
 D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.csproj.Up2Date
 D:\HotelBooking\HotelBooking\DTO\bin\Debug\Newtonsoft.Json.dll
 D:\HotelBooking\HotelBooking\DTO\bin\Debug\Newtonsoft.Json.xml
+D:\Study\nam4\ptpmudtm\doan_new6.10\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\DTO.dll
+D:\Study\nam4\ptpmudtm\doan_new6.10\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\DTO.pdb
+D:\Study\nam4\ptpmudtm\doan_new6.10\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\Newtonsoft.Json.dll
+D:\Study\nam4\ptpmudtm\doan_new6.10\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\zxing.dll
+D:\Study\nam4\ptpmudtm\doan_new6.10\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\zxing.presentation.dll
+D:\Study\nam4\ptpmudtm\doan_new6.10\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\Newtonsoft.Json.xml
+D:\Study\nam4\ptpmudtm\doan_new6.10\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\zxing.xml
+D:\Study\nam4\ptpmudtm\doan_new6.10\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\zxing.presentation.xml
+D:\Study\nam4\ptpmudtm\doan_new6.10\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Study\nam4\ptpmudtm\doan_new6.10\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Study\nam4\ptpmudtm\doan_new6.10\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.Up2Date
+D:\Study\nam4\ptpmudtm\doan_new6.10\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.dll
+D:\Study\nam4\ptpmudtm\doan_new6.10\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.pdb

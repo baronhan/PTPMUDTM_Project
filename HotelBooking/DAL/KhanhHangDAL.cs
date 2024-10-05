@@ -89,6 +89,7 @@ namespace DAL
                                 email = kh.email,
                                 diaChi = kh.diaChi,
                                 soDienThoai = kh.soDienThoai,
+                                profileImage = kh.profileImage,
                                 maNhomNguoiDung = (int)kh.maNhomNguoiDung
                             }).FirstOrDefault();
             return khachHang;
@@ -115,6 +116,7 @@ namespace DAL
                                              email = kh.email,
                                              diaChi = kh.diaChi,
                                              soDienThoai = kh.soDienThoai,
+                                         
                                              maNhomNguoiDung = (int)kh.maNhomNguoiDung
                                          })
                                          .ToList();
@@ -196,7 +198,7 @@ namespace DAL
                 khachHangDb.email = khachHang.email;
                 khachHangDb.diaChi = khachHang.diaChi;
                 khachHangDb.soDienThoai = khachHang.soDienThoai;
-
+                khachHangDb.profileImage = khachHang.profileImage;
                 qlks.SubmitChanges();
                 return true;
             }

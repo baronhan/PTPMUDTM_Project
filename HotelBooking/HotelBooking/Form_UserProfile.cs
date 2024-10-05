@@ -10,12 +10,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace HotelBooking
 {
     public partial class Form_UserProfile : Form
     {
-      
+
         string _username = Form_Login._username;
         KhachHangBUL bul = new KhachHangBUL();
         KhachHangDTO kh;
@@ -23,15 +24,22 @@ namespace HotelBooking
         {
             InitializeComponent();
             LoadUserProfile();
-    
+
         }
+        private void ChangeTextBoxColorBasedOnVisibility()
+        {
+      
+        }
+
         private void Form_UserProfile_Load(object sender, EventArgs e)
         {
-            pictureBoxUser.Image = Properties.Resources.defaultAvatar;
-            pictureBoxUser.SizeMode = PictureBoxSizeMode.Zoom;
-            //pictureBoxUser.Region = GetRoundedImagePicturebox(pictureBoxUser);
             lblUser.Text = _username;
             lblUser.Font = new Font(lblUser.Font.FontFamily, 20);
+            txtFullname.Font = new Font(txtFullname.Font.FontFamily, 20);
+            txtAddress.Font = new Font(txtAddress.Font.FontFamily, 20);
+            txtEmail.Font = new Font(txtEmail.Font.FontFamily, 20);
+            txtPhone.Font = new Font(txtPhone.Font.FontFamily, 20);
+
         }
         private void LoadUserProfile()
         {
@@ -43,6 +51,15 @@ namespace HotelBooking
                 txtEmail.Text = kh.email;
                 txtAddress.Text = kh.diaChi;
                 txtPhone.Text = kh.soDienThoai;
+                if (!string.IsNullOrEmpty(kh.profileImage))
+                {
+                    Image image = Image.FromFile(kh.profileImage);
+                    SetRoundedImageInPictureBox(pictureBoxUser, image);
+                    pictureBoxUser.SizeMode = PictureBoxSizeMode.Zoom;
+                }else
+                {
+                    pictureBoxUser.Image = Properties.Resources.defaultAvatar;
+                }
             }
             else
             {
@@ -50,7 +67,7 @@ namespace HotelBooking
             }
         }
 
-    
+
         private void SetRoundedImageInPictureBox(PictureBox pictureBox, Image image)
         {
 
@@ -58,18 +75,18 @@ namespace HotelBooking
             using (Graphics g = Graphics.FromImage(bitmap))
             {
                 g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-               
+
                 float boxRatio = (float)pictureBox.Width / pictureBox.Height;
                 float imageRatio = (float)image.Width / image.Height;
 
                 Rectangle srcRect;
-                if (imageRatio > boxRatio) 
+                if (imageRatio > boxRatio)
                 {
                     int newWidth = (int)(image.Height * boxRatio);
                     int cropX = (image.Width - newWidth) / 2;
                     srcRect = new Rectangle(cropX, 0, newWidth, image.Height);
                 }
-                else 
+                else
                 {
                     int newHeight = (int)(image.Width / boxRatio);
                     int cropY = (image.Height - newHeight) / 2;
@@ -98,12 +115,23 @@ namespace HotelBooking
                 openFileDialog.Title = "Hãy chọn 1 bức ảnh đẹp nhất";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    Image image = Image.FromFile(openFileDialog.FileName);
-                    //pictureBoxUser.Image = image;
+                    string imagePath = openFileDialog.FileName;
+                    Image image = Image.FromFile(imagePath);
 
                     SetRoundedImageInPictureBox(pictureBoxUser, image);
-
                     pictureBoxUser.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    kh.profileImage = imagePath;
+
+                    bool isUpdated = bul.UpdateKhachHang(kh);
+                    if (isUpdated)
+                    {
+                        MessageBox.Show("Ảnh đã được upload thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Upload ảnh thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -113,6 +141,17 @@ namespace HotelBooking
             if (pictureBoxUser.Image != null)
             {
                 pictureBoxUser.Image = Properties.Resources.defaultAvatar;
+                kh.profileImage = null;
+                bool isUpdated = bul.UpdateKhachHang(kh);
+                if (isUpdated)
+                {
+                    MessageBox.Show("Ảnh đã được xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Xóa ảnh thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
             else
             {
@@ -137,6 +176,11 @@ namespace HotelBooking
             txtEmail.Enabled = true;
             txtFullname.Enabled = true;
             txtPhone.Enabled = true;
+
+            txtFullname.ForeColor = Color.White;
+            txtPhone.ForeColor = Color.White;
+            txtEmail.ForeColor = Color.White;
+            txtAddress.ForeColor = Color.White;
         }
         private void EnabledFalseTXT()
         {
@@ -144,6 +188,11 @@ namespace HotelBooking
             txtEmail.Enabled = false;
             txtFullname.Enabled = false;
             txtPhone.Enabled = false;
+
+            txtFullname.ForeColor = Color.White;
+            txtPhone.ForeColor = Color.White;
+            txtEmail.ForeColor = Color.White;
+            txtAddress.ForeColor = Color.White;
         }
         private bool ValidateUserInfo()
         {
@@ -270,8 +319,6 @@ namespace HotelBooking
                         this.Close();
                         Form_Login form_Login = new Form_Login();
                         form_Login.Show();
-
-
                     }
                     else
                     {
@@ -290,7 +337,7 @@ namespace HotelBooking
             if (kh != null) // Kiểm tra nếu kh không null
             {
                 Form_ChangePassword form = new Form_ChangePassword(kh.maKH); // Truyền maKH vào form
-           
+
                 form.ShowDialog();
                 form.BringToFront();
             }

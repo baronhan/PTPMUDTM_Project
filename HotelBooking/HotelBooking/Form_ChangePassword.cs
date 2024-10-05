@@ -23,6 +23,11 @@ namespace HotelBooking
             txtNewPass.PasswordChar = '*';
             txtConfirmPass.PasswordChar = '*';
 
+            txtOldPass.Font = new Font(txtOldPass.Font.FontFamily, 20);
+            txtNewPass.Font = new Font(txtNewPass.Font.FontFamily, 20);
+            txtConfirmPass.Font = new Font(txtConfirmPass.Font.FontFamily, 20);
+
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -66,6 +71,10 @@ namespace HotelBooking
                 if (isChanged)
                 {
                     MessageBox.Show("Bạn đã thay đổi mật khẩu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                    Form_Login form_Login = new Form_Login();
+                    form_Login.Show();
+
                 }
                 else
                 {

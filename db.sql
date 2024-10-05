@@ -161,10 +161,10 @@ VALUES
 ('baro_nhan', '123', N'Nguyễn Phúc Bảo Nhân', 'npbaonhan18803@gmail.com', '490/54 Lê Văn Sỹ', '0948877502', 1);
 
 -- Dữ liệu cho bảng Phieu_Dat_Phong
-INSERT INTO Phieu_Dat_Phong (maKH, maPhong, checkIn, checkOut, soTaiKhoan, tongTien)
+INSERT INTO Phieu_Dat_Phong (maKH, maPhong, checkIn, checkOut, tongTien)
 VALUES 
-(1, 1, '2024-09-20', '2024-09-25', '1234567890', 2500000),
-(2, 2, '2024-09-18', '2024-09-20', '0987654321', 2400000);
+(1, 1, '2024-09-20', '2024-09-25', 2500000),
+(2, 2, '2024-09-18', '2024-09-20', 2400000);
 
 -- Dữ liệu cho bảng CT_PDP_DV
 INSERT INTO CT_PDP_DV (maDatPhong, maDichVu, soLuong, tongTien)
