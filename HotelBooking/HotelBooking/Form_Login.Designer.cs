@@ -92,7 +92,7 @@
             this.txtUserName.Location = new System.Drawing.Point(75, 120);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(305, 27);
-            this.txtUserName.TabIndex = 1;
+            this.txtUserName.TabIndex = 0;
             // 
             // btnLogin
             // 
@@ -237,7 +237,6 @@
             this.Name = "Form_Login";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
             this.Load += new System.EventHandler(this.Form_Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

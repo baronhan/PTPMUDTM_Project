@@ -108,3 +108,9 @@ D:\HotelBooking\HotelBooking\BUL\obj\Debug\BUL.csproj.CoreCompileInputs.cache
 D:\HotelBooking\HotelBooking\BUL\obj\Debug\BUL.csproj.Up2Date
 D:\HotelBooking\HotelBooking\BUL\obj\Debug\BUL.dll
 D:\HotelBooking\HotelBooking\BUL\obj\Debug\BUL.pdb
+D:\HotelBooking\HotelBooking\BUL\bin\Debug\zxing.dll
+D:\HotelBooking\HotelBooking\BUL\bin\Debug\zxing.presentation.dll
+D:\HotelBooking\HotelBooking\BUL\bin\Debug\zxing.xml
+D:\HotelBooking\HotelBooking\BUL\bin\Debug\zxing.presentation.xml
+D:\HotelBooking\HotelBooking\BUL\bin\Debug\Newtonsoft.Json.dll
+D:\HotelBooking\HotelBooking\BUL\bin\Debug\Newtonsoft.Json.xml

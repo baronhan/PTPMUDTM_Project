@@ -90,3 +90,9 @@ D:\HotelBooking\HotelBooking\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\HotelBooking\HotelBooking\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\HotelBooking\HotelBooking\DAL\obj\Debug\DAL.dll
 D:\HotelBooking\HotelBooking\DAL\obj\Debug\DAL.pdb
+D:\HotelBooking\HotelBooking\DAL\bin\Debug\zxing.dll
+D:\HotelBooking\HotelBooking\DAL\bin\Debug\zxing.presentation.dll
+D:\HotelBooking\HotelBooking\DAL\bin\Debug\zxing.xml
+D:\HotelBooking\HotelBooking\DAL\bin\Debug\zxing.presentation.xml
+D:\HotelBooking\HotelBooking\DAL\bin\Debug\Newtonsoft.Json.dll
+D:\HotelBooking\HotelBooking\DAL\bin\Debug\Newtonsoft.Json.xml

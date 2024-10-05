@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -20,6 +21,16 @@ namespace BUL
         public DataTable selectedPhong()
         {
             return dal.selectedPhong();
+        }
+
+        public PhongDTO getRoomInfoById(int id)
+        {
+            return dal.getRoomInfoById(id);
+        }
+
+        public bool updateTrangThaiPhong(int roomId)
+        {
+            return dal.updateTrangThaiPhong(roomId);
         }
     }
 }
