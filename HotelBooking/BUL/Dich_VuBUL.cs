@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,6 +15,11 @@ namespace BUL
         public DataTable SelectDichVu()
         {
             return dal.SelectDichVu();
+        }
+
+        public List<Dich_VuDTO> GetServicesByBookingId(int maDatPhong)
+        {
+            return dal.GetServicesByBookingId(maDatPhong);
         }
     }
 }

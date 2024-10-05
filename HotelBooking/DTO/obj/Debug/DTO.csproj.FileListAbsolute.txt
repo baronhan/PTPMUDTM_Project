@@ -28,3 +28,10 @@ D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
 D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.dll
 D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.pdb
+D:\HotelBooking\HotelBooking\DTO\bin\Debug\zxing.dll
+D:\HotelBooking\HotelBooking\DTO\bin\Debug\zxing.presentation.dll
+D:\HotelBooking\HotelBooking\DTO\bin\Debug\zxing.xml
+D:\HotelBooking\HotelBooking\DTO\bin\Debug\zxing.presentation.xml
+D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.csproj.Up2Date
+D:\HotelBooking\HotelBooking\DTO\bin\Debug\Newtonsoft.Json.dll
+D:\HotelBooking\HotelBooking\DTO\bin\Debug\Newtonsoft.Json.xml

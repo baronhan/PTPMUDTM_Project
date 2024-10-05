@@ -46,11 +46,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dgvSelectedServices = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnRemoveService = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnContinueBooking = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnAddNewService = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnReturnRoomList = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReturnRoomList = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnAddNewService = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnContinueBooking = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnRemoveService = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServiceList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedServices)).BeginInit();
@@ -80,6 +80,7 @@
             // 
             // dgvServiceList
             // 
+            this.dgvServiceList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvServiceList.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -183,6 +184,7 @@
             // 
             // dgvSelectedServices
             // 
+            this.dgvSelectedServices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSelectedServices.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -229,116 +231,28 @@
             this.label6.TabIndex = 27;
             this.label6.Text = "List Of Selected Services";
             // 
-            // btnRemoveService
+            // panel1
             // 
-            this.btnRemoveService.Activecolor = System.Drawing.Color.BurlyWood;
-            this.btnRemoveService.AutoSize = true;
-            this.btnRemoveService.BackColor = System.Drawing.Color.Tan;
-            this.btnRemoveService.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRemoveService.BorderRadius = 5;
-            this.btnRemoveService.ButtonText = "      Remove Service";
-            this.btnRemoveService.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemoveService.DisabledColor = System.Drawing.Color.Gray;
-            this.btnRemoveService.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnRemoveService.Iconimage = global::HotelBooking.Properties.Resources.remove_icon;
-            this.btnRemoveService.Iconimage_right = null;
-            this.btnRemoveService.Iconimage_right_Selected = null;
-            this.btnRemoveService.Iconimage_Selected = null;
-            this.btnRemoveService.IconMarginLeft = 0;
-            this.btnRemoveService.IconMarginRight = 0;
-            this.btnRemoveService.IconRightVisible = true;
-            this.btnRemoveService.IconRightZoom = 0D;
-            this.btnRemoveService.IconVisible = true;
-            this.btnRemoveService.IconZoom = 40D;
-            this.btnRemoveService.IsTab = false;
-            this.btnRemoveService.Location = new System.Drawing.Point(708, 252);
-            this.btnRemoveService.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btnRemoveService.Name = "btnRemoveService";
-            this.btnRemoveService.Normalcolor = System.Drawing.Color.Tan;
-            this.btnRemoveService.OnHovercolor = System.Drawing.Color.Silver;
-            this.btnRemoveService.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnRemoveService.selected = false;
-            this.btnRemoveService.Size = new System.Drawing.Size(257, 59);
-            this.btnRemoveService.TabIndex = 28;
-            this.btnRemoveService.Text = "      Remove Service";
-            this.btnRemoveService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemoveService.Textcolor = System.Drawing.Color.White;
-            this.btnRemoveService.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveService.Click += new System.EventHandler(this.btnRemoveService_Click);
-            // 
-            // btnContinueBooking
-            // 
-            this.btnContinueBooking.Activecolor = System.Drawing.Color.BurlyWood;
-            this.btnContinueBooking.AutoSize = true;
-            this.btnContinueBooking.BackColor = System.Drawing.Color.Tan;
-            this.btnContinueBooking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnContinueBooking.BorderRadius = 5;
-            this.btnContinueBooking.ButtonText = "      Continue Booking";
-            this.btnContinueBooking.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnContinueBooking.DisabledColor = System.Drawing.Color.Gray;
-            this.btnContinueBooking.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnContinueBooking.Iconimage = global::HotelBooking.Properties.Resources.home_icon;
-            this.btnContinueBooking.Iconimage_right = null;
-            this.btnContinueBooking.Iconimage_right_Selected = null;
-            this.btnContinueBooking.Iconimage_Selected = null;
-            this.btnContinueBooking.IconMarginLeft = 0;
-            this.btnContinueBooking.IconMarginRight = 0;
-            this.btnContinueBooking.IconRightVisible = true;
-            this.btnContinueBooking.IconRightZoom = 0D;
-            this.btnContinueBooking.IconVisible = true;
-            this.btnContinueBooking.IconZoom = 40D;
-            this.btnContinueBooking.IsTab = false;
-            this.btnContinueBooking.Location = new System.Drawing.Point(708, 446);
-            this.btnContinueBooking.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btnContinueBooking.Name = "btnContinueBooking";
-            this.btnContinueBooking.Normalcolor = System.Drawing.Color.Tan;
-            this.btnContinueBooking.OnHovercolor = System.Drawing.Color.Silver;
-            this.btnContinueBooking.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnContinueBooking.selected = false;
-            this.btnContinueBooking.Size = new System.Drawing.Size(257, 59);
-            this.btnContinueBooking.TabIndex = 29;
-            this.btnContinueBooking.Text = "      Continue Booking";
-            this.btnContinueBooking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnContinueBooking.Textcolor = System.Drawing.Color.White;
-            this.btnContinueBooking.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinueBooking.Click += new System.EventHandler(this.btnContinueBooking_Click);
-            // 
-            // btnAddNewService
-            // 
-            this.btnAddNewService.Activecolor = System.Drawing.Color.BurlyWood;
-            this.btnAddNewService.AutoSize = true;
-            this.btnAddNewService.BackColor = System.Drawing.Color.Tan;
-            this.btnAddNewService.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddNewService.BorderRadius = 5;
-            this.btnAddNewService.ButtonText = "      Add New Service";
-            this.btnAddNewService.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddNewService.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAddNewService.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAddNewService.Iconimage = global::HotelBooking.Properties.Resources.add_icon;
-            this.btnAddNewService.Iconimage_right = null;
-            this.btnAddNewService.Iconimage_right_Selected = null;
-            this.btnAddNewService.Iconimage_Selected = null;
-            this.btnAddNewService.IconMarginLeft = 0;
-            this.btnAddNewService.IconMarginRight = 0;
-            this.btnAddNewService.IconRightVisible = true;
-            this.btnAddNewService.IconRightZoom = 0D;
-            this.btnAddNewService.IconVisible = true;
-            this.btnAddNewService.IconZoom = 40D;
-            this.btnAddNewService.IsTab = false;
-            this.btnAddNewService.Location = new System.Drawing.Point(708, 155);
-            this.btnAddNewService.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btnAddNewService.Name = "btnAddNewService";
-            this.btnAddNewService.Normalcolor = System.Drawing.Color.Tan;
-            this.btnAddNewService.OnHovercolor = System.Drawing.Color.Silver;
-            this.btnAddNewService.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAddNewService.selected = false;
-            this.btnAddNewService.Size = new System.Drawing.Size(257, 59);
-            this.btnAddNewService.TabIndex = 30;
-            this.btnAddNewService.Text = "      Add New Service";
-            this.btnAddNewService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddNewService.Textcolor = System.Drawing.Color.White;
-            this.btnAddNewService.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewService.Click += new System.EventHandler(this.btnAddNewService_Click);
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnReturnRoomList);
+            this.panel1.Controls.Add(this.btnAddNewService);
+            this.panel1.Controls.Add(this.btnContinueBooking);
+            this.panel1.Controls.Add(this.btnRemoveService);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.dgvSelectedServices);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.txtPrices);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtAcronym);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtServiceName);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.dgvServiceList);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 47);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1008, 661);
+            this.panel1.TabIndex = 3;
             // 
             // btnReturnRoomList
             // 
@@ -377,28 +291,116 @@
             this.btnReturnRoomList.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturnRoomList.Click += new System.EventHandler(this.btnReturnRoomList_Click);
             // 
-            // panel1
+            // btnAddNewService
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnReturnRoomList);
-            this.panel1.Controls.Add(this.btnAddNewService);
-            this.panel1.Controls.Add(this.btnContinueBooking);
-            this.panel1.Controls.Add(this.btnRemoveService);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.dgvSelectedServices);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txtPrices);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtAcronym);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtServiceName);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dgvServiceList);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 47);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1008, 661);
-            this.panel1.TabIndex = 3;
+            this.btnAddNewService.Activecolor = System.Drawing.Color.BurlyWood;
+            this.btnAddNewService.AutoSize = true;
+            this.btnAddNewService.BackColor = System.Drawing.Color.Tan;
+            this.btnAddNewService.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddNewService.BorderRadius = 5;
+            this.btnAddNewService.ButtonText = "      Add New Service";
+            this.btnAddNewService.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddNewService.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAddNewService.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAddNewService.Iconimage = global::HotelBooking.Properties.Resources.add_icon;
+            this.btnAddNewService.Iconimage_right = null;
+            this.btnAddNewService.Iconimage_right_Selected = null;
+            this.btnAddNewService.Iconimage_Selected = null;
+            this.btnAddNewService.IconMarginLeft = 0;
+            this.btnAddNewService.IconMarginRight = 0;
+            this.btnAddNewService.IconRightVisible = true;
+            this.btnAddNewService.IconRightZoom = 0D;
+            this.btnAddNewService.IconVisible = true;
+            this.btnAddNewService.IconZoom = 40D;
+            this.btnAddNewService.IsTab = false;
+            this.btnAddNewService.Location = new System.Drawing.Point(708, 155);
+            this.btnAddNewService.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnAddNewService.Name = "btnAddNewService";
+            this.btnAddNewService.Normalcolor = System.Drawing.Color.Tan;
+            this.btnAddNewService.OnHovercolor = System.Drawing.Color.Silver;
+            this.btnAddNewService.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAddNewService.selected = false;
+            this.btnAddNewService.Size = new System.Drawing.Size(257, 59);
+            this.btnAddNewService.TabIndex = 30;
+            this.btnAddNewService.Text = "      Add New Service";
+            this.btnAddNewService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddNewService.Textcolor = System.Drawing.Color.White;
+            this.btnAddNewService.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewService.Click += new System.EventHandler(this.btnAddNewService_Click);
+            // 
+            // btnContinueBooking
+            // 
+            this.btnContinueBooking.Activecolor = System.Drawing.Color.BurlyWood;
+            this.btnContinueBooking.AutoSize = true;
+            this.btnContinueBooking.BackColor = System.Drawing.Color.Tan;
+            this.btnContinueBooking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnContinueBooking.BorderRadius = 5;
+            this.btnContinueBooking.ButtonText = "      Continue Booking";
+            this.btnContinueBooking.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnContinueBooking.DisabledColor = System.Drawing.Color.Gray;
+            this.btnContinueBooking.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnContinueBooking.Iconimage = global::HotelBooking.Properties.Resources.home_icon;
+            this.btnContinueBooking.Iconimage_right = null;
+            this.btnContinueBooking.Iconimage_right_Selected = null;
+            this.btnContinueBooking.Iconimage_Selected = null;
+            this.btnContinueBooking.IconMarginLeft = 0;
+            this.btnContinueBooking.IconMarginRight = 0;
+            this.btnContinueBooking.IconRightVisible = true;
+            this.btnContinueBooking.IconRightZoom = 0D;
+            this.btnContinueBooking.IconVisible = true;
+            this.btnContinueBooking.IconZoom = 40D;
+            this.btnContinueBooking.IsTab = false;
+            this.btnContinueBooking.Location = new System.Drawing.Point(708, 446);
+            this.btnContinueBooking.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnContinueBooking.Name = "btnContinueBooking";
+            this.btnContinueBooking.Normalcolor = System.Drawing.Color.Tan;
+            this.btnContinueBooking.OnHovercolor = System.Drawing.Color.Silver;
+            this.btnContinueBooking.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnContinueBooking.selected = false;
+            this.btnContinueBooking.Size = new System.Drawing.Size(257, 59);
+            this.btnContinueBooking.TabIndex = 29;
+            this.btnContinueBooking.Text = "      Continue Booking";
+            this.btnContinueBooking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnContinueBooking.Textcolor = System.Drawing.Color.White;
+            this.btnContinueBooking.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinueBooking.Click += new System.EventHandler(this.btnContinueBooking_Click);
+            // 
+            // btnRemoveService
+            // 
+            this.btnRemoveService.Activecolor = System.Drawing.Color.BurlyWood;
+            this.btnRemoveService.AutoSize = true;
+            this.btnRemoveService.BackColor = System.Drawing.Color.Tan;
+            this.btnRemoveService.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRemoveService.BorderRadius = 5;
+            this.btnRemoveService.ButtonText = "      Remove Service";
+            this.btnRemoveService.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoveService.DisabledColor = System.Drawing.Color.Gray;
+            this.btnRemoveService.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRemoveService.Iconimage = global::HotelBooking.Properties.Resources.remove_icon;
+            this.btnRemoveService.Iconimage_right = null;
+            this.btnRemoveService.Iconimage_right_Selected = null;
+            this.btnRemoveService.Iconimage_Selected = null;
+            this.btnRemoveService.IconMarginLeft = 0;
+            this.btnRemoveService.IconMarginRight = 0;
+            this.btnRemoveService.IconRightVisible = true;
+            this.btnRemoveService.IconRightZoom = 0D;
+            this.btnRemoveService.IconVisible = true;
+            this.btnRemoveService.IconZoom = 40D;
+            this.btnRemoveService.IsTab = false;
+            this.btnRemoveService.Location = new System.Drawing.Point(708, 252);
+            this.btnRemoveService.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnRemoveService.Name = "btnRemoveService";
+            this.btnRemoveService.Normalcolor = System.Drawing.Color.Tan;
+            this.btnRemoveService.OnHovercolor = System.Drawing.Color.Silver;
+            this.btnRemoveService.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRemoveService.selected = false;
+            this.btnRemoveService.Size = new System.Drawing.Size(257, 59);
+            this.btnRemoveService.TabIndex = 28;
+            this.btnRemoveService.Text = "      Remove Service";
+            this.btnRemoveService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemoveService.Textcolor = System.Drawing.Color.White;
+            this.btnRemoveService.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveService.Click += new System.EventHandler(this.btnRemoveService_Click);
             // 
             // Form_Services
             // 

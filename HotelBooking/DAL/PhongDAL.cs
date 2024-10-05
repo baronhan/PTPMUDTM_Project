@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace DAL
         {
             try
             {
-                Phong phong = qlks.Phongs.Where(t => t.maLoaiPhong == idPhong).FirstOrDefault();
+                Phong phong = qlks.Phongs.Where(t => t.maPhong == idPhong).FirstOrDefault();
 
                 if (phong != null && phong.trangThai == 1)
                 {
@@ -29,6 +30,32 @@ namespace DAL
             }
 
             return false;
+        }
+
+        public PhongDTO getRoomInfoById(int id)
+        {
+            try
+            {
+                Phong phong = qlks.Phongs.Where(t => t.maLoaiPhong == id).FirstOrDefault();
+
+                if(phong != null)
+                {
+                    PhongDTO phongDTO = new PhongDTO
+                    {
+                        maPhong = phong.maPhong,
+                        tenPhong = phong.tenPhong,
+                        donGia = (decimal)phong.donGia
+                    };
+
+                    return phongDTO;
+                }    
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message); 
+            }
+
+            return null;
         }
 
         public DataTable selectedPhong()
@@ -69,5 +96,33 @@ namespace DAL
 
             return roomList;
         }
+
+        public bool updateTrangThaiPhong(int roomId)
+        {
+            try
+            {
+                var room = qlks.Phongs.SingleOrDefault(p => p.maPhong == roomId);
+
+                if (room != null)
+                {
+                    room.trangThai = 0;
+
+                    qlks.SubmitChanges();
+
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Room not found.");
+                    return false; 
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false; 
+            }
+        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -43,5 +44,47 @@ namespace DAL
             }
             return serviceList;
         }
+
+        public List<Dich_VuDTO> GetServicesByBookingId(int maDatPhong)
+        {
+            List<Dich_VuDTO> servicesList = new List<Dich_VuDTO>();
+
+            try
+            {
+                // Query to get the services associated with the given booking ID
+                var query = from ct in qlks.CT_PDP_DVs // Assuming CT_PDP_DV is the table holding service details
+                            where ct.maDatPhong == maDatPhong
+                            join dv in qlks.Dich_Vus on ct.maDichVu equals dv.maDichVu // Join with Dich_Vus to get service details
+                            select new
+                            {
+                                dv.maDichVu,
+                                dv.tenDich,
+                                dv.acronym,
+                                dv.donGia,
+                                ct.soLuong,
+                            };
+
+                // Populate the services list
+                foreach (var item in query)
+                {
+                    Dich_VuDTO service = new Dich_VuDTO
+                    {
+                        maDichVu = item.maDichVu,
+                        tenDichVu = item.tenDich,
+                        acronym = item.acronym,
+                        donGia = (decimal)item.donGia
+                    };
+
+                    servicesList.Add(service);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+            return servicesList;
+        }
+
     }
 }

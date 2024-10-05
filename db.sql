@@ -54,6 +54,7 @@ CREATE TABLE Khach_Hang (
     diaChi VARCHAR(255),
     soDienThoai VARCHAR(20),
     maNhomNguoiDung INT,
+	profileImage VARCHAR(255),
     FOREIGN KEY (maNhomNguoiDung) REFERENCES Nhom_Nguoi_Dung(maNhom)
 );
 
@@ -63,7 +64,6 @@ CREATE TABLE Phieu_Dat_Phong (
     maPhong INT,
     checkIn DATE,
     checkOut DATE,
-    soTaiKhoan VARCHAR(50),
     tongTien DECIMAL(10, 2),
     FOREIGN KEY (maKH) REFERENCES Khach_Hang(maKH),
     FOREIGN KEY (maPhong) REFERENCES Phong(maPhong)
@@ -182,6 +182,45 @@ VALUES
 (3, 5, 1), -- Nhân viên lễ tân có quyền quản lý đặt phòng
 (2, 6, 1); -- Quản trị viên có quyền quản lý phân quyền
 
+select * from Khach_Hang
+
+update Khach_Hang
+set maNhomNguoiDung = 1
+where maKH = 2
+
+select * from Phong
+
+UPDATE Phong
+SET donGia = (CASE 
+                WHEN RAND() < 0.1 THEN 1000
+                WHEN RAND() < 0.2 THEN 2000
+                WHEN RAND() < 0.3 THEN 3000
+                WHEN RAND() < 0.4 THEN 4000
+                WHEN RAND() < 0.5 THEN 5000
+                WHEN RAND() < 0.6 THEN 6000
+                WHEN RAND() < 0.7 THEN 7000
+                WHEN RAND() < 0.8 THEN 8000
+                WHEN RAND() < 0.9 THEN 9000
+                ELSE 10000
+             END)
+WHERE donGia > 0;
 
 
+select * from Dich_Vu
+UPDATE Dich_Vu
+SET donGia = (CASE 
+                WHEN RAND() < 0.1 THEN 1000
+                WHEN RAND() < 0.2 THEN 2000
+                WHEN RAND() < 0.3 THEN 3000
+                WHEN RAND() < 0.4 THEN 4000
+                WHEN RAND() < 0.5 THEN 5000
+                WHEN RAND() < 0.6 THEN 6000
+                WHEN RAND() < 0.7 THEN 7000
+                WHEN RAND() < 0.8 THEN 8000
+                WHEN RAND() < 0.9 THEN 9000
+                ELSE 10000
+             END)
+WHERE donGia > 0;  -- Điều kiện này để đảm bảo giá có thể được cập nhật
+SELECT donGia FROM Dich_Vu WHERE donGia > 0;
+select * from Phieu_Dat_Phong
 

@@ -36,6 +36,9 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>C:\Users\LENOVO\Downloads\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -48,6 +51,12 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form_ChangePassword.cs">
@@ -85,6 +94,12 @@
     </Compile>
     <Compile Include="Form_Management.Designer.cs">
       <DependentUpon>Form_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Payment.Designer.cs">
+      <DependentUpon>Form_Payment.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_PhieuDatPhong.cs">
       <SubType>Form</SubType>
@@ -142,6 +157,9 @@
     <EmbeddedResource Include="Form_Management.resx">
       <DependentUpon>Form_Management.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Payment.resx">
+      <DependentUpon>Form_Payment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_PhieuDatPhong.resx">
       <DependentUpon>Form_PhieuDatPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +188,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -237,6 +256,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Images\momo_logo.jpeg" />
     <Content Include="Images\room_001.jpeg" />
     <Content Include="Images\room_002.jpeg" />
     <Content Include="Images\room_003.jpeg" />
@@ -251,6 +271,7 @@
     <Content Include="Images\room_012.jpeg" />
     <Content Include="Images\room_013.jpeg" />
     <Content Include="Images\room_014.jpeg" />
+    <None Include="Resources\payment_icon.png" />
     <None Include="Resources\return_icon.png" />
     <None Include="Resources\remove_icon.png" />
     <None Include="Resources\add_icon.png" />

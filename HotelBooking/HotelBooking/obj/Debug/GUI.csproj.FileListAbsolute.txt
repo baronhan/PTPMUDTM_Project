@@ -169,3 +169,10 @@ D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\GUI.csproj.CoreCompileInputs
 D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\GUI.csproj.Up2Date
 D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\HotelBooking.exe
 D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\HotelBooking.pdb
+D:\HotelBooking\HotelBooking\HotelBooking\bin\Debug\zxing.dll
+D:\HotelBooking\HotelBooking\HotelBooking\bin\Debug\zxing.presentation.dll
+D:\HotelBooking\HotelBooking\HotelBooking\bin\Debug\zxing.xml
+D:\HotelBooking\HotelBooking\HotelBooking\bin\Debug\zxing.presentation.xml
+D:\HotelBooking\HotelBooking\HotelBooking\obj\Debug\HotelBooking.Form_Payment.resources
+D:\HotelBooking\HotelBooking\HotelBooking\bin\Debug\Newtonsoft.Json.dll
+D:\HotelBooking\HotelBooking\HotelBooking\bin\Debug\Newtonsoft.Json.xml

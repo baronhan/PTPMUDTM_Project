@@ -24,6 +24,41 @@ namespace HotelBooking
             InitializeComponent();
             this.formMain = formMain;
             this.idPhong = idPhong;
+
+            InitializeSelectedServicesDataGrid();
+        }
+
+        public Form_Services(Form_Main formMain, List<Dich_VuDTO> serviceList, int idPhong)
+        {
+            InitializeComponent();
+            this.formMain = formMain;
+            this.idPhong = idPhong;
+
+            InitializeSelectedServicesDataGrid();
+            this.serviceList = serviceList; 
+            loadServiceList(this.serviceList);
+        }
+
+        private void InitializeSelectedServicesDataGrid()
+        {
+            if (dgvSelectedServices.Columns.Count == 0)
+            {
+                dgvSelectedServices.Columns.Add("ID", "ID");
+                dgvSelectedServices.Columns.Add("ServiceName", "ServiceName");
+                dgvSelectedServices.Columns.Add("Acronym", "Acronym");
+                dgvSelectedServices.Columns.Add("Prices", "Prices");
+                dgvSelectedServices.Columns["ID"].Visible = false; 
+            }
+        }
+
+        private void loadServiceList(List<Dich_VuDTO> list)
+        {
+            dgvSelectedServices.Rows.Clear(); 
+
+            foreach (var service in list)
+            {
+                dgvSelectedServices.Rows.Add(service.maDichVu, service.tenDichVu, service.acronym, service.donGia);
+            }
         }
 
         private void Form_Services_Load(object sender, EventArgs e)
@@ -32,12 +67,7 @@ namespace HotelBooking
             dgvServiceList.DataSource = tbService;
             dgvServiceList.Columns["ID"].Visible = false;
 
-            dgvSelectedServices.Columns.Add("ID", "ID");
-            dgvSelectedServices.Columns.Add("ServiceName", "ServiceName");
-            dgvSelectedServices.Columns.Add("Acronym", "Acronym");
-            dgvSelectedServices.Columns.Add("Prices", "Prices");
-            dgvSelectedServices.Columns["ID"].Visible = false;
-
+            InitializeSelectedServicesDataGrid();
         }
 
         private void dgvServiceList_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -63,9 +93,25 @@ namespace HotelBooking
             {
                 foreach (DataGridViewRow row in dgvSelectedServices.SelectedRows)
                 {
-                    if (!row.IsNewRow)
+                    string serviceName = row.Cells["ServiceName"].Value.ToString();
+                    int serviceId = (int)row.Cells["ID"].Value;
+
+                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa " + serviceName + " không?",
+                                                          "Xác nhận",
+                                                          MessageBoxButtons.YesNo,
+                                                          MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
                     {
-                        dgvSelectedServices.Rows.Remove(row);
+                        if (!row.IsNewRow)
+                        {
+                            dgvSelectedServices.Rows.Remove(row);
+
+                            var serviceToRemove = serviceList.FirstOrDefault(s => s.maDichVu == serviceId);
+                            if (serviceToRemove != null)
+                            {
+                                serviceList.Remove(serviceToRemove);
+                            }
+                        }
                     }
                 }
             }
@@ -74,6 +120,7 @@ namespace HotelBooking
                 MessageBox.Show("Vui lòng chọn ít nhất 1 dịch vụ.");
             }
         }
+
 
         private void btnAddNewService_Click(object sender, EventArgs e)
         {
