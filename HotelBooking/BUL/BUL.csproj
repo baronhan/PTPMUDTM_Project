@@ -61,6 +61,7 @@
     <Compile Include="Dich_VuBUL.cs" />
     <Compile Include="Hinh_Anh_PhongBUL.cs" />
     <Compile Include="KhachHangBUL.cs" />
+    <Compile Include="NhomNguoiDungBUL.cs" />
     <Compile Include="PhongBUL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />

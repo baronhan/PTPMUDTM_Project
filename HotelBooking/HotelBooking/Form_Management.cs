@@ -87,7 +87,16 @@ namespace HotelBooking
 
         private void btnClose_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show(
+                         "Bạn có chắc chắn muốn đăng xuất không?",
+                         "Xác nhận",
+                         MessageBoxButtons.YesNo,
+                         MessageBoxIcon.Question
+                     );
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

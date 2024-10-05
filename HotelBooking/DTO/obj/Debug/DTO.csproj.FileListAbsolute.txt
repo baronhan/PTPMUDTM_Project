@@ -28,3 +28,9 @@ D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
 D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.dll
 D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.pdb
+C:\Users\thinkbook\Downloads\VVV - 10.04_2\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\DTO.dll
+C:\Users\thinkbook\Downloads\VVV - 10.04_2\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\DTO.pdb
+C:\Users\thinkbook\Downloads\VVV - 10.04_2\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\thinkbook\Downloads\VVV - 10.04_2\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\thinkbook\Downloads\VVV - 10.04_2\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.dll
+C:\Users\thinkbook\Downloads\VVV - 10.04_2\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.pdb
