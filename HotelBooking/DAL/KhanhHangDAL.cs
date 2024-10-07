@@ -89,6 +89,7 @@ namespace DAL
                                 email = kh.email,
                                 diaChi = kh.diaChi,
                                 soDienThoai = kh.soDienThoai,
+                                profileImage = kh.profileImage,
                                 maNhomNguoiDung = (int)kh.maNhomNguoiDung
                             }).FirstOrDefault();
             return khachHang;
@@ -111,6 +112,7 @@ namespace DAL
                                          {
                                              maKH = kh.maKH,
                                              username = kh.userName,
+                                             password = kh.password,
                                              hoTen = kh.hoTen,
                                              email = kh.email,
                                              diaChi = kh.diaChi,
@@ -157,16 +159,56 @@ namespace DAL
 
             return userList;
         }
+        public DataTable GetKhachHangDataTable(int? userGroupId = null)
+        {
+            var query = qlks.Khach_Hangs.AsQueryable();
+
+            if (userGroupId.HasValue)
+            {
+                query = query.Where(kh => kh.maNhomNguoiDung == userGroupId.Value);
+            }
+
+            var khachHangList = query.Select(kh => new
+            {
+                kh.maKH,
+                kh.userName,
+                kh.hoTen,
+                kh.email,
+                kh.diaChi,
+                kh.soDienThoai
+            }).ToList();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID", typeof(int));
+            dt.Columns.Add("UserName", typeof(string));
+            dt.Columns.Add("FullName", typeof(string));
+            dt.Columns.Add("Email", typeof(string));
+            dt.Columns.Add("Address", typeof(string));
+            dt.Columns.Add("Phone", typeof(string));
+
+            foreach (var kh in khachHangList)
+            {
+                DataRow row = dt.NewRow();
+                row["ID"] = kh.maKH;
+                row["UserName"] = kh.userName;
+                row["FullName"] = kh.hoTen;
+                row["Email"] = kh.email;
+                row["Address"] = kh.diaChi;
+                row["Phone"] = kh.soDienThoai;
+                dt.Rows.Add(row);
+            }
+
+            return dt;
+        }
+        
         public bool AddKhachHang(KhachHangDTO khachHang)
         {
             try
             {
-                string hashedPassword = BCrypt.Net.BCrypt.HashPassword("12345678");
-
                 Khach_Hang newKhachHang = new Khach_Hang
                 {
                     userName = khachHang.username,
-                    password = hashedPassword,
+                    password = BCrypt.Net.BCrypt.HashPassword(khachHang.password),
                     hoTen = khachHang.hoTen,
                     email = khachHang.email,
                     diaChi = khachHang.diaChi,
@@ -186,6 +228,52 @@ namespace DAL
         }
 
 
+
+        //public bool UpdateKhachHang(KhachHangDTO khachHang)
+        //{
+        //    var khachHangDb = qlks.Khach_Hangs.FirstOrDefault(kh => kh.maKH == khachHang.maKH);
+        //    if (khachHangDb != null)
+        //    {
+        //        khachHangDb.userName = khachHang.username;
+        //        khachHangDb.hoTen = khachHang.hoTen;
+        //        khachHangDb.email = khachHang.email;
+        //        khachHangDb.diaChi = khachHang.diaChi;
+        //        khachHangDb.soDienThoai = khachHang.soDienThoai;
+        //        khachHangDb.profileImage=khachHang.profileImage;
+        //        qlks.SubmitChanges();
+        //        return true;
+        //    }
+        //    return false;
+        //}
+        //public bool UpdateKhachHang(KhachHangDTO khachHang)
+        //{
+        //    var khachHangDb = qlks.Khach_Hangs.FirstOrDefault(kh => kh.maKH == khachHang.maKH);
+
+        //    if (khachHangDb != null)
+        //    {
+        //        khachHangDb.userName = khachHang.username;
+        //        khachHangDb.hoTen = khachHang.hoTen;
+        //        khachHangDb.email = khachHang.email;
+        //        khachHangDb.diaChi = khachHang.diaChi;
+        //        khachHangDb.soDienThoai = khachHang.soDienThoai;
+
+        //        if (!string.IsNullOrWhiteSpace(khachHang.profileImage))
+        //        {
+        //            khachHangDb.profileImage = khachHang.profileImage;
+        //        }
+        //        try
+        //        {
+        //            qlks.SubmitChanges();
+        //            return true;
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            Console.WriteLine($"Error updating user: {ex.Message}");
+        //            return false;
+        //        }
+        //    }
+        //    return false;
+        //}
         public bool UpdateKhachHang(KhachHangDTO khachHang)
         {
             var khachHangDb = qlks.Khach_Hangs.FirstOrDefault(kh => kh.maKH == khachHang.maKH);
@@ -196,9 +284,17 @@ namespace DAL
                 khachHangDb.email = khachHang.email;
                 khachHangDb.diaChi = khachHang.diaChi;
                 khachHangDb.soDienThoai = khachHang.soDienThoai;
-
-                qlks.SubmitChanges();
-                return true;
+                khachHangDb.profileImage = khachHang.profileImage;
+                try
+                {
+                    qlks.SubmitChanges();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error updating user: {ex.Message}");
+                    return false;
+                }
             }
             return false;
         }

@@ -35,3 +35,29 @@ D:\HotelBooking\HotelBooking\DTO\bin\Debug\zxing.presentation.xml
 D:\HotelBooking\HotelBooking\DTO\obj\Debug\DTO.csproj.Up2Date
 D:\HotelBooking\HotelBooking\DTO\bin\Debug\Newtonsoft.Json.dll
 D:\HotelBooking\HotelBooking\DTO\bin\Debug\Newtonsoft.Json.xml
+C:\Users\thinkbook\Downloads\VVV - bn\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\DTO.dll
+C:\Users\thinkbook\Downloads\VVV - bn\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\DTO.pdb
+C:\Users\thinkbook\Downloads\VVV - bn\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\Newtonsoft.Json.dll
+C:\Users\thinkbook\Downloads\VVV - bn\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\zxing.dll
+C:\Users\thinkbook\Downloads\VVV - bn\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\zxing.presentation.dll
+C:\Users\thinkbook\Downloads\VVV - bn\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\Newtonsoft.Json.xml
+C:\Users\thinkbook\Downloads\VVV - bn\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\zxing.xml
+C:\Users\thinkbook\Downloads\VVV - bn\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\zxing.presentation.xml
+C:\Users\thinkbook\Downloads\VVV - bn\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\thinkbook\Downloads\VVV - bn\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\thinkbook\Downloads\VVV - bn\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.Up2Date
+C:\Users\thinkbook\Downloads\VVV - bn\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.dll
+C:\Users\thinkbook\Downloads\VVV - bn\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.pdb
+C:\Users\thinkbook\Downloads\VVV - bn - Copy\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\DTO.dll
+C:\Users\thinkbook\Downloads\VVV - bn - Copy\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\DTO.pdb
+C:\Users\thinkbook\Downloads\VVV - bn - Copy\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\Newtonsoft.Json.dll
+C:\Users\thinkbook\Downloads\VVV - bn - Copy\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\zxing.dll
+C:\Users\thinkbook\Downloads\VVV - bn - Copy\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\zxing.presentation.dll
+C:\Users\thinkbook\Downloads\VVV - bn - Copy\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\Newtonsoft.Json.xml
+C:\Users\thinkbook\Downloads\VVV - bn - Copy\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\zxing.xml
+C:\Users\thinkbook\Downloads\VVV - bn - Copy\PTPMUDTM_Project\HotelBooking\DTO\bin\Debug\zxing.presentation.xml
+C:\Users\thinkbook\Downloads\VVV - bn - Copy\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\thinkbook\Downloads\VVV - bn - Copy\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\thinkbook\Downloads\VVV - bn - Copy\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.csproj.Up2Date
+C:\Users\thinkbook\Downloads\VVV - bn - Copy\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.dll
+C:\Users\thinkbook\Downloads\VVV - bn - Copy\PTPMUDTM_Project\HotelBooking\DTO\obj\Debug\DTO.pdb

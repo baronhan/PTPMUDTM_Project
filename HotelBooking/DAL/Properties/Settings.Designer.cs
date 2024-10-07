@@ -26,8 +26,8 @@ namespace DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-3LQEMN31;Initial Catalog=DatPhongKhachSan;Integrated Security=" +
-            "True;TrustServerCertificate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-MS9K4O3\\SQLEXPRESS;Initial Catalog=DatPhongKhachSan;Integrate" +
+            "d Security=True;TrustServerCertificate=True")]
         public string DatPhongKhachSanConnectionString {
             get {
                 return ((string)(this["DatPhongKhachSanConnectionString"]));
@@ -37,23 +37,24 @@ namespace DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=DatPhongKhachSan;Persist Security Info=True" +
-            ";User ID=hotelbooking;Password=123;TrustServerCertificate=True")]
-        public string DatPhongKhachSanConnectionString1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-MS9K4O3\\SQLEXPRESS;Initial Catalog=DatPhongKhachSan;Persist S" +
+            "ecurity Info=True;User ID=hotelbooking;Password=123;Encrypt=True;TrustServerCert" +
+            "ificate=True")]
+        public string DatPhongKhachSanConnectionString2 {
             get {
-                return ((string)(this["DatPhongKhachSanConnectionString1"]));
+                return ((string)(this["DatPhongKhachSanConnectionString2"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-3LQEMN31;Initial Catalog=DatPhongKhachSan;Persist Security Inf" +
-            "o=True;User ID=hotelbooking;Password=123;Encrypt=True;TrustServerCertificate=Tru" +
-            "e")]
-        public string DatPhongKhachSanConnectionString2 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-MS9K4O3\\SQLEXPRESS,1433;Initial Catalog=DatPhongKhachSan;Pers" +
+            "ist Security Info=True;User ID=hotelbooking;Password=123;TrustServerCertificate=" +
+            "True")]
+        public string DatPhongKhachSanConnectionString1 {
             get {
-                return ((string)(this["DatPhongKhachSanConnectionString2"]));
+                return ((string)(this["DatPhongKhachSanConnectionString1"]));
             }
         }
     }

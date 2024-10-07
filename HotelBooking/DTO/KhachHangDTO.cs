@@ -15,10 +15,11 @@ namespace DTO
         public string email { get; set; }
         public string diaChi { get; set; }
         public string soDienThoai { get; set; }
+        public string profileImage { get; set; }
         public int maNhomNguoiDung { get; set; }
 
         public KhachHangDTO() { }
-        public KhachHangDTO(int maKH, string username, string password, string hoTen, string email, string diaChi, string soDienThoai, int maNhomNguoiDung)
+        public KhachHangDTO(int maKH, string username, string password, string hoTen, string email, string diaChi, string soDienThoai, int maNhomNguoiDung, string profileImage)
         {
             this.maKH = maKH;
             this.username = username;
@@ -28,6 +29,7 @@ namespace DTO
             this.diaChi = diaChi;
             this.soDienThoai = soDienThoai;
             this.maNhomNguoiDung = maNhomNguoiDung;
+            this.profileImage = profileImage;
         }
 
 

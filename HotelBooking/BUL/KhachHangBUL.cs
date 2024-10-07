@@ -31,6 +31,11 @@ namespace BUL
         {
             return dal.GetKhachHangDataTable();
         }
+        public DataTable GetKhachHangDataTable(int? userGroupId = null)
+        {
+
+            return dal.GetKhachHangDataTable(userGroupId);
+        }
         public KhachHangDTO GetKhachHangByUsername(string username)
         {
             return dal.GetKhachHangByUsername(username);
