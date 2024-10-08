@@ -223,4 +223,6 @@ SET donGia = (CASE
 WHERE donGia > 0;  -- Điều kiện này để đảm bảo giá có thể được cập nhật
 SELECT donGia FROM Dich_Vu WHERE donGia > 0;
 select * from Phieu_Dat_Phong
-
+select * from Phong
+select * from CT_PDP_DV
+select * from Dich_Vu
