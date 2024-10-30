@@ -64,19 +64,6 @@ namespace PhanMemQuanLyKhachSan.Properties {
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap add_icon {
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/Properties/Resources.Designer.cs
-=======
-            get {
-                object obj = ResourceManager.GetObject("add_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap background_gif {
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/Properties/Resources.Designer.cs
             get {
                 object obj = ResourceManager.GetObject("add_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -116,21 +103,7 @@ namespace PhanMemQuanLyKhachSan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap forward_icon {
-=======
-        internal static System.Drawing.Bitmap defaultAvatar {
-            get {
-                object obj = ResourceManager.GetObject("defaultAvatar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap gift_icon {
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/Properties/Resources.Designer.cs
             get {
                 object obj = ResourceManager.GetObject("forward_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -170,21 +143,7 @@ namespace PhanMemQuanLyKhachSan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap pushpin_icon {
-=======
-        internal static System.Drawing.Bitmap hotel_background_image {
-            get {
-                object obj = ResourceManager.GetObject("hotel_background_image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap lock_icon {
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/Properties/Resources.Designer.cs
             get {
                 object obj = ResourceManager.GetObject("pushpin_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
