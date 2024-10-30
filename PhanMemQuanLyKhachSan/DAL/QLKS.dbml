@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyKhachSan" Class="QLKSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-3LQEMN31;Initial Catalog=QuanLyKhachSan;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QuanLyKhachSanConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DatPhong_CT" Member="DatPhong_CTs">
+    <Type Name="DatPhong_CT">
+      <Column Name="idDPCT" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idDP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idPhong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="soNgayO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="donGia" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="thanhTien" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="ngay" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Phong_DatPhong_CT" Member="Phong" ThisKey="idPhong" OtherKey="idPhong" Type="Phong" IsForeignKey="true" />
+      <Association Name="DatPhong_DatPhong_CT" Member="DatPhong" ThisKey="idDP" OtherKey="idDP" Type="DatPhong" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Phong" Member="Phongs">
+    <Type Name="Phong">
+      <Column Name="idPhong" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tenPhong" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="trangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="idTang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idLoaiPhong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="disable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Phong_DatPhong_CT" Member="DatPhong_CTs" ThisKey="idPhong" OtherKey="idPhong" Type="DatPhong_CT" />
+      <Association Name="Phong_Phong_TB" Member="Phong_TBs" ThisKey="idPhong" OtherKey="idPhong" Type="Phong_TB" />
+      <Association Name="LoaiPhong_Phong" Member="LoaiPhong" ThisKey="idLoaiPhong" OtherKey="idLoaiPhong" Type="LoaiPhong" IsForeignKey="true" />
+      <Association Name="Tang_Phong" Member="Tang" ThisKey="idTang" OtherKey="idTang" Type="Tang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiPhong" Member="LoaiPhongs">
+    <Type Name="LoaiPhong">
+      <Column Name="idLoaiPhong" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tenLoaiPhong" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="donGia" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="soNguoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="soGiuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="disable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="LoaiPhong_Phong" Member="Phongs" ThisKey="idLoaiPhong" OtherKey="idLoaiPhong" Type="Phong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Phong_TB" Member="Phong_TBs">
+    <Type Name="Phong_TB">
+      <Column Name="idPhong" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idTB" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Phong_Phong_TB" Member="Phong" ThisKey="idPhong" OtherKey="idPhong" Type="Phong" IsForeignKey="true" />
+      <Association Name="ThietBi_Phong_TB" Member="ThietBi" ThisKey="idTB" OtherKey="idTB" Type="ThietBi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThietBi" Member="ThietBis">
+    <Type Name="ThietBi">
+      <Column Name="idTB" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tenTB" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="donGia" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="disable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="ThietBi_Phong_TB" Member="Phong_TBs" ThisKey="idTB" OtherKey="idTB" Type="Phong_TB" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tang" Member="Tangs">
+    <Type Name="Tang">
+      <Column Name="idTang" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tenTang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="disable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Tang_Phong" Member="Phongs" ThisKey="idTang" OtherKey="idTang" Type="Phong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fullName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="passWord" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="last_pwd_change" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="isGroup" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="disable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="User_Right" Member="Rights" ThisKey="uid" OtherKey="idUser" Type="Right" />
+      <Association Name="User_DatPhong" Member="DatPhongs" ThisKey="uid" OtherKey="idUser" Type="DatPhong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rights" Member="Rights">
+    <Type Name="Right">
+      <Column Name="fund_code" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idUser" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="userRight" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="User_Right" Member="User" ThisKey="idUser" OtherKey="uid" Type="User" IsForeignKey="true" />
+      <Association Name="Func_Right" Member="Func" ThisKey="fund_code" OtherKey="fund_code" Type="Func" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SanPham" Member="SanPhams">
+    <Type Name="SanPham">
+      <Column Name="idSP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tenSP" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="donGia" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="disable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="SanPham_DatPhong_SP" Member="DatPhong_SPs" ThisKey="idSP" OtherKey="idSP" Type="DatPhong_SP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Func" Member="Funcs">
+    <Type Name="Func">
+      <Column Name="fund_code" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="tips" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Func_Right" Member="Rights" ThisKey="fund_code" OtherKey="fund_code" Type="Right" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KhachHang" Member="KhachHangs">
+    <Type Name="KhachHang">
+      <Column Name="idKH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="hoTen" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="gioiTinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="cccd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="dienThoai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="diaChi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="disable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="KhachHang_DatPhong" Member="DatPhongs" ThisKey="idKH" OtherKey="idKH" Type="DatPhong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DatPhong" Member="DatPhongs">
+    <Type Name="DatPhong">
+      <Column Name="idDP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngayDat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngayTra" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="soTien" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="soNguoiO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="disable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="theoDoan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ghiChu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="update_by" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DatPhong_DatPhong_CT" Member="DatPhong_CTs" ThisKey="idDP" OtherKey="idDP" Type="DatPhong_CT" />
+      <Association Name="DatPhong_DatPhong_SP" Member="DatPhong_SPs" ThisKey="idDP" OtherKey="idDP" Type="DatPhong_SP" />
+      <Association Name="KhachHang_DatPhong" Member="KhachHang" ThisKey="idKH" OtherKey="idKH" Type="KhachHang" IsForeignKey="true" />
+      <Association Name="User_DatPhong" Member="User" ThisKey="idUser" OtherKey="uid" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DatPhong_SP" Member="DatPhong_SPs">
+    <Type Name="DatPhong_SP">
+      <Column Name="idDPSP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idDP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idSP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idPhong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="donGia" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="thanhTien" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="ngay" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="DatPhong_DatPhong_SP" Member="DatPhong" ThisKey="idDP" OtherKey="idDP" Type="DatPhong" IsForeignKey="true" />
+      <Association Name="SanPham_DatPhong_SP" Member="SanPham" ThisKey="idSP" OtherKey="idSP" Type="SanPham" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

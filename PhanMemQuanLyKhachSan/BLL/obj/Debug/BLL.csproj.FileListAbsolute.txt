@@ -1,0 +1,12 @@
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\bin\Debug\BLL.dll
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\bin\Debug\BLL.pdb
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\bin\Debug\DAL.dll
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\bin\Debug\DTO.dll
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\bin\Debug\DAL.pdb
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\bin\Debug\DAL.dll.config
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\bin\Debug\DTO.pdb
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\obj\Debug\BLL.dll
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\obj\Debug\BLL.pdb

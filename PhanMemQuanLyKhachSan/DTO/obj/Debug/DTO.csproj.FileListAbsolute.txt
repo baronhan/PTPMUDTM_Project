@@ -1,0 +1,6 @@
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\DTO\bin\Debug\DTO.dll
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\DTO\bin\Debug\DTO.pdb
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\DTO\obj\Debug\DTO.dll
+D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\DTO\obj\Debug\DTO.pdb
