@@ -25,3 +25,16 @@ D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachS
 D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_KhachHang.resources
 D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_Tang.resources
 D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_DatPhongtheoDoan.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_DatPhongtheoDoan.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_KhachHang.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_LoaiPhong.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_Main.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_Phong.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_SanPham.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_Tang.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_ThietBi.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_ThietBiTrongPhong.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Properties.Resources.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\GUI.csproj.CoreCompileInputs.cache

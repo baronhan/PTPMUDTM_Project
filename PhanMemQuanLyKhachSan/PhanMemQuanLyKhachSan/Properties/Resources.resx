@@ -121,28 +121,11 @@
   <data name="forward_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\forward_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/Properties/Resources.resx
   <data name="save_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="locked_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\locked_home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-=======
-  <data name="return_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\return_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="history_booking_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\history_booking_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="remove_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\remove_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="defaultAvatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\defaultAvatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="background_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/Properties/Resources.resx
   </data>
   <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -165,16 +148,8 @@
   <data name="add_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/Properties/Resources.resx
   <data name="non-booking" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\non-booking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-=======
-  <data name="add_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/Properties/Resources.resx
   </data>
   <data name="print_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\print_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -185,27 +160,9 @@
   <data name="update_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\update_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/Properties/Resources.resx
   <data name="search_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-=======
-  <data name="lock_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wedding" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wedding.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/Properties/Resources.resx
-  </data>
-  <data name="home_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="payment_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\payment_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="momo_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\momo_logo.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+
+
 </root>

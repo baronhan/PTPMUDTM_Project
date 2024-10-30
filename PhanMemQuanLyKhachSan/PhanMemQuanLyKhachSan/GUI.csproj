@@ -59,17 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/GUI.csproj
     <Compile Include="Form_DatPhongtheoDoan.cs">
-=======
-    <Compile Include="Form_ChangePassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_ChangePassword.Designer.cs">
-      <DependentUpon>Form_ChangePassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_HistoryBooking.cs">
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/GUI.csproj
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_DatPhongtheoDoan.Designer.cs">
@@ -93,29 +83,7 @@
     <Compile Include="Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/GUI.csproj
     <Compile Include="Form_Phong.cs">
-=======
-    <Compile Include="Form_Management.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Management.Designer.cs">
-      <DependentUpon>Form_Management.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Payment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Payment.Designer.cs">
-      <DependentUpon>Form_Payment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_PhieuDatPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_PhieuDatPhong.Designer.cs">
-      <DependentUpon>Form_PhieuDatPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Register.cs">
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/GUI.csproj
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Phong.Designer.cs">
@@ -127,23 +95,7 @@
     <Compile Include="Form_SanPham.Designer.cs">
       <DependentUpon>Form_SanPham.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/GUI.csproj
     <Compile Include="Form_Tang.cs">
-=======
-    <Compile Include="Form_Services.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Services.Designer.cs">
-      <DependentUpon>Form_Services.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_UserList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_UserList.Designer.cs">
-      <DependentUpon>Form_UserList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_UserProfile.cs">
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/GUI.csproj
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Tang.Designer.cs">
@@ -163,16 +115,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/GUI.csproj
     <EmbeddedResource Include="Form_DatPhongtheoDoan.resx">
       <DependentUpon>Form_DatPhongtheoDoan.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="Form_ChangePassword.resx">
-      <DependentUpon>Form_ChangePassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_HistoryBooking.resx">
-      <DependentUpon>Form_HistoryBooking.cs</DependentUpon>
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/GUI.csproj
     </EmbeddedResource>
     <EmbeddedResource Include="Form_KhachHang.resx">
       <DependentUpon>Form_KhachHang.cs</DependentUpon>
@@ -183,27 +127,12 @@
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/GUI.csproj
     <EmbeddedResource Include="Form_Phong.resx">
       <DependentUpon>Form_Phong.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="Form_Management.resx">
-      <DependentUpon>Form_Management.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Payment.resx">
-      <DependentUpon>Form_Payment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_PhieuDatPhong.resx">
-      <DependentUpon>Form_PhieuDatPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Register.resx">
-      <DependentUpon>Form_Register.cs</DependentUpon>
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/GUI.csproj
     </EmbeddedResource>
     <EmbeddedResource Include="Form_SanPham.resx">
       <DependentUpon>Form_SanPham.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/GUI.csproj
     <EmbeddedResource Include="Form_Tang.resx">
       <DependentUpon>Form_Tang.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,31 +141,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ThietBiTrongPhong.resx">
       <DependentUpon>Form_ThietBiTrongPhong.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="Form_Services.resx">
-      <DependentUpon>Form_Services.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_UserList.resx">
-      <DependentUpon>Form_UserList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_UserProfile.resx">
-      <DependentUpon>Form_UserProfile.cs</DependentUpon>
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/GUI.csproj
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/GUI.csproj
-=======
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <None Include="packages.config" />
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/GUI.csproj
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -254,16 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{868fd19c-76bd-4256-a0da-45648d743c06}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{5541909b-3c40-4c24-ad88-2f54dbd008af}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pushpin_icon.png" />
@@ -305,48 +205,17 @@
     <None Include="Resources\print_icon.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/GUI.csproj
     <None Include="Resources\search_icon1.png" />
-=======
-    <None Include="Resources\gift_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\service.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\coin_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\wedding.jpg" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <None Include="Images\momo_logo.jpeg" />
-    <Content Include="Images\room_001.jpeg" />
-    <Content Include="Images\room_002.jpeg" />
-    <Content Include="Images\room_003.jpeg" />
-    <Content Include="Images\room_004.jpeg" />
-    <Content Include="Images\room_005.jpeg" />
-    <Content Include="Images\room_006.jpeg" />
-    <Content Include="Images\room_007.jpeg" />
-    <Content Include="Images\room_008.jpeg" />
-    <Content Include="Images\room_009.jpeg" />
-    <Content Include="Images\room_010.jpeg" />
-    <Content Include="Images\room_011.jpeg" />
-    <Content Include="Images\room_012.jpeg" />
-    <Content Include="Images\room_013.jpeg" />
-    <Content Include="Images\room_014.jpeg" />
-    <None Include="Resources\payment_icon.png" />
-    <None Include="Resources\return_icon.png" />
-    <None Include="Resources\remove_icon.png" />
-    <None Include="Resources\add_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\defaultAvatar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hotel_background_image.jpg" />
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/GUI.csproj
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{868fd19c-76bd-4256-a0da-45648d743c06}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{5541909b-3c40-4c24-ad88-2f54dbd008af}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

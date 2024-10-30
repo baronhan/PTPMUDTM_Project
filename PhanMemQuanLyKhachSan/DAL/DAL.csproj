@@ -30,15 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/DAL/DAL.csproj
-=======
-    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
-      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/DAL/DAL.csproj
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -58,18 +49,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/DAL/DAL.csproj
     <Compile Include="DatPhongDAL.cs" />
     <Compile Include="DatPhong_CTDAL.cs" />
     <Compile Include="DatPhong_SPDVDAL.cs" />
     <Compile Include="KhachHangDAL.cs" />
     <Compile Include="LoaiPhongDAL.cs" />
-=======
-    <Compile Include="Dich_VuDAL.cs" />
-    <Compile Include="Hinh_Anh_PhongDAL.cs" />
-    <Compile Include="KhanhHangDAL.cs" />
-    <Compile Include="PhieuDatPhongDAL.cs" />
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/DAL/DAL.csproj
     <Compile Include="PhongDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -90,12 +74,6 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{5541909b-3c40-4c24-ad88-2f54dbd008af}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -109,6 +87,12 @@
     <None Include="QLKS.dbml.layout">
       <DependentUpon>QLKS.dbml</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{5541909b-3c40-4c24-ad88-2f54dbd008af}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

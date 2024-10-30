@@ -10,3 +10,31 @@ D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\obj\Debug\BLL.c
 D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\obj\Debug\BLL.csproj.Up2Date
 D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\obj\Debug\BLL.dll
 D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\BLL\obj\Debug\BLL.pdb
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\BLL.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\BLL.pdb
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\BCrypt.Net-Next.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\DAL.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\DTO.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\Newtonsoft.Json.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\System.Buffers.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\System.Memory.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\System.Numerics.Vectors.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\zxing.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\zxing.presentation.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\DAL.pdb
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\DAL.dll.config
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\DTO.pdb
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\BCrypt.Net-Next.xml
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\Newtonsoft.Json.xml
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\System.Buffers.xml
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\System.Memory.xml
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\System.Numerics.Vectors.xml
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\zxing.xml
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\bin\Debug\zxing.presentation.xml
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\obj\Debug\BLL.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\BLL\obj\Debug\BLL.pdb

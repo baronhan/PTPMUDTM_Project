@@ -67,26 +67,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/BLL/BLL.csproj
     <Compile Include="DatPhongBLL.cs" />
     <Compile Include="DatPhong_CTBLL.cs" />
     <Compile Include="DatPhong_SPBLL.cs" />
     <Compile Include="KhachHangBLL.cs" />
     <Compile Include="LoaiPhongBLL.cs" />
     <Compile Include="PhongBLL.cs" />
-=======
-    <Compile Include="Dich_VuBUL.cs" />
-    <Compile Include="Hinh_Anh_PhongBUL.cs" />
-    <Compile Include="KhachHangBUL.cs" />
-    <Compile Include="PhieuDatPhongBUL.cs" />
-    <Compile Include="PhongBUL.cs" />
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/BUL/BUL.csproj
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanPhamBLL.cs" />
     <Compile Include="TangBLL.cs" />
     <Compile Include="ThietBiBLL.cs" />
     <Compile Include="ThietBiTrongPhongBLL.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
@@ -97,9 +92,6 @@
       <Project>{5541909b-3c40-4c24-ad88-2f54dbd008af}</Project>
       <Name>DTO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

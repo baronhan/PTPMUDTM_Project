@@ -8,3 +8,17 @@ D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\DAL\obj\Debug\DAL.c
 D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\DAL\obj\Debug\DAL.dll
 D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\DAL\obj\Debug\DAL.pdb
+D:\HotelBooking\PhanMemQuanLyKhachSan\DAL\bin\Debug\DAL.dll.config
+D:\HotelBooking\PhanMemQuanLyKhachSan\DAL\bin\Debug\DAL.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\DAL\bin\Debug\DAL.pdb
+D:\HotelBooking\PhanMemQuanLyKhachSan\DAL\bin\Debug\DTO.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\DAL\bin\Debug\zxing.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\DAL\bin\Debug\zxing.presentation.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\DAL\bin\Debug\DTO.pdb
+D:\HotelBooking\PhanMemQuanLyKhachSan\DAL\bin\Debug\zxing.xml
+D:\HotelBooking\PhanMemQuanLyKhachSan\DAL\bin\Debug\zxing.presentation.xml
+D:\HotelBooking\PhanMemQuanLyKhachSan\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\HotelBooking\PhanMemQuanLyKhachSan\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\HotelBooking\PhanMemQuanLyKhachSan\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\HotelBooking\PhanMemQuanLyKhachSan\DAL\obj\Debug\DAL.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\DAL\obj\Debug\DAL.pdb

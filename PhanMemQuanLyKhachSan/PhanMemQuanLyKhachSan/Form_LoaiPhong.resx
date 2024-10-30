@@ -117,11 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-<<<<<<< HEAD:PhanMemQuanLyKhachSan/PhanMemQuanLyKhachSan/Form_LoaiPhong.resx
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-=======
-  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
->>>>>>> 701634267eb2bf27addb4500492a59520da15c0a:HotelBooking/HotelBooking/Form_HistoryBooking.resx
     <value>17, 17</value>
   </metadata>
 </root>

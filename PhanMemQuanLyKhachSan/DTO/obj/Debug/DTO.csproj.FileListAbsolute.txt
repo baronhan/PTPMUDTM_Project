@@ -4,3 +4,16 @@ D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\DTO\obj\Debug\DTO.c
 D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\DTO\obj\Debug\DTO.dll
 D:\HKI 2024-2025\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\DTO\obj\Debug\DTO.pdb
+D:\HotelBooking\PhanMemQuanLyKhachSan\DTO\bin\Debug\DTO.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\DTO\bin\Debug\DTO.pdb
+D:\HotelBooking\PhanMemQuanLyKhachSan\DTO\bin\Debug\Newtonsoft.Json.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\DTO\bin\Debug\zxing.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\DTO\bin\Debug\zxing.presentation.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\DTO\bin\Debug\Newtonsoft.Json.xml
+D:\HotelBooking\PhanMemQuanLyKhachSan\DTO\bin\Debug\zxing.xml
+D:\HotelBooking\PhanMemQuanLyKhachSan\DTO\bin\Debug\zxing.presentation.xml
+D:\HotelBooking\PhanMemQuanLyKhachSan\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\HotelBooking\PhanMemQuanLyKhachSan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\HotelBooking\PhanMemQuanLyKhachSan\DTO\obj\Debug\DTO.csproj.Up2Date
+D:\HotelBooking\PhanMemQuanLyKhachSan\DTO\obj\Debug\DTO.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\DTO\obj\Debug\DTO.pdb
