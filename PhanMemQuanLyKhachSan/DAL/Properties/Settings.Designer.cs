@@ -33,5 +33,17 @@ namespace DAL.Properties {
                 return ((string)(this["QuanLyKhachSanConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-3LQEMN31;Initial Catalog=DatPhongKhachSan;Persist Security Inf" +
+            "o=True;User ID=hotelbooking;Password=123;Encrypt=True;TrustServerCertificate=Tru" +
+            "e")]
+        public string DatPhongKhachSanConnectionString2 {
+            get {
+                return ((string)(this["DatPhongKhachSanConnectionString2"]));
+            }
+        }
     }
 }
