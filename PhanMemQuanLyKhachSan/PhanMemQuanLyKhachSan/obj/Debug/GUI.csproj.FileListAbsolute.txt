@@ -58,3 +58,11 @@ D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\bin\Debug\DAL.dll.co
 D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\GUI.csproj.Up2Date
 D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.exe
 D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.pdb
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_GoiYPhong.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_Login.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_QuenMatKhau.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_BaoCao.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\bin\Debug\Syncfusion.Compression.Base.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\bin\Debug\Syncfusion.DocIO.Base.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\bin\Debug\Syncfusion.OfficeChart.Base.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\bin\Debug\Syncfusion.XlsIO.Base.dll

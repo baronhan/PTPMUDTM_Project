@@ -120,6 +120,11 @@ namespace BLL
             return dal.getDanhSachSanPhamTheoPhong(idPhong, idDP);
         }
 
+        public bool IsSanPhamInPhieuDat(int idDP, int idSanPham)
+        {
+            return dal.IsSanPhamInPhieuDat(idDP, idSanPham);
+        }
+
         public bool updateChiTietPhongSanPham(DatPhong_SPDTO ctspDTO)
         {
             if (ctspDTO == null)

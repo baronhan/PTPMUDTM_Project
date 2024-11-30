@@ -171,5 +171,54 @@ namespace DAL
             }
         }
 
+        public List<PhongGreedyDTO> LayDanhSachPhongConTrong()
+        {
+            try
+            {
+                using (QLKSDataContext context = new QLKSDataContext())
+                {
+                    var danhSachPhongConTrong = context.Phongs
+                        .Where(p => p.trangThai == false)
+                        .Join(context.LoaiPhongs,
+                              phong => phong.idLoaiPhong,
+                              loaiPhong => loaiPhong.idLoaiPhong,
+                              (phong, loaiPhong) => new PhongGreedyDTO
+                              {
+                                  Id = phong.idPhong,
+                                  TenPhong = phong.tenPhong,
+                                  SoKhachToiDa = (int)loaiPhong.soNguoi,
+                                  GiaTien = (double)loaiPhong.donGia
+                              })
+                        .ToList();
+
+                    return danhSachPhongConTrong;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public bool KiemTraTrangThaiPhong(int idPhong)
+        {
+            try
+            {
+                var phong = context.Phongs.FirstOrDefault(p => p.idPhong == idPhong);
+
+                if (phong != null && phong.trangThai == false) 
+                {
+                    return true; 
+                }
+
+                return false;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
     }
 }

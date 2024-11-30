@@ -32,11 +32,98 @@ namespace PhanMemQuanLyKhachSan
         private Dictionary<int, DataTable> danhSachSanPhamTheoPhong = new Dictionary<int, DataTable>();
         private List<AvailableRoomDTO> availableRooms = new List<AvailableRoomDTO>();
         private List<AvailableRoomDTO> bookedRooms = new List<AvailableRoomDTO>();
+        private bool isRightClick = false;
 
         public Form_DatPhongtheoDoan(Form_Main form)
         {
             InitializeComponent();
             this.form = form;
+            dgvDanhSach.ContextMenuStrip = menuForButton;
+            dgvDanhSach.MouseDown += dgvDanhSach_MouseDown;
+            menuForButton.ItemClicked += menuForButton_ItemClicked;
+        }
+
+        private void dgvDanhSach_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                isRightClick = true;
+
+                var hitTest = dgvDanhSach.HitTest(e.X, e.Y);
+
+                if (hitTest.RowIndex >= 0)
+                {
+                    dgvDanhSach.ClearSelection();
+
+                    string idDP = dgvDanhSach.Rows[hitTest.RowIndex].Cells["idDP"].Value.ToString();
+
+                    menuForButton.Tag = idDP;
+
+                    menuForButton.Show(dgvDanhSach, e.Location);
+                }
+            }
+        }
+
+
+        private void menuForButton_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (e.ClickedItem.Text == "Trả phòng")
+            {
+                string idDP = menuForButton.Tag.ToString();
+
+                int idDatPhong = int.Parse(idDP);
+
+                MessageBox.Show($"Bạn đã chọn trả phòng với idDP: {idDP}");
+
+                string thanhToan = _datPhongBLL.getTienThanhToan(idDatPhong);
+
+                if (thanhToan != null)
+                {
+                    double soTien = double.Parse(thanhToan);
+
+                    string soTienVND = soTien.ToString("C0", new System.Globalization.CultureInfo("vi-VN"));
+
+                    DialogResult result = MessageBox.Show(
+                        $"Bạn cần thanh toán số tiền {soTienVND}",
+                        "Thông báo",
+                        MessageBoxButtons.YesNo, 
+                        MessageBoxIcon.Information);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        bool updateThanhToan = _datPhongBLL.UpdateThanhToan(idDatPhong);
+                        if (updateThanhToan)
+                        {
+                            var danhSachPhong = _datPhongBLL.LayDanhSachPhongByIdDP(idDatPhong);
+
+                            foreach (var phong in danhSachPhong)
+                            {
+                                bool updateTrangThaiPhong = _datPhongBLL.CapNhatTrangThaiPhong(phong.idPhong); 
+
+                                if (!updateTrangThaiPhong)
+                                {
+                                    MessageBox.Show($"Cập nhật trạng thái phòng {phong.tenPhong} thất bại.", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+
+                            MessageBox.Show("Đơn đặt phòng đã được thanh toán và các phòng đã được cập nhật trạng thái!", "Thông báo thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            loadDanhSachDatPhong();
+                            form.showRoom();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cập nhật trạng thái thanh toán thất bại!", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else if (result == DialogResult.No)
+                    {
+                        MessageBox.Show("Bạn chưa thực hiện thanh toán!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+
+
+
+            }
         }
 
         private void Form_DatPhongtheoDoan_Load(object sender, EventArgs e)
@@ -56,11 +143,10 @@ namespace PhanMemQuanLyKhachSan
         {
             btnThem.Visible = t;
             btnSua.Visible = t;
-            btnXoa.Visible = t;
+            btnXoaDatPhong.Visible = t;
             btnThoat.Visible = t;
             btnLuu.Visible = !t;
             btnBoQua.Visible = !t;
-            btnIn.Visible = t;
         }
         private void enableControl(bool t)
         {
@@ -347,6 +433,7 @@ namespace PhanMemQuanLyKhachSan
                                         if(kqCTSP == false)
                                         {
                                             MessageBox.Show("Thêm mới Chi tiết sản phẩm thất bại!");
+                                            loadDanhSachDatPhong();
                                             break;
                                         }    
                                     }
@@ -719,9 +806,9 @@ namespace PhanMemQuanLyKhachSan
                 DataTable dtSanPham = new DataTable();
                 dtSanPham.Columns.Add("Mã Sản Phẩm", typeof(int));
                 dtSanPham.Columns.Add("Tên Sản Phẩm", typeof(string));
-                dtSanPham.Columns.Add("Số lượng", typeof(Int32));
-                dtSanPham.Columns.Add("Giá", typeof(decimal));
-                dtSanPham.Columns.Add("Disable", typeof(bool));
+                dtSanPham.Columns.Add("Giá", typeof(decimal)); // Cột Đơn Giá
+                dtSanPham.Columns.Add("Số lượng", typeof(int)); // Cột Số lượng
+                dtSanPham.Columns.Add("Disable", typeof(bool)); // Cột Disable thêm vào để tránh lỗi
 
                 danhSachSanPhamTheoPhong[idPhong] = dtSanPham;
             }
@@ -736,29 +823,45 @@ namespace PhanMemQuanLyKhachSan
                 string tenSanPham = sanPhamRow["Tên sản phẩm"].ToString();
                 decimal donGia = Convert.ToDecimal(sanPhamRow["Giá"]);
 
-                int soLuong = 1; 
+                int soLuong = 1;  // Giá trị mặc định cho số lượng (có thể thay đổi nếu cần)
 
+                // Thêm Tên Sản Phẩm, Đơn Giá và Số Lượng vào dtSanPhamPhong
                 dtSanPhamPhong.Rows.Add(idSP, tenSanPham, donGia, soLuong);
             }
 
-
-
+            // Cập nhật DataGridView với dữ liệu mới
             dgvDanhSachSPDV.DataSource = dtSanPhamPhong;
-            dgvDanhSachSPDV.Columns[0].Visible = false;
-            dgvDanhSachSPDV.Columns[3].Visible = false;
+
+            // Kiểm tra xem cột "Disable" có tồn tại không trước khi thực hiện việc ẩn
+            if (dgvDanhSachSPDV.Columns.Contains("Disable"))
+            {
+                dgvDanhSachSPDV.Columns["Disable"].Visible = false;  // Ẩn cột "Disable"
+            }
+
+            // Ẩn các cột không cần thiết
+            dgvDanhSachSPDV.Columns["Mã Sản Phẩm"].Visible = false;  // Ẩn cột "Mã Sản Phẩm"
+
+            // Hiển thị cột "Tên Sản Phẩm", "Đơn Giá" và "Số Lượng"
+            dgvDanhSachSPDV.Columns["Tên Sản Phẩm"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvDanhSachSPDV.Columns["Giá"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvDanhSachSPDV.Columns["Số lượng"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
             dgvDanhSachSPDV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
 
+
+
+
+
         private void btnHuySanPham_Click(object sender, EventArgs e)
         {
-
             if (dgvDanhSach.SelectedRows.Count > 0)
             {
                 var selectedRow = dgvDanhSach.SelectedRows[0];
                 int idDP = (int)selectedRow.Cells["idDP"].Value;
 
-                if (dgvDanhSachSPDV.SelectedRows.Count == 0)
+                if (dgvDanhSachSPDV.SelectedRows.Count == 0)    
                 {
                     MessageBox.Show("Vui lòng chọn ít nhất một sản phẩm để hủy bỏ lựa chọn!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -777,22 +880,36 @@ namespace PhanMemQuanLyKhachSan
 
                         if (sanPhamRow != null)
                         {
-                            int soLuong = (int)sanPhamRow["Số lượng"];
-
-                            if (soLuong > 1)
+                            if (sanPhamRow["Số lượng"] != DBNull.Value)
                             {
-                                sanPhamRow["Số lượng"] = soLuong - 1;
+                                int soLuong;
+                                if (int.TryParse(sanPhamRow["Số lượng"].ToString(), out soLuong))
+                                {
+                                    if (soLuong > 1)
+                                    {
+                                        sanPhamRow["Số lượng"] = soLuong - 1;
+                                    }
+                                    else
+                                    {
+                                        var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa toàn bộ sản phẩm này?", "Xác nhận xóa", MessageBoxButtons.YesNo);
+                                        if (confirmResult == DialogResult.Yes)
+                                        {
+                                            removedProductIds.Add(idSanPham);
+                                            dtSanPhamPhong.Rows.Remove(sanPhamRow);
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Số lượng sản phẩm không hợp lệ.");
+                                }
                             }
                             else
                             {
-                                var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa toàn bộ sản phẩm này?", "Xác nhận xóa", MessageBoxButtons.YesNo);
-                                if (confirmResult == DialogResult.Yes)
-                                {
-                                    removedProductIds.Add(idSanPham);
-                                    dtSanPhamPhong.Rows.Remove(sanPhamRow);
-                                }
+                                MessageBox.Show("Số lượng sản phẩm không được để trống.");
                             }
                         }
+
                     }
 
                     dgvDanhSachSPDV.DataSource = dtSanPhamPhong;
@@ -800,6 +917,13 @@ namespace PhanMemQuanLyKhachSan
 
                 foreach (int idSanPham in removedProductIds)
                 {
+                    bool isSanPhamInPhieuDat = _chiTietSanPhamBLL.IsSanPhamInPhieuDat(idDP, idSanPham);
+
+                    if (!isSanPhamInPhieuDat)
+                    {
+                        continue;
+                    }
+
                     bool checkDeleteCTSP = _chiTietSanPhamBLL.deleteSanPhamByRoom(idDP, idSanPham);
 
                     if (!checkDeleteCTSP)
@@ -811,9 +935,64 @@ namespace PhanMemQuanLyKhachSan
 
                 removedProductIds.Clear();
             }
+
+            if (dgvDanhSach.SelectedRows.Count > 0)
+            {
+            }
             else
             {
-                MessageBox.Show("Không có đơn phòng nào được chọn.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (dgvDanhSachSPDV.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Vui lòng chọn ít nhất một sản phẩm để hủy bỏ lựa chọn!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                int idPhong = (int)dgvDanhSachPhongDat.SelectedRows[0].Cells["Mã Phòng"].Value;
+
+                if (danhSachSanPhamTheoPhong.ContainsKey(idPhong))
+                {
+                    DataTable dtSanPhamPhong = danhSachSanPhamTheoPhong[idPhong];
+
+                    foreach (DataGridViewRow selectedRowSP in dgvDanhSachSPDV.SelectedRows)
+                    {
+                        int idSanPham = (int)selectedRowSP.Cells["Mã sản phẩm"].Value;
+                        var sanPhamRow = dtSanPhamPhong.AsEnumerable().FirstOrDefault(row => (int)row["Mã sản phẩm"] == idSanPham);
+
+                        if (sanPhamRow != null)
+                        {
+                            if (sanPhamRow["Số lượng"] != DBNull.Value)
+                            {
+                                int soLuong;
+                                if (int.TryParse(sanPhamRow["Số lượng"].ToString(), out soLuong))
+                                {
+                                    if (soLuong > 1)
+                                    {
+                                        sanPhamRow["Số lượng"] = soLuong - 1;
+                                    }
+                                    else
+                                    {
+                                        var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa toàn bộ sản phẩm này?", "Xác nhận xóa", MessageBoxButtons.YesNo);
+                                        if (confirmResult == DialogResult.Yes)
+                                        {
+                                            removedProductIds.Add(idSanPham);
+                                            dtSanPhamPhong.Rows.Remove(sanPhamRow);
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Số lượng sản phẩm không hợp lệ.");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Số lượng sản phẩm không được để trống.");
+                            }
+                        }
+
+                    }
+
+                    dgvDanhSachSPDV.DataSource = dtSanPhamPhong;
+                }
             }
         }
 
@@ -908,39 +1087,53 @@ namespace PhanMemQuanLyKhachSan
 
         private void dgvDanhSach_SelectionChanged(object sender, EventArgs e)
         {
-            if(dgvDanhSach.SelectedRows.Count > 0)
-            {   
-                dtableSanPham.Clear();
+            if (isRightClick)
+            {
+                isRightClick = false;
+                return;
+            }
 
+            if (dgvDanhSach.SelectedRows.Count > 0)
+            {
+                var selectedRow = dgvDanhSach.SelectedRows[0];
+                DateTime ngayTra = (DateTime)selectedRow.Cells["NgayTra"].Value; 
+
+                if (ngayTra <= DateTime.Now)
+                {
+                    MessageBox.Show("Không thể sửa phiếu đặt này vì ngày trả đã qua hạn!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                dtableSanPham.Clear();
                 showHideControl(false);
 
                 dgvDanhSachSPDV.DataSource = dtableSanPham;
 
                 tabControl.SelectedTab = tabChiTiet;
 
-                var selectedRow = dgvDanhSach.SelectedRows[0];
-
-
                 txtThanhTien.Text = selectedRow.Cells["soTien"].Value.ToString();
                 txtGhiChu.Text = selectedRow.Cells["ghiChu"].Value.ToString();
                 dtpNgayDat.Value = (DateTime)selectedRow.Cells["ngayDat"].Value;
                 dtpNgayTra.Value = (DateTime)selectedRow.Cells["ngayTra"].Value;
                 nbrSoNguoiO.Value = (int)selectedRow.Cells["soNguoiO"].Value;
+
                 if (selectedRow.Cells["status"].Value != null && selectedRow.Cells["status"].Value is int status)
                 {
-                    cbTrangThai.SelectedValue = status; 
+                    cbTrangThai.SelectedValue = status;
                 }
                 else
                 {
-                    cbTrangThai.SelectedValue = 0; 
+                    cbTrangThai.SelectedValue = 0;
                 }
+
                 cbKhachHang.SelectedValue = (int)selectedRow.Cells["idKH"].Value;
 
                 int idDP = (int)selectedRow.Cells["idDP"].Value;
 
                 loadDanhSachPhongDaDat(idDP);
-            }    
+            }
         }
+
 
         private void loadDanhSachPhongDaDat(int idDP)
         {
@@ -1016,5 +1209,29 @@ namespace PhanMemQuanLyKhachSan
             }
         }
 
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Form_GoiYPhong form = new Form_GoiYPhong();
+            form.Show();
+        }
+
+        private void btnXoaDatPhong_Click(object sender, EventArgs e)
+        {
+            if (dgvDanhSach.SelectedRows.Count > 0)
+            {
+                var selectedRow = dgvDanhSach.SelectedRows[0];
+                int idDP = (int)selectedRow.Cells["idDP"].Value;
+
+                if (_datPhongBLL.VoHieuHoaPhieuDatPhong(idDP))
+                {
+                    MessageBox.Show("Bạn đã vô hiệu hóa phiếu đặt thành công");
+                    loadDanhSachDatPhong();
+                }
+                else
+                {
+                    MessageBox.Show("Vô hiệu hóa phiếu đặt phòng thất bại!");
+                }    
+            }
+        }
     }
 }

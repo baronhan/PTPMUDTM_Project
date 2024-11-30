@@ -48,18 +48,9 @@ namespace DAL
     partial void InsertTang(Tang instance);
     partial void UpdateTang(Tang instance);
     partial void DeleteTang(Tang instance);
-    partial void InsertUser(User instance);
-    partial void UpdateUser(User instance);
-    partial void DeleteUser(User instance);
-    partial void InsertRight(Right instance);
-    partial void UpdateRight(Right instance);
-    partial void DeleteRight(Right instance);
     partial void InsertSanPham(SanPham instance);
     partial void UpdateSanPham(SanPham instance);
     partial void DeleteSanPham(SanPham instance);
-    partial void InsertFunc(Func instance);
-    partial void UpdateFunc(Func instance);
-    partial void DeleteFunc(Func instance);
     partial void InsertKhachHang(KhachHang instance);
     partial void UpdateKhachHang(KhachHang instance);
     partial void DeleteKhachHang(KhachHang instance);
@@ -69,6 +60,9 @@ namespace DAL
     partial void InsertDatPhong_SP(DatPhong_SP instance);
     partial void UpdateDatPhong_SP(DatPhong_SP instance);
     partial void DeleteDatPhong_SP(DatPhong_SP instance);
+    partial void InsertUser(User instance);
+    partial void UpdateUser(User instance);
+    partial void DeleteUser(User instance);
     #endregion
 		
 		public QLKSDataContext() : 
@@ -149,35 +143,11 @@ namespace DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<User> Users
-		{
-			get
-			{
-				return this.GetTable<User>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Right> Rights
-		{
-			get
-			{
-				return this.GetTable<Right>();
-			}
-		}
-		
 		public System.Data.Linq.Table<SanPham> SanPhams
 		{
 			get
 			{
 				return this.GetTable<SanPham>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Func> Funcs
-		{
-			get
-			{
-				return this.GetTable<Func>();
 			}
 		}
 		
@@ -202,6 +172,14 @@ namespace DAL
 			get
 			{
 				return this.GetTable<DatPhong_SP>();
+			}
+		}
+		
+		public System.Data.Linq.Table<User> Users
+		{
+			get
+			{
+				return this.GetTable<User>();
 			}
 		}
 	}
@@ -1516,460 +1494,6 @@ namespace DAL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[User]")]
-	public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _uid;
-		
-		private string _fullName;
-		
-		private string _userName;
-		
-		private string _passWord;
-		
-		private System.Nullable<System.DateTime> _last_pwd_change;
-		
-		private System.Nullable<bool> _isGroup;
-		
-		private System.Nullable<bool> _disable;
-		
-		private EntitySet<Right> _Rights;
-		
-		private EntitySet<DatPhong> _DatPhongs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnuidChanging(int value);
-    partial void OnuidChanged();
-    partial void OnfullNameChanging(string value);
-    partial void OnfullNameChanged();
-    partial void OnuserNameChanging(string value);
-    partial void OnuserNameChanged();
-    partial void OnpassWordChanging(string value);
-    partial void OnpassWordChanged();
-    partial void Onlast_pwd_changeChanging(System.Nullable<System.DateTime> value);
-    partial void Onlast_pwd_changeChanged();
-    partial void OnisGroupChanging(System.Nullable<bool> value);
-    partial void OnisGroupChanged();
-    partial void OndisableChanging(System.Nullable<bool> value);
-    partial void OndisableChanged();
-    #endregion
-		
-		public User()
-		{
-			this._Rights = new EntitySet<Right>(new Action<Right>(this.attach_Rights), new Action<Right>(this.detach_Rights));
-			this._DatPhongs = new EntitySet<DatPhong>(new Action<DatPhong>(this.attach_DatPhongs), new Action<DatPhong>(this.detach_DatPhongs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_uid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int uid
-		{
-			get
-			{
-				return this._uid;
-			}
-			set
-			{
-				if ((this._uid != value))
-				{
-					this.OnuidChanging(value);
-					this.SendPropertyChanging();
-					this._uid = value;
-					this.SendPropertyChanged("uid");
-					this.OnuidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fullName", DbType="NVarChar(255)")]
-		public string fullName
-		{
-			get
-			{
-				return this._fullName;
-			}
-			set
-			{
-				if ((this._fullName != value))
-				{
-					this.OnfullNameChanging(value);
-					this.SendPropertyChanging();
-					this._fullName = value;
-					this.SendPropertyChanged("fullName");
-					this.OnfullNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userName", DbType="NVarChar(255)")]
-		public string userName
-		{
-			get
-			{
-				return this._userName;
-			}
-			set
-			{
-				if ((this._userName != value))
-				{
-					this.OnuserNameChanging(value);
-					this.SendPropertyChanging();
-					this._userName = value;
-					this.SendPropertyChanged("userName");
-					this.OnuserNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_passWord", DbType="NVarChar(255)")]
-		public string passWord
-		{
-			get
-			{
-				return this._passWord;
-			}
-			set
-			{
-				if ((this._passWord != value))
-				{
-					this.OnpassWordChanging(value);
-					this.SendPropertyChanging();
-					this._passWord = value;
-					this.SendPropertyChanged("passWord");
-					this.OnpassWordChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_last_pwd_change", DbType="DateTime")]
-		public System.Nullable<System.DateTime> last_pwd_change
-		{
-			get
-			{
-				return this._last_pwd_change;
-			}
-			set
-			{
-				if ((this._last_pwd_change != value))
-				{
-					this.Onlast_pwd_changeChanging(value);
-					this.SendPropertyChanging();
-					this._last_pwd_change = value;
-					this.SendPropertyChanged("last_pwd_change");
-					this.Onlast_pwd_changeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_isGroup", DbType="Bit")]
-		public System.Nullable<bool> isGroup
-		{
-			get
-			{
-				return this._isGroup;
-			}
-			set
-			{
-				if ((this._isGroup != value))
-				{
-					this.OnisGroupChanging(value);
-					this.SendPropertyChanging();
-					this._isGroup = value;
-					this.SendPropertyChanged("isGroup");
-					this.OnisGroupChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_disable", DbType="Bit")]
-		public System.Nullable<bool> disable
-		{
-			get
-			{
-				return this._disable;
-			}
-			set
-			{
-				if ((this._disable != value))
-				{
-					this.OndisableChanging(value);
-					this.SendPropertyChanging();
-					this._disable = value;
-					this.SendPropertyChanged("disable");
-					this.OndisableChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Right", Storage="_Rights", ThisKey="uid", OtherKey="idUser")]
-		public EntitySet<Right> Rights
-		{
-			get
-			{
-				return this._Rights;
-			}
-			set
-			{
-				this._Rights.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_DatPhong", Storage="_DatPhongs", ThisKey="uid", OtherKey="idUser")]
-		public EntitySet<DatPhong> DatPhongs
-		{
-			get
-			{
-				return this._DatPhongs;
-			}
-			set
-			{
-				this._DatPhongs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Rights(Right entity)
-		{
-			this.SendPropertyChanging();
-			entity.User = this;
-		}
-		
-		private void detach_Rights(Right entity)
-		{
-			this.SendPropertyChanging();
-			entity.User = null;
-		}
-		
-		private void attach_DatPhongs(DatPhong entity)
-		{
-			this.SendPropertyChanging();
-			entity.User = this;
-		}
-		
-		private void detach_DatPhongs(DatPhong entity)
-		{
-			this.SendPropertyChanging();
-			entity.User = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Rights")]
-	public partial class Right : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _fund_code;
-		
-		private int _idUser;
-		
-		private string _userRight;
-		
-		private EntityRef<User> _User;
-		
-		private EntityRef<Func> _Func;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onfund_codeChanging(string value);
-    partial void Onfund_codeChanged();
-    partial void OnidUserChanging(int value);
-    partial void OnidUserChanged();
-    partial void OnuserRightChanging(string value);
-    partial void OnuserRightChanged();
-    #endregion
-		
-		public Right()
-		{
-			this._User = default(EntityRef<User>);
-			this._Func = default(EntityRef<Func>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fund_code", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string fund_code
-		{
-			get
-			{
-				return this._fund_code;
-			}
-			set
-			{
-				if ((this._fund_code != value))
-				{
-					if (this._Func.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onfund_codeChanging(value);
-					this.SendPropertyChanging();
-					this._fund_code = value;
-					this.SendPropertyChanged("fund_code");
-					this.Onfund_codeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idUser", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int idUser
-		{
-			get
-			{
-				return this._idUser;
-			}
-			set
-			{
-				if ((this._idUser != value))
-				{
-					if (this._User.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidUserChanging(value);
-					this.SendPropertyChanging();
-					this._idUser = value;
-					this.SendPropertyChanged("idUser");
-					this.OnidUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userRight", DbType="NVarChar(50)")]
-		public string userRight
-		{
-			get
-			{
-				return this._userRight;
-			}
-			set
-			{
-				if ((this._userRight != value))
-				{
-					this.OnuserRightChanging(value);
-					this.SendPropertyChanging();
-					this._userRight = value;
-					this.SendPropertyChanged("userRight");
-					this.OnuserRightChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Right", Storage="_User", ThisKey="idUser", OtherKey="uid", IsForeignKey=true)]
-		public User User
-		{
-			get
-			{
-				return this._User.Entity;
-			}
-			set
-			{
-				User previousValue = this._User.Entity;
-				if (((previousValue != value) 
-							|| (this._User.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._User.Entity = null;
-						previousValue.Rights.Remove(this);
-					}
-					this._User.Entity = value;
-					if ((value != null))
-					{
-						value.Rights.Add(this);
-						this._idUser = value.uid;
-					}
-					else
-					{
-						this._idUser = default(int);
-					}
-					this.SendPropertyChanged("User");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Func_Right", Storage="_Func", ThisKey="fund_code", OtherKey="fund_code", IsForeignKey=true)]
-		public Func Func
-		{
-			get
-			{
-				return this._Func.Entity;
-			}
-			set
-			{
-				Func previousValue = this._Func.Entity;
-				if (((previousValue != value) 
-							|| (this._Func.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Func.Entity = null;
-						previousValue.Rights.Remove(this);
-					}
-					this._Func.Entity = value;
-					if ((value != null))
-					{
-						value.Rights.Add(this);
-						this._fund_code = value.fund_code;
-					}
-					else
-					{
-						this._fund_code = default(string);
-					}
-					this.SendPropertyChanged("Func");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SanPham")]
 	public partial class SanPham : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -2129,144 +1653,6 @@ namespace DAL
 		{
 			this.SendPropertyChanging();
 			entity.SanPham = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Func")]
-	public partial class Func : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _fund_code;
-		
-		private string _description;
-		
-		private string _tips;
-		
-		private EntitySet<Right> _Rights;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onfund_codeChanging(string value);
-    partial void Onfund_codeChanged();
-    partial void OndescriptionChanging(string value);
-    partial void OndescriptionChanged();
-    partial void OntipsChanging(string value);
-    partial void OntipsChanged();
-    #endregion
-		
-		public Func()
-		{
-			this._Rights = new EntitySet<Right>(new Action<Right>(this.attach_Rights), new Action<Right>(this.detach_Rights));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fund_code", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string fund_code
-		{
-			get
-			{
-				return this._fund_code;
-			}
-			set
-			{
-				if ((this._fund_code != value))
-				{
-					this.Onfund_codeChanging(value);
-					this.SendPropertyChanging();
-					this._fund_code = value;
-					this.SendPropertyChanged("fund_code");
-					this.Onfund_codeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_description", DbType="NVarChar(255)")]
-		public string description
-		{
-			get
-			{
-				return this._description;
-			}
-			set
-			{
-				if ((this._description != value))
-				{
-					this.OndescriptionChanging(value);
-					this.SendPropertyChanging();
-					this._description = value;
-					this.SendPropertyChanged("description");
-					this.OndescriptionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tips", DbType="NVarChar(255)")]
-		public string tips
-		{
-			get
-			{
-				return this._tips;
-			}
-			set
-			{
-				if ((this._tips != value))
-				{
-					this.OntipsChanging(value);
-					this.SendPropertyChanging();
-					this._tips = value;
-					this.SendPropertyChanged("tips");
-					this.OntipsChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Func_Right", Storage="_Rights", ThisKey="fund_code", OtherKey="fund_code")]
-		public EntitySet<Right> Rights
-		{
-			get
-			{
-				return this._Rights;
-			}
-			set
-			{
-				this._Rights.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Rights(Right entity)
-		{
-			this.SendPropertyChanging();
-			entity.Func = this;
-		}
-		
-		private void detach_Rights(Right entity)
-		{
-			this.SendPropertyChanging();
-			entity.Func = null;
 		}
 	}
 	
@@ -3349,6 +2735,216 @@ namespace DAL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[User]")]
+	public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _uid;
+		
+		private string _fullName;
+		
+		private string _userName;
+		
+		private string _passWord;
+		
+		private System.Nullable<System.DateTime> _last_pwd_change;
+		
+		private System.Nullable<bool> _disable;
+		
+		private EntitySet<DatPhong> _DatPhongs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnuidChanging(int value);
+    partial void OnuidChanged();
+    partial void OnfullNameChanging(string value);
+    partial void OnfullNameChanged();
+    partial void OnuserNameChanging(string value);
+    partial void OnuserNameChanged();
+    partial void OnpassWordChanging(string value);
+    partial void OnpassWordChanged();
+    partial void Onlast_pwd_changeChanging(System.Nullable<System.DateTime> value);
+    partial void Onlast_pwd_changeChanged();
+    partial void OndisableChanging(System.Nullable<bool> value);
+    partial void OndisableChanged();
+    #endregion
+		
+		public User()
+		{
+			this._DatPhongs = new EntitySet<DatPhong>(new Action<DatPhong>(this.attach_DatPhongs), new Action<DatPhong>(this.detach_DatPhongs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_uid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int uid
+		{
+			get
+			{
+				return this._uid;
+			}
+			set
+			{
+				if ((this._uid != value))
+				{
+					this.OnuidChanging(value);
+					this.SendPropertyChanging();
+					this._uid = value;
+					this.SendPropertyChanged("uid");
+					this.OnuidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fullName", DbType="NVarChar(255)")]
+		public string fullName
+		{
+			get
+			{
+				return this._fullName;
+			}
+			set
+			{
+				if ((this._fullName != value))
+				{
+					this.OnfullNameChanging(value);
+					this.SendPropertyChanging();
+					this._fullName = value;
+					this.SendPropertyChanged("fullName");
+					this.OnfullNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userName", DbType="NVarChar(255)")]
+		public string userName
+		{
+			get
+			{
+				return this._userName;
+			}
+			set
+			{
+				if ((this._userName != value))
+				{
+					this.OnuserNameChanging(value);
+					this.SendPropertyChanging();
+					this._userName = value;
+					this.SendPropertyChanged("userName");
+					this.OnuserNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_passWord", DbType="NVarChar(255)")]
+		public string passWord
+		{
+			get
+			{
+				return this._passWord;
+			}
+			set
+			{
+				if ((this._passWord != value))
+				{
+					this.OnpassWordChanging(value);
+					this.SendPropertyChanging();
+					this._passWord = value;
+					this.SendPropertyChanged("passWord");
+					this.OnpassWordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_last_pwd_change", DbType="DateTime")]
+		public System.Nullable<System.DateTime> last_pwd_change
+		{
+			get
+			{
+				return this._last_pwd_change;
+			}
+			set
+			{
+				if ((this._last_pwd_change != value))
+				{
+					this.Onlast_pwd_changeChanging(value);
+					this.SendPropertyChanging();
+					this._last_pwd_change = value;
+					this.SendPropertyChanged("last_pwd_change");
+					this.Onlast_pwd_changeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_disable", DbType="Bit")]
+		public System.Nullable<bool> disable
+		{
+			get
+			{
+				return this._disable;
+			}
+			set
+			{
+				if ((this._disable != value))
+				{
+					this.OndisableChanging(value);
+					this.SendPropertyChanging();
+					this._disable = value;
+					this.SendPropertyChanged("disable");
+					this.OndisableChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_DatPhong", Storage="_DatPhongs", ThisKey="uid", OtherKey="idUser")]
+		public EntitySet<DatPhong> DatPhongs
+		{
+			get
+			{
+				return this._DatPhongs;
+			}
+			set
+			{
+				this._DatPhongs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_DatPhongs(DatPhong entity)
+		{
+			this.SendPropertyChanging();
+			entity.User = this;
+		}
+		
+		private void detach_DatPhongs(DatPhong entity)
+		{
+			this.SendPropertyChanging();
+			entity.User = null;
 		}
 	}
 }

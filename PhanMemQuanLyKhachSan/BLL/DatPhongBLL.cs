@@ -54,14 +54,59 @@ namespace BLL
             return dal.addDatPhong(_datPhong);
         }
 
+        public bool CapNhatTrangThaiPhong(int idPhong)
+        {
+            return dal.CapNhatTrangThaiPhong(idPhong);
+        }
+
+        public XuatExcel excel(int maPD)
+        {
+            if(maPD <= 0)
+            {
+                MessageBox.Show("Mã phiếu đặt không hợp lệ!");
+                return null;
+            }    
+
+            return dal.excel(maPD);
+        }
+
         public List<DatPhongDTO> getDanhSachDatPhong()
         {
             return dal.getDanhSachDatPhong();
         }
 
+        public string getTienThanhToan(int idDatPhong)
+        {
+            if (idDatPhong <= 0)
+            {
+                MessageBox.Show("Mã đặt phòng không hợp lệ!");
+            }
+
+            return dal.getTienThanhToan(idDatPhong);
+        }
+
+        public List<PhongDTO> LayDanhSachPhongByIdDP(int idDatPhong)
+        {
+            return dal.LayDanhSachPhongByIdDP(idDatPhong);
+        }
+
         public bool updateDatPhong(DatPhongDTO datPhongDTO)
         {
             return dal.updateDatPhong(datPhongDTO);
+        }
+
+        public bool UpdateThanhToan(int idDatPhong)
+        {
+            return dal.UpdateThanhToan(idDatPhong);
+        }
+
+        public bool VoHieuHoaPhieuDatPhong(int idDP)
+        {
+            if(idDP <= 0)
+            {
+                MessageBox.Show("Mã phiếu đặt không hợp lệ!");
+            }    
+            return dal.VoHieuHoaPhieuDatPhong(idDP);
         }
     }
 }

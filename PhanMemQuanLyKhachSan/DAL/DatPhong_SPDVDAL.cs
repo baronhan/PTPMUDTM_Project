@@ -144,6 +144,12 @@ namespace DAL
             return table;
         }
 
+        public bool IsSanPhamInPhieuDat(int idDP, int idSanPham)
+        {
+            return context.DatPhong_SPs
+                      .Any(ct => ct.idDP == idDP && ct.idSP == idSanPham);
+        }
+
         public bool updateChiTietPhongSanPham(DatPhong_SPDTO ctspDTO)
         {
             try

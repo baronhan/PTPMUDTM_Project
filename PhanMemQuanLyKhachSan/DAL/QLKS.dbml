@@ -64,28 +64,6 @@
       <Association Name="Tang_Phong" Member="Phongs" ThisKey="idTang" OtherKey="idTang" Type="Phong" />
     </Type>
   </Table>
-  <Table Name="dbo.[User]" Member="Users">
-    <Type Name="User">
-      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="fullName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="userName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="passWord" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="last_pwd_change" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="isGroup" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="disable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="User_Right" Member="Rights" ThisKey="uid" OtherKey="idUser" Type="Right" />
-      <Association Name="User_DatPhong" Member="DatPhongs" ThisKey="uid" OtherKey="idUser" Type="DatPhong" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Rights" Member="Rights">
-    <Type Name="Right">
-      <Column Name="fund_code" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="idUser" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="userRight" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="User_Right" Member="User" ThisKey="idUser" OtherKey="uid" Type="User" IsForeignKey="true" />
-      <Association Name="Func_Right" Member="Func" ThisKey="fund_code" OtherKey="fund_code" Type="Func" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.SanPham" Member="SanPhams">
     <Type Name="SanPham">
       <Column Name="idSP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -93,14 +71,6 @@
       <Column Name="donGia" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
       <Column Name="disable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="SanPham_DatPhong_SP" Member="DatPhong_SPs" ThisKey="idSP" OtherKey="idSP" Type="DatPhong_SP" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Func" Member="Funcs">
-    <Type Name="Func">
-      <Column Name="fund_code" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="tips" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Association Name="Func_Right" Member="Rights" ThisKey="fund_code" OtherKey="fund_code" Type="Right" />
     </Type>
   </Table>
   <Table Name="dbo.KhachHang" Member="KhachHangs">
@@ -150,6 +120,17 @@
       <Column Name="ngay" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="DatPhong_DatPhong_SP" Member="DatPhong" ThisKey="idDP" OtherKey="idDP" Type="DatPhong" IsForeignKey="true" />
       <Association Name="SanPham_DatPhong_SP" Member="SanPham" ThisKey="idSP" OtherKey="idSP" Type="SanPham" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fullName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="passWord" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="last_pwd_change" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="disable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="User_DatPhong" Member="DatPhongs" ThisKey="uid" OtherKey="idUser" Type="DatPhong" />
     </Type>
   </Table>
 </Database>

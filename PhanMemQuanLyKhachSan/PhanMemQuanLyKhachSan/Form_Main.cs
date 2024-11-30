@@ -16,6 +16,8 @@ namespace PhanMemQuanLyKhachSan
     {
         TangBLL tangBLL = new TangBLL();
         PhongBLL phongBLL = new PhongBLL();
+        DatPhongBLL datPhongBLL = new DatPhongBLL();
+        
         private static int idPhong = 0;
 
         public Form_Main()
@@ -23,6 +25,7 @@ namespace PhanMemQuanLyKhachSan
             InitializeComponent();
             showRoom();
         }
+
 
         private Image ResizeImage(Image img, Size size)
         {
@@ -99,28 +102,23 @@ namespace PhanMemQuanLyKhachSan
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?",
+                                         "Xác nhận",
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
 
-        private void menuForButton_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            if(e.ClickedItem.Text == "Đặt phòng")
+            if (result == DialogResult.Yes)
             {
-                ContextMenuStrip menu = sender as ContextMenuStrip;
-                if(menu != null && menu.SourceControl is Button phongButton)
-                {
-                    string idPhong = phongButton.Tag.ToString();
-                    MessageBox.Show($"Bạn đã chọn phòng có ID: {idPhong}");
+                Form_Login formLogin = new Form_Login();
+                formLogin.Show();
 
-                    DatPhong(idPhong);
+                this.Hide();
 
-                }    
-            }    
-        }
-
-        private void DatPhong(string idPhong)
-        {
-            MessageBox.Show($"Đã đặt phòng ID: {idPhong}");
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void LOAIPHONG_Click(object sender, EventArgs e)
@@ -168,6 +166,39 @@ namespace PhanMemQuanLyKhachSan
         private void DATPHONG_Click(object sender, EventArgs e)
         {
             Form_DatPhongtheoDoan form = new Form_DatPhongtheoDoan(this);
+            form.Show();
+        }
+
+        private void quênMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_QuenMatKhau form = new Form_QuenMatKhau();
+            form.Show();
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?",
+                                         "Xác nhận",
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Form_Login formLogin = new Form_Login();
+                formLogin.Show();
+
+                this.Hide(); 
+
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            Form_BaoCao form = new Form_BaoCao();
             form.Show();
         }
     }

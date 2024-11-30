@@ -246,5 +246,5 @@ WHERE ctsp.idDP = 7 AND ctsp.idPhong = 17;
 
 select * from SanPham
 
-select * from DatPhong_SP
-where idDP = 7 and idSP = 5 and 
+--select * from DatPhong_SP
+--where idDP = 7 and idSP = 5 and 

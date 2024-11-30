@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DatPhongtheoDoan));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnThem = new System.Windows.Forms.ToolStripButton();
+            this.btnSua = new System.Windows.Forms.ToolStripButton();
+            this.btnLuu = new System.Windows.Forms.ToolStripButton();
+            this.btnBoQua = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btnThoat = new System.Windows.Forms.ToolStripButton();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabDanhSach = new System.Windows.Forms.TabPage();
             this.panelDanhSach = new System.Windows.Forms.Panel();
@@ -78,13 +86,9 @@
             this.lblNgayDat = new System.Windows.Forms.Label();
             this.cbKhachHang = new System.Windows.Forms.ComboBox();
             this.lblKhachHang = new System.Windows.Forms.Label();
-            this.btnThem = new System.Windows.Forms.ToolStripButton();
-            this.btnXoa = new System.Windows.Forms.ToolStripButton();
-            this.btnSua = new System.Windows.Forms.ToolStripButton();
-            this.btnLuu = new System.Windows.Forms.ToolStripButton();
-            this.btnBoQua = new System.Windows.Forms.ToolStripButton();
-            this.btnIn = new System.Windows.Forms.ToolStripButton();
-            this.btnThoat = new System.Windows.Forms.ToolStripButton();
+            this.menuForButton = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnTraPhong = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnXoaDatPhong = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabDanhSach.SuspendLayout();
@@ -109,6 +113,7 @@
             this.panel5.SuspendLayout();
             this.dgvThongTinKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbrSoNguoiO)).BeginInit();
+            this.menuForButton.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -118,17 +123,77 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnThem,
-            this.btnXoa,
+            this.btnXoaDatPhong,
             this.btnSua,
             this.btnLuu,
             this.btnBoQua,
-            this.btnIn,
+            this.toolStripButton1,
             this.btnThoat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1320, 44);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnThem
+            // 
+            this.btnThem.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.add_icon;
+            this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(50, 41);
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.update_icon;
+            this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(40, 41);
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.save_icon;
+            this.btnLuu.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(38, 41);
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnBoQua
+            // 
+            this.btnBoQua.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.skip_icon;
+            this.btnBoQua.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBoQua.Name = "btnBoQua";
+            this.btnBoQua.Size = new System.Drawing.Size(58, 41);
+            this.btnBoQua.Text = "Bỏ qua";
+            this.btnBoQua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(47, 41);
+            this.toolStripButton1.Text = "Gợi ý";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.exit;
+            this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(49, 41);
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // tabControl
             // 
@@ -679,75 +744,30 @@
             this.lblKhachHang.TabIndex = 0;
             this.lblKhachHang.Text = "Khách hàng";
             // 
-            // btnThem
+            // menuForButton
             // 
-            this.btnThem.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.add_icon;
-            this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(50, 41);
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.menuForButton.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuForButton.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnTraPhong});
+            this.menuForButton.Name = "menuForButton";
+            this.menuForButton.Size = new System.Drawing.Size(150, 30);
             // 
-            // btnXoa
+            // btnTraPhong
             // 
-            this.btnXoa.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.delete_icon;
-            this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(37, 41);
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnTraPhong.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.forward_icon;
+            this.btnTraPhong.Name = "btnTraPhong";
+            this.btnTraPhong.Size = new System.Drawing.Size(149, 26);
+            this.btnTraPhong.Text = "Trả phòng";
             // 
-            // btnSua
+            // btnXoaDatPhong
             // 
-            this.btnSua.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.update_icon;
-            this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(40, 41);
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.save_icon;
-            this.btnLuu.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(38, 41);
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnBoQua
-            // 
-            this.btnBoQua.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.skip_icon;
-            this.btnBoQua.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnBoQua.Name = "btnBoQua";
-            this.btnBoQua.Size = new System.Drawing.Size(58, 41);
-            this.btnBoQua.Text = "Bỏ qua";
-            this.btnBoQua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
-            // 
-            // btnIn
-            // 
-            this.btnIn.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.print_icon;
-            this.btnIn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(29, 41);
-            this.btnIn.Text = "In";
-            this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.exit;
-            this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(49, 41);
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.btnXoaDatPhong.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.delete_icon;
+            this.btnXoaDatPhong.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnXoaDatPhong.Name = "btnXoaDatPhong";
+            this.btnXoaDatPhong.Size = new System.Drawing.Size(37, 41);
+            this.btnXoaDatPhong.Text = "Xóa";
+            this.btnXoaDatPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnXoaDatPhong.Click += new System.EventHandler(this.btnXoaDatPhong_Click);
             // 
             // Form_DatPhongtheoDoan
             // 
@@ -793,6 +813,7 @@
             this.dgvThongTinKhachHang.ResumeLayout(false);
             this.dgvThongTinKhachHang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbrSoNguoiO)).EndInit();
+            this.menuForButton.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -803,7 +824,6 @@
         private System.Windows.Forms.ToolStripButton btnThoat;
         private System.Windows.Forms.ToolStripButton btnLuu;
         private System.Windows.Forms.ToolStripButton btnSua;
-        private System.Windows.Forms.ToolStripButton btnXoa;
         private System.Windows.Forms.ToolStripButton btnThem;
         private System.Windows.Forms.ToolStripButton btnBoQua;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -847,7 +867,6 @@
         private System.Windows.Forms.DataGridView dgvDanhSachPhongDat;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ToolStripButton btnIn;
         private System.Windows.Forms.NumericUpDown nbrSoNguoiO;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtThanhTien;
@@ -857,5 +876,9 @@
         private System.Windows.Forms.Button btnThemSanPham;
         private System.Windows.Forms.Button btnThanhTien;
         private System.Windows.Forms.Button btnHuyTimKiem;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ContextMenuStrip menuForButton;
+        private System.Windows.Forms.ToolStripMenuItem btnTraPhong;
+        private System.Windows.Forms.ToolStripButton btnXoaDatPhong;
     }
 }

@@ -126,5 +126,14 @@ namespace BLL
             return dal.updateTrangThaiPhong(idPhong, trangThai);
         }
 
+        public List<PhongGreedyDTO> LayDanhSachPhongConTrong()
+        {
+            return dal.LayDanhSachPhongConTrong();
+        }
+
+        public bool KiemTraTrangThaiPhong(int idPhong)
+        {
+            return dal.KiemTraTrangThaiPhong(idPhong);
+        }
     }
 }
