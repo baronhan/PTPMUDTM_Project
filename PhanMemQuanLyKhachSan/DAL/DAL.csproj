@@ -54,6 +54,7 @@
     <Compile Include="DatPhong_SPDVDAL.cs" />
     <Compile Include="KhachHangDAL.cs" />
     <Compile Include="LoaiPhongDAL.cs" />
+    <Compile Include="NhomNguoiDungDAL.cs" />
     <Compile Include="PhanQuyenDAL.cs" />
     <Compile Include="PhongDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="TangDAL.cs" />
     <Compile Include="ThietBiDAL.cs" />
     <Compile Include="ThietBiTrongPhongDAL.cs" />
+    <Compile Include="TrangFormDAL.cs" />
     <Compile Include="UserDAL.cs" />
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />

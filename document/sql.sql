@@ -277,13 +277,28 @@ INSERT INTO NhomNguoiDung(name)
 VALUES 
     ('Admin'),
     (N'Lễ tân')
-select * from NhomNguoiDung
+select * from Form
 
 INSERT INTO Form (url)
 VALUES 
     ('Form_BaoCao'),
     ('Form_DatPhongtheoDoan'),
-    ('/profile'),
-    ('/reports'),
-    ('/help');
+    ('Form_GoiYPhong'),
+    ('Form_KhachHang'),
+    ('Form_Login'),
+    ('Form_Main'),
+    ('Form_Phong'),
+    ('Form_DoiMatKhau'),
+    ('Form_SanPham'),
+    ('Form_Tang'),
+    ('Form_ThietBi'),
+    ('Form_ThietBiTrongPhong'),
+    ('Form_LoaiPhong');
+
+	SELECT p.*
+FROM Permission p
+INNER JOIN Form pg ON p.formID = pg.formID
+WHERE p.userType = 2
+  AND pg.url = 'Form_Main'
+  AND p.CoQuyen = 1
 

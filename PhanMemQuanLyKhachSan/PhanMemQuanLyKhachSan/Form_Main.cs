@@ -270,11 +270,51 @@ namespace PhanMemQuanLyKhachSan
                 return;
             }
         }
-
-        private void btnBaoCao_Click(object sender, EventArgs e)
+        private void xuấtPhiếuĐặtPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_BaoCao form = new Form_BaoCao();
 
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
+        }
+
+        private void quảnLýToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_NhomNguoiDung form = new Form_NhomNguoiDung();
+
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
+        }
+
+        private void quảnLýTrangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_TrangForm form = new Form_TrangForm();
+
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
+        }
+
+        private void quảnLýPhânQuyềnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_PhanQuyen form = new Form_PhanQuyen();
             if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
             {
                 form.Show();

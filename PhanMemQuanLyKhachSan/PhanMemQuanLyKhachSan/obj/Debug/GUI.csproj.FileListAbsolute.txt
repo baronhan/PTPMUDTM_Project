@@ -66,3 +66,7 @@ D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\bin\Debug\Syncfusion
 D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\bin\Debug\Syncfusion.DocIO.Base.dll
 D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\bin\Debug\Syncfusion.OfficeChart.Base.dll
 D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\bin\Debug\Syncfusion.XlsIO.Base.dll
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_NhomNguoiDung.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_TrangForm.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_ChiTietQuyen.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_PhanQuyen.resources

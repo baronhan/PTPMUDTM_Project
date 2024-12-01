@@ -79,6 +79,12 @@
     <Compile Include="Form_BaoCao.Designer.cs">
       <DependentUpon>Form_BaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_ChiTietQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ChiTietQuyen.Designer.cs">
+      <DependentUpon>Form_ChiTietQuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_DatPhongtheoDoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,18 @@
     </Compile>
     <Compile Include="Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NhomNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NhomNguoiDung.Designer.cs">
+      <DependentUpon>Form_NhomNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PhanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PhanQuyen.Designer.cs">
+      <DependentUpon>Form_PhanQuyen.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Phong.cs">
       <SubType>Form</SubType>
@@ -151,10 +169,19 @@
     <Compile Include="Form_ThietBiTrongPhong.Designer.cs">
       <DependentUpon>Form_ThietBiTrongPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_TrangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TrangForm.Designer.cs">
+      <DependentUpon>Form_TrangForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_BaoCao.resx">
       <DependentUpon>Form_BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ChiTietQuyen.resx">
+      <DependentUpon>Form_ChiTietQuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DatPhongtheoDoan.resx">
       <DependentUpon>Form_DatPhongtheoDoan.cs</DependentUpon>
@@ -174,6 +201,12 @@
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_NhomNguoiDung.resx">
+      <DependentUpon>Form_NhomNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PhanQuyen.resx">
+      <DependentUpon>Form_PhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Phong.resx">
       <DependentUpon>Form_Phong.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ThietBiTrongPhong.resx">
       <DependentUpon>Form_ThietBiTrongPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TrangForm.resx">
+      <DependentUpon>Form_TrangForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

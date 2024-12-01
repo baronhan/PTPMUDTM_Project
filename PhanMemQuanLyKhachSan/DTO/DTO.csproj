@@ -57,6 +57,8 @@
     <Compile Include="DatPhong_SPDTO.cs" />
     <Compile Include="KhachHangDTO.cs" />
     <Compile Include="LoaiPhongDTO.cs" />
+    <Compile Include="NhomNguoiDungDTO.cs" />
+    <Compile Include="PhanQuyenDTO.cs" />
     <Compile Include="PhongDTO.cs" />
     <Compile Include="PhongGreedyDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="TangDTO.cs" />
     <Compile Include="ThietBiDTO.cs" />
     <Compile Include="ThietBiTrongPhongDTO.cs" />
+    <Compile Include="TrangFormDTO.cs" />
     <Compile Include="UserDTO.cs" />
     <Compile Include="XuatExcel.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />

@@ -183,7 +183,7 @@ namespace PhanMemQuanLyKhachSan
                 }   
                 else
                 {
-                    tb = "Vui lòng chọn một Tầng bạn muốn xóa trong danh sách Tầng!";
+                    tb = "Vui lòng chọn một Tầng bạn muốn chỉnh sửa trong danh sách Tầng!";
                 }    
             }
 
