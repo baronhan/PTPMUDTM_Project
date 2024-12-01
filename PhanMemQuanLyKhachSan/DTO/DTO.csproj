@@ -52,10 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AvailableRoomDTO.cs" />
+    <Compile Include="ConvertUltil.cs" />
     <Compile Include="DatPhongDTO.cs" />
     <Compile Include="DatPhong_CTDTO.cs" />
     <Compile Include="DatPhong_SPDTO.cs" />
     <Compile Include="KhachHangDTO.cs" />
+    <Compile Include="KhachHangExcel.cs" />
     <Compile Include="LoaiPhongDTO.cs" />
     <Compile Include="NhomNguoiDungDTO.cs" />
     <Compile Include="PhanQuyenDTO.cs" />
@@ -68,11 +70,41 @@
     <Compile Include="ThietBiTrongPhongDTO.cs" />
     <Compile Include="TrangFormDTO.cs" />
     <Compile Include="UserDTO.cs" />
+    <Compile Include="WordExport.cs" />
     <Compile Include="XuatExcel.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

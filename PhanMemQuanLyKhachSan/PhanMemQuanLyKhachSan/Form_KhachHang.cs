@@ -282,5 +282,38 @@ namespace PhanMemQuanLyKhachSan
             }
 
         }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            List<KhachHangExcel> kh = bll.getDanhSachKhachHangExcel();
+
+            DataTable table = ConvertUltil.ConvertListToDataTable(kh.ToList());
+
+            table.PrimaryKey = null;
+
+            DataColumn col = new DataColumn("STT", typeof(int));
+            table.Columns.Add(col);
+            col.SetOrdinal(0);
+
+            int len = table.Rows.Count;
+            for (int i = 0; i < len; i++)
+            {
+                table.Rows[i]["STT"] = i + 1;
+            }
+
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+            int soluong = table.Rows.Count;
+            dic.Add("soluongkhachhang", soluong.ToString());
+
+            WordExport wd = new WordExport();
+            wd.WordUltil(Application.StartupPath + "/Template.dotx", true);
+
+            wd.WriteFields(dic);
+
+            wd.WriteTable(table, 1);
+
+            // Thông báo hoàn thành
+            MessageBox.Show("Xuất xong!");
+        }
     }
 }

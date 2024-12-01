@@ -127,5 +127,50 @@ namespace DAL
                 return null;
             }
         }
+
+        public List<KhachHangExcel> getDanhSachKhachHangExcel()
+        {
+            try
+            {
+                List<KhachHangExcel> list = context.KhachHangs
+                    .Select(kh => new KhachHangExcel
+                    {
+                        hoTen = kh.hoTen,
+                        dienThoai = kh.dienThoai,
+                        email = kh.email,
+                        diaChi = kh.diaChi,
+                    }).ToList();
+
+                return list;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public List<KhachHangDTO> getDanhSachKhachHangByIDs(List<int> idKhachHangs)
+        {
+            using (var dbContext = new QLKSDataContext())
+            {
+                var result = dbContext.KhachHangs
+                    .Where(kh => idKhachHangs.Contains(kh.idKH))
+                    .Select(kh => new KhachHangDTO
+                    {
+                        idKH = kh.idKH,
+                        hoTen = kh.hoTen,
+                        gioiTinh = (bool)kh.gioiTinh,
+                        cccd = kh.cccd,
+                        dienThoai = kh.dienThoai,
+                        email = kh.email,
+                        diaChi = kh.diaChi
+                    })
+                    .ToList();
+
+                return result;
+            }
+        }
+
     }
 }

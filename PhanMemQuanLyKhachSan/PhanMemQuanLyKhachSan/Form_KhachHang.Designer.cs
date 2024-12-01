@@ -49,6 +49,7 @@
             this.btnXoa = new System.Windows.Forms.ToolStripButton();
             this.btnSua = new System.Windows.Forms.ToolStripButton();
             this.btnLuu = new System.Windows.Forms.ToolStripButton();
+            this.btnIn = new System.Windows.Forms.ToolStripButton();
             this.btnBoQua = new System.Windows.Forms.ToolStripButton();
             this.btnThoat = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
@@ -222,6 +223,7 @@
             this.btnXoa,
             this.btnSua,
             this.btnLuu,
+            this.btnIn,
             this.btnBoQua,
             this.btnThoat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -269,6 +271,16 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnIn
+            // 
+            this.btnIn.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.print_icon;
+            this.btnIn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(29, 44);
+            this.btnIn.Text = "In";
+            this.btnIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnBoQua
             // 
@@ -337,5 +349,6 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtDienThoai;
         private System.Windows.Forms.Label lblDienThoai;
+        private System.Windows.Forms.ToolStripButton btnIn;
     }
 }

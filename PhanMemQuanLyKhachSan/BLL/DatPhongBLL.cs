@@ -75,6 +75,11 @@ namespace BLL
             return dal.getDanhSachDatPhong();
         }
 
+        public List<DatPhongDTO> getDanhSachDatPhongDaThanhToan()
+        {
+            return dal.getDanhSachDatPhongDaThanhToan();
+        }
+
         public string getTienThanhToan(int idDatPhong)
         {
             if (idDatPhong <= 0)

@@ -149,5 +149,15 @@ namespace BLL
 
             return dal.getKhachHangByID((int)idKH);
         }
+
+        public List<KhachHangExcel> getDanhSachKhachHangExcel()
+        {
+            return dal.getDanhSachKhachHangExcel();
+        }
+
+        public List<KhachHangDTO> getDanhSachKhachHangByIDs(List<int> idKhachHangs)
+        {
+            return dal.getDanhSachKhachHangByIDs(idKhachHangs);
+        }
     }
 }

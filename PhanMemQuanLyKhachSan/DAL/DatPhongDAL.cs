@@ -331,5 +331,64 @@ namespace DAL
                 return false;
             }
         }
+
+        public List<DatPhongDTO> getDanhSachDatPhongDaThanhToan()
+        {
+            try
+            {
+                var list = new List<DatPhongDTO>();
+
+                var query = from dp in context.DatPhongs
+                            join kh in context.KhachHangs on dp.idKH equals kh.idKH
+                            where dp.disable == false && dp.status == true
+                            select new
+                            {
+                                dp.idDP,
+                                TenKhachHang = kh.hoTen,
+                                dp.idKH,
+                                ngayDat = dp.ngayDat,
+                                ngayTra = dp.ngayTra,
+                                dp.soTien,
+                                dp.soNguoiO,
+                                dp.idUser,
+                                dp.status,
+                                dp.disable,
+                                dp.theoDoan,
+                                dp.ghiChu,
+                                create_date = dp.create_date,
+                                update_date = dp.update_date,
+                                update_by = dp.update_by
+                            };
+
+                foreach (var item in query)
+                {
+                    list.Add(new DatPhongDTO
+                    {
+                        idDP = item.idDP,
+                        idKH = (int)item.idKH,
+                        ngayDat = (DateTime)item.ngayDat,
+                        ngayTra = (DateTime)item.ngayTra,
+                        soTien = (decimal)item.soTien,
+                        soNguoiO = (int)item.soNguoiO,
+                        idUser = (int)item.idUser,
+                        status = (bool)item.status,
+                        disable = (bool)item.disable,
+                        theoDoan = (bool)item.theoDoan,
+                        ghiChu = item.ghiChu,
+                        create_date = item.create_date ?? DateTime.MinValue,
+                        update_date = item.update_date ?? DateTime.MinValue,
+                        update_by = item.update_by ?? 0,
+                        hoTen = item.TenKhachHang,
+                        statusText = ((bool)item.status ? "Hoàn tất" : "Chưa hoàn tất")
+                    });
+                }
+                return list;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
     }
 }

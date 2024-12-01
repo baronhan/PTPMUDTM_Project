@@ -324,5 +324,31 @@ namespace PhanMemQuanLyKhachSan
                 MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
             }
         }
+
+        private void thốngKêDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_ThongKeDoanhThu form = new Form_ThongKeDoanhThu();
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
+        }
+
+        private void thốngKêKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_ThongKeKhachHang form = new Form_ThongKeKhachHang();
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
+        }
     }
 }
