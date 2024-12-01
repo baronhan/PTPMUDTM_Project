@@ -29,6 +29,25 @@ namespace DAL
             }
         }
 
+        public int GetUserTypeID(int uid)
+        {
+            try
+            {
+                var user = context.Users.FirstOrDefault(u => u.uid == uid);
+                if (user != null)
+                {
+                    return user.userType.Value;
+                }
+
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return 0;
+            }
+        }
+
         public bool KiemTraMatKhauCu(string passWord)
         {
             try

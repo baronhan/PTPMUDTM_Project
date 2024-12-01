@@ -17,13 +17,16 @@ namespace PhanMemQuanLyKhachSan
         TangBLL tangBLL = new TangBLL();
         PhongBLL phongBLL = new PhongBLL();
         DatPhongBLL datPhongBLL = new DatPhongBLL();
-        
-        private static int idPhong = 0;
+        PhanQuyenBLL phanQuyenBLL = new PhanQuyenBLL();
 
-        public Form_Main()
+        private static int idPhong = 0;
+        public int userTypeId { get; set; }
+
+        public Form_Main(int userTypeId)
         {
             InitializeComponent();
             showRoom();
+            this.userTypeId = userTypeId;
         }
 
 
@@ -124,55 +127,127 @@ namespace PhanMemQuanLyKhachSan
         private void LOAIPHONG_Click(object sender, EventArgs e)
         {
             Form_LoaiPhong form = new Form_LoaiPhong();
-            form.Show();
+
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
         }
 
         private void PHONG_Click(object sender, EventArgs e)
         {
             Form_Phong form = new Form_Phong(this);
-            form.Show();
+
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
         }
 
         private void SANPHAM_Click(object sender, EventArgs e)
         {
             Form_SanPham form = new Form_SanPham();
-            form.Show();
+
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
         }
 
         private void THIETBI_Click(object sender, EventArgs e)
         {
             Form_ThietBi form = new Form_ThietBi();
-            form.Show();
+
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
         }
 
         private void PHONG_THIETBI_Click(object sender, EventArgs e)
         {
             Form_ThietBiTrongPhong form = new Form_ThietBiTrongPhong();
-            form.Show();
+
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
         }
 
         private void KHACHHANG_Click(object sender, EventArgs e)
         {
             Form_KhachHang form = new Form_KhachHang();
-            form.Show();
+
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
         }
 
         private void TANG_Click(object sender, EventArgs e)
         {
             Form_Tang form = new Form_Tang(this);
-            form.Show();
+
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
         }
 
         private void DATPHONG_Click(object sender, EventArgs e)
         {
             Form_DatPhongtheoDoan form = new Form_DatPhongtheoDoan(this);
-            form.Show();
+
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
         }
 
         private void quênMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_QuenMatKhau form = new Form_QuenMatKhau();
-            form.Show();
+
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -199,7 +274,15 @@ namespace PhanMemQuanLyKhachSan
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
             Form_BaoCao form = new Form_BaoCao();
-            form.Show();
+
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
         }
     }
 }

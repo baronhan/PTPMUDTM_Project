@@ -60,6 +60,15 @@ namespace DAL
     partial void InsertDatPhong_SP(DatPhong_SP instance);
     partial void UpdateDatPhong_SP(DatPhong_SP instance);
     partial void DeleteDatPhong_SP(DatPhong_SP instance);
+    partial void InsertForm(Form instance);
+    partial void UpdateForm(Form instance);
+    partial void DeleteForm(Form instance);
+    partial void InsertPermission(Permission instance);
+    partial void UpdatePermission(Permission instance);
+    partial void DeletePermission(Permission instance);
+    partial void InsertNhomNguoiDung(NhomNguoiDung instance);
+    partial void UpdateNhomNguoiDung(NhomNguoiDung instance);
+    partial void DeleteNhomNguoiDung(NhomNguoiDung instance);
     partial void InsertUser(User instance);
     partial void UpdateUser(User instance);
     partial void DeleteUser(User instance);
@@ -172,6 +181,30 @@ namespace DAL
 			get
 			{
 				return this.GetTable<DatPhong_SP>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Form> Forms
+		{
+			get
+			{
+				return this.GetTable<Form>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Permission> Permissions
+		{
+			get
+			{
+				return this.GetTable<Permission>();
+			}
+		}
+		
+		public System.Data.Linq.Table<NhomNguoiDung> NhomNguoiDungs
+		{
+			get
+			{
+				return this.GetTable<NhomNguoiDung>();
 			}
 		}
 		
@@ -2738,6 +2771,454 @@ namespace DAL
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Form")]
+	public partial class Form : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _formID;
+		
+		private string _url;
+		
+		private EntitySet<Permission> _Permissions;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnformIDChanging(int value);
+    partial void OnformIDChanged();
+    partial void OnurlChanging(string value);
+    partial void OnurlChanged();
+    #endregion
+		
+		public Form()
+		{
+			this._Permissions = new EntitySet<Permission>(new Action<Permission>(this.attach_Permissions), new Action<Permission>(this.detach_Permissions));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_formID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int formID
+		{
+			get
+			{
+				return this._formID;
+			}
+			set
+			{
+				if ((this._formID != value))
+				{
+					this.OnformIDChanging(value);
+					this.SendPropertyChanging();
+					this._formID = value;
+					this.SendPropertyChanged("formID");
+					this.OnformIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_url", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string url
+		{
+			get
+			{
+				return this._url;
+			}
+			set
+			{
+				if ((this._url != value))
+				{
+					this.OnurlChanging(value);
+					this.SendPropertyChanging();
+					this._url = value;
+					this.SendPropertyChanged("url");
+					this.OnurlChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Form_Permission", Storage="_Permissions", ThisKey="formID", OtherKey="formID")]
+		public EntitySet<Permission> Permissions
+		{
+			get
+			{
+				return this._Permissions;
+			}
+			set
+			{
+				this._Permissions.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Permissions(Permission entity)
+		{
+			this.SendPropertyChanging();
+			entity.Form = this;
+		}
+		
+		private void detach_Permissions(Permission entity)
+		{
+			this.SendPropertyChanging();
+			entity.Form = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Permission")]
+	public partial class Permission : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _userType;
+		
+		private int _formID;
+		
+		private bool _coQuyen;
+		
+		private EntityRef<Form> _Form;
+		
+		private EntityRef<NhomNguoiDung> _NhomNguoiDung;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnuserTypeChanging(int value);
+    partial void OnuserTypeChanged();
+    partial void OnformIDChanging(int value);
+    partial void OnformIDChanged();
+    partial void OncoQuyenChanging(bool value);
+    partial void OncoQuyenChanged();
+    #endregion
+		
+		public Permission()
+		{
+			this._Form = default(EntityRef<Form>);
+			this._NhomNguoiDung = default(EntityRef<NhomNguoiDung>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userType", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int userType
+		{
+			get
+			{
+				return this._userType;
+			}
+			set
+			{
+				if ((this._userType != value))
+				{
+					if (this._NhomNguoiDung.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnuserTypeChanging(value);
+					this.SendPropertyChanging();
+					this._userType = value;
+					this.SendPropertyChanged("userType");
+					this.OnuserTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_formID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int formID
+		{
+			get
+			{
+				return this._formID;
+			}
+			set
+			{
+				if ((this._formID != value))
+				{
+					if (this._Form.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnformIDChanging(value);
+					this.SendPropertyChanging();
+					this._formID = value;
+					this.SendPropertyChanged("formID");
+					this.OnformIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_coQuyen", DbType="Bit NOT NULL")]
+		public bool coQuyen
+		{
+			get
+			{
+				return this._coQuyen;
+			}
+			set
+			{
+				if ((this._coQuyen != value))
+				{
+					this.OncoQuyenChanging(value);
+					this.SendPropertyChanging();
+					this._coQuyen = value;
+					this.SendPropertyChanged("coQuyen");
+					this.OncoQuyenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Form_Permission", Storage="_Form", ThisKey="formID", OtherKey="formID", IsForeignKey=true)]
+		public Form Form
+		{
+			get
+			{
+				return this._Form.Entity;
+			}
+			set
+			{
+				Form previousValue = this._Form.Entity;
+				if (((previousValue != value) 
+							|| (this._Form.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Form.Entity = null;
+						previousValue.Permissions.Remove(this);
+					}
+					this._Form.Entity = value;
+					if ((value != null))
+					{
+						value.Permissions.Add(this);
+						this._formID = value.formID;
+					}
+					else
+					{
+						this._formID = default(int);
+					}
+					this.SendPropertyChanged("Form");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NhomNguoiDung_Permission", Storage="_NhomNguoiDung", ThisKey="userType", OtherKey="userType", IsForeignKey=true)]
+		public NhomNguoiDung NhomNguoiDung
+		{
+			get
+			{
+				return this._NhomNguoiDung.Entity;
+			}
+			set
+			{
+				NhomNguoiDung previousValue = this._NhomNguoiDung.Entity;
+				if (((previousValue != value) 
+							|| (this._NhomNguoiDung.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._NhomNguoiDung.Entity = null;
+						previousValue.Permissions.Remove(this);
+					}
+					this._NhomNguoiDung.Entity = value;
+					if ((value != null))
+					{
+						value.Permissions.Add(this);
+						this._userType = value.userType;
+					}
+					else
+					{
+						this._userType = default(int);
+					}
+					this.SendPropertyChanged("NhomNguoiDung");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.NhomNguoiDung")]
+	public partial class NhomNguoiDung : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _userType;
+		
+		private string _name;
+		
+		private EntitySet<Permission> _Permissions;
+		
+		private EntitySet<User> _Users;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnuserTypeChanging(int value);
+    partial void OnuserTypeChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    #endregion
+		
+		public NhomNguoiDung()
+		{
+			this._Permissions = new EntitySet<Permission>(new Action<Permission>(this.attach_Permissions), new Action<Permission>(this.detach_Permissions));
+			this._Users = new EntitySet<User>(new Action<User>(this.attach_Users), new Action<User>(this.detach_Users));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userType", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int userType
+		{
+			get
+			{
+				return this._userType;
+			}
+			set
+			{
+				if ((this._userType != value))
+				{
+					this.OnuserTypeChanging(value);
+					this.SendPropertyChanging();
+					this._userType = value;
+					this.SendPropertyChanged("userType");
+					this.OnuserTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NhomNguoiDung_Permission", Storage="_Permissions", ThisKey="userType", OtherKey="userType")]
+		public EntitySet<Permission> Permissions
+		{
+			get
+			{
+				return this._Permissions;
+			}
+			set
+			{
+				this._Permissions.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NhomNguoiDung_User", Storage="_Users", ThisKey="userType", OtherKey="userType")]
+		public EntitySet<User> Users
+		{
+			get
+			{
+				return this._Users;
+			}
+			set
+			{
+				this._Users.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Permissions(Permission entity)
+		{
+			this.SendPropertyChanging();
+			entity.NhomNguoiDung = this;
+		}
+		
+		private void detach_Permissions(Permission entity)
+		{
+			this.SendPropertyChanging();
+			entity.NhomNguoiDung = null;
+		}
+		
+		private void attach_Users(User entity)
+		{
+			this.SendPropertyChanging();
+			entity.NhomNguoiDung = this;
+		}
+		
+		private void detach_Users(User entity)
+		{
+			this.SendPropertyChanging();
+			entity.NhomNguoiDung = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[User]")]
 	public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -2752,11 +3233,15 @@ namespace DAL
 		
 		private string _passWord;
 		
+		private System.Nullable<int> _userType;
+		
 		private System.Nullable<System.DateTime> _last_pwd_change;
 		
 		private System.Nullable<bool> _disable;
 		
 		private EntitySet<DatPhong> _DatPhongs;
+		
+		private EntityRef<NhomNguoiDung> _NhomNguoiDung;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2770,6 +3255,8 @@ namespace DAL
     partial void OnuserNameChanged();
     partial void OnpassWordChanging(string value);
     partial void OnpassWordChanged();
+    partial void OnuserTypeChanging(System.Nullable<int> value);
+    partial void OnuserTypeChanged();
     partial void Onlast_pwd_changeChanging(System.Nullable<System.DateTime> value);
     partial void Onlast_pwd_changeChanged();
     partial void OndisableChanging(System.Nullable<bool> value);
@@ -2779,6 +3266,7 @@ namespace DAL
 		public User()
 		{
 			this._DatPhongs = new EntitySet<DatPhong>(new Action<DatPhong>(this.attach_DatPhongs), new Action<DatPhong>(this.detach_DatPhongs));
+			this._NhomNguoiDung = default(EntityRef<NhomNguoiDung>);
 			OnCreated();
 		}
 		
@@ -2862,6 +3350,30 @@ namespace DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userType", DbType="Int")]
+		public System.Nullable<int> userType
+		{
+			get
+			{
+				return this._userType;
+			}
+			set
+			{
+				if ((this._userType != value))
+				{
+					if (this._NhomNguoiDung.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnuserTypeChanging(value);
+					this.SendPropertyChanging();
+					this._userType = value;
+					this.SendPropertyChanged("userType");
+					this.OnuserTypeChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_last_pwd_change", DbType="DateTime")]
 		public System.Nullable<System.DateTime> last_pwd_change
 		{
@@ -2912,6 +3424,40 @@ namespace DAL
 			set
 			{
 				this._DatPhongs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NhomNguoiDung_User", Storage="_NhomNguoiDung", ThisKey="userType", OtherKey="userType", IsForeignKey=true)]
+		public NhomNguoiDung NhomNguoiDung
+		{
+			get
+			{
+				return this._NhomNguoiDung.Entity;
+			}
+			set
+			{
+				NhomNguoiDung previousValue = this._NhomNguoiDung.Entity;
+				if (((previousValue != value) 
+							|| (this._NhomNguoiDung.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._NhomNguoiDung.Entity = null;
+						previousValue.Users.Remove(this);
+					}
+					this._NhomNguoiDung.Entity = value;
+					if ((value != null))
+					{
+						value.Users.Add(this);
+						this._userType = value.userType;
+					}
+					else
+					{
+						this._userType = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("NhomNguoiDung");
+				}
 			}
 		}
 		

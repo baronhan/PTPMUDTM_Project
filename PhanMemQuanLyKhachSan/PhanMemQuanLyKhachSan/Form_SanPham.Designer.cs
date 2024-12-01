@@ -231,6 +231,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form_SanPham";
+            this.Tag = "Form_SanPham";
             this.Text = "Form_SanPham";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

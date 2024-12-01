@@ -152,6 +152,7 @@
             this.Controls.Add(this.dgvDanhSach);
             this.Controls.Add(this.panelTimKiem);
             this.Name = "Form_BaoCao";
+            this.Tag = "Form_BaoCao";
             this.Text = "Form_BaoCao";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).EndInit();
             this.panelTimKiem.ResumeLayout(false);

@@ -23,6 +23,7 @@ namespace PhanMemQuanLyKhachSan
         DatPhongBLL _datPhongBLL = new DatPhongBLL();
         DatPhong_CTBLL _datPhongChiTietBLL = new DatPhong_CTBLL();  
         DatPhong_SPBLL _chiTietSanPhamBLL = new DatPhong_SPBLL();
+        PhanQuyenBLL phanQuyenBLL = new PhanQuyenBLL();
 
         private bool _btnThem = false;
         private DataTable dtableDatPhong;
@@ -33,6 +34,7 @@ namespace PhanMemQuanLyKhachSan
         private List<AvailableRoomDTO> availableRooms = new List<AvailableRoomDTO>();
         private List<AvailableRoomDTO> bookedRooms = new List<AvailableRoomDTO>();
         private bool isRightClick = false;
+        private int userTypeId;
 
         public Form_DatPhongtheoDoan(Form_Main form)
         {
@@ -41,6 +43,7 @@ namespace PhanMemQuanLyKhachSan
             dgvDanhSach.ContextMenuStrip = menuForButton;
             dgvDanhSach.MouseDown += dgvDanhSach_MouseDown;
             menuForButton.ItemClicked += menuForButton_ItemClicked;
+            userTypeId = form.userTypeId;
         }
 
         private void dgvDanhSach_MouseDown(object sender, MouseEventArgs e)
@@ -1212,7 +1215,15 @@ namespace PhanMemQuanLyKhachSan
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Form_GoiYPhong form = new Form_GoiYPhong();
-            form.Show();
+
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
         }
 
         private void btnXoaDatPhong_Click(object sender, EventArgs e)

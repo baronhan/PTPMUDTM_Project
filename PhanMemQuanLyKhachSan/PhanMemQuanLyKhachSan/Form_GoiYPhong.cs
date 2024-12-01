@@ -101,8 +101,5 @@ namespace PhanMemQuanLyKhachSan
 
             return ketQuaToiUu.Select(p => p.TenPhong).ToList();
         }
-
-
-
     }
 }

@@ -122,15 +122,41 @@
       <Association Name="SanPham_DatPhong_SP" Member="SanPham" ThisKey="idSP" OtherKey="idSP" Type="SanPham" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Form" Member="Forms">
+    <Type Name="Form">
+      <Column Name="formID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="url" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="Form_Permission" Member="Permissions" ThisKey="formID" OtherKey="formID" Type="Permission" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Permission" Member="Permissions">
+    <Type Name="Permission">
+      <Column Name="userType" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="formID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="coQuyen" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Form_Permission" Member="Form" ThisKey="formID" OtherKey="formID" Type="Form" IsForeignKey="true" />
+      <Association Name="NhomNguoiDung_Permission" Member="NhomNguoiDung" ThisKey="userType" OtherKey="userType" Type="NhomNguoiDung" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhomNguoiDung" Member="NhomNguoiDungs">
+    <Type Name="NhomNguoiDung">
+      <Column Name="userType" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="NhomNguoiDung_Permission" Member="Permissions" ThisKey="userType" OtherKey="userType" Type="Permission" />
+      <Association Name="NhomNguoiDung_User" Member="Users" ThisKey="userType" OtherKey="userType" Type="User" />
+    </Type>
+  </Table>
   <Table Name="dbo.[User]" Member="Users">
     <Type Name="User">
       <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="fullName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="userName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="passWord" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="userType" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="last_pwd_change" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="disable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="User_DatPhong" Member="DatPhongs" ThisKey="uid" OtherKey="idUser" Type="DatPhong" />
+      <Association Name="NhomNguoiDung_User" Member="NhomNguoiDung" ThisKey="userType" OtherKey="userType" Type="NhomNguoiDung" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

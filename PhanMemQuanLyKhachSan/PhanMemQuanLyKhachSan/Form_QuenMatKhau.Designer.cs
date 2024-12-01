@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtNewPassword = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblTenPhong = new System.Windows.Forms.Label();
-            this.txtNewPassword = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,15 +57,32 @@
             this.panel1.Size = new System.Drawing.Size(551, 395);
             this.panel1.TabIndex = 6;
             // 
+            // txtNewPassword
+            // 
+            this.txtNewPassword.Location = new System.Drawing.Point(216, 202);
+            this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.Size = new System.Drawing.Size(289, 22);
+            this.txtNewPassword.TabIndex = 11;
+            this.txtNewPassword.UseSystemPasswordChar = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(65, 205);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "New Password:";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(132, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(335, 51);
+            this.label2.Size = new System.Drawing.Size(294, 51);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Quên Mật Khẩu";
+            this.label2.Text = "Đổi Mật Khẩu";
             // 
             // btnDangNhap
             // 
@@ -111,23 +128,6 @@
             this.lblTenPhong.TabIndex = 2;
             this.lblTenPhong.Text = "Password:";
             // 
-            // txtNewPassword
-            // 
-            this.txtNewPassword.Location = new System.Drawing.Point(216, 202);
-            this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.Size = new System.Drawing.Size(289, 22);
-            this.txtNewPassword.TabIndex = 11;
-            this.txtNewPassword.UseSystemPasswordChar = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 205);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 16);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "New Password:";
-            // 
             // Form_QuenMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -135,6 +135,7 @@
             this.ClientSize = new System.Drawing.Size(551, 395);
             this.Controls.Add(this.panel1);
             this.Name = "Form_QuenMatKhau";
+            this.Tag = "Form_DoiMatKhau";
             this.Text = "Form_QuenMatKhau";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

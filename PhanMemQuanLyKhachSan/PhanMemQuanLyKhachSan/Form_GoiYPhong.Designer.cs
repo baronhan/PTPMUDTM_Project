@@ -148,11 +148,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(198, 25);
+            this.label2.Location = new System.Drawing.Point(277, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(484, 42);
+            this.label2.Size = new System.Drawing.Size(297, 42);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Gợi ý đặt phòng theo đoàn";
+            this.label2.Text = "Gợi ý đặt phòng";
             // 
             // lblTenTang
             // 
@@ -190,6 +190,7 @@
             this.ClientSize = new System.Drawing.Size(850, 268);
             this.Controls.Add(this.panel1);
             this.Name = "Form_GoiYPhong";
+            this.Tag = "Form_GoiYPhong";
             this.Text = "Form_GoiYPhong";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTang)).EndInit();
             this.panel1.ResumeLayout(false);

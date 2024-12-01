@@ -236,6 +236,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form_ThietBiTrongPhong";
+            this.Tag = "Form_ThietBiTrongPhong";
             this.Text = "Form_ThietBiTrongPhong";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

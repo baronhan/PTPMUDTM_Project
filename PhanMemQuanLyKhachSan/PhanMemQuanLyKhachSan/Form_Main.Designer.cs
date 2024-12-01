@@ -93,7 +93,7 @@
             // 
             this.quênMậtKhẩuToolStripMenuItem.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.forward_icon;
             this.quênMậtKhẩuToolStripMenuItem.Name = "quênMậtKhẩuToolStripMenuItem";
-            this.quênMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quênMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.quênMậtKhẩuToolStripMenuItem.Text = "Quên mật khẩu";
             this.quênMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.quênMậtKhẩuToolStripMenuItem_Click);
             // 
@@ -101,7 +101,7 @@
             // 
             this.đăngXuấtToolStripMenuItem.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.forward_icon;
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -283,6 +283,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form_Main";
+            this.Tag = "Form_Main";
             this.Text = "Quản lý khách sạn";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

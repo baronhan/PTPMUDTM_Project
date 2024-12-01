@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ckDisable = new System.Windows.Forms.CheckBox();
             this.txtTenTang = new System.Windows.Forms.TextBox();
             this.lblTenTang = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,7 +42,6 @@
             this.btnLuu = new System.Windows.Forms.ToolStripButton();
             this.btnBoQua = new System.Windows.Forms.ToolStripButton();
             this.btnThoat = new System.Windows.Forms.ToolStripButton();
-            this.ckDisable = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTang)).BeginInit();
@@ -61,6 +61,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(530, 355);
             this.panel1.TabIndex = 5;
+            // 
+            // ckDisable
+            // 
+            this.ckDisable.AutoSize = true;
+            this.ckDisable.Location = new System.Drawing.Point(382, 293);
+            this.ckDisable.Name = "ckDisable";
+            this.ckDisable.Size = new System.Drawing.Size(76, 20);
+            this.ckDisable.TabIndex = 8;
+            this.ckDisable.Text = "Disable";
+            this.ckDisable.UseVisualStyleBackColor = true;
             // 
             // txtTenTang
             // 
@@ -187,16 +197,6 @@
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // ckDisable
-            // 
-            this.ckDisable.AutoSize = true;
-            this.ckDisable.Location = new System.Drawing.Point(382, 293);
-            this.ckDisable.Name = "ckDisable";
-            this.ckDisable.Size = new System.Drawing.Size(76, 20);
-            this.ckDisable.TabIndex = 8;
-            this.ckDisable.Text = "Disable";
-            this.ckDisable.UseVisualStyleBackColor = true;
-            // 
             // Form_Tang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -205,6 +205,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form_Tang";
+            this.Tag = "Form_Tang";
             this.Text = "Form_Tang";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

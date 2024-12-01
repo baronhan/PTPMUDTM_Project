@@ -248,3 +248,42 @@ select * from SanPham
 
 --select * from DatPhong_SP
 --where idDP = 7 and idSP = 5 and 
+
+CREATE TABLE NhomNguoiDung (
+    userType INT IDENTITY(1,1) PRIMARY KEY,
+    name NVARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Form (
+    formID INT IDENTITY(1,1) PRIMARY KEY,
+    url NVARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE Permission (
+    userType INT NOT NULL,
+    formID INT NOT NULL,
+	coQuyen BIT NOT NULL,
+    PRIMARY KEY (userType, formID),
+    FOREIGN KEY (userType) REFERENCES NhomNguoiDung(userType),
+    FOREIGN KEY (formID) REFERENCES Form(formID)
+);
+
+ALTER TABLE [User]
+ADD CONSTRAINT FK_User_UserType FOREIGN KEY (userType) 
+REFERENCES NhomNguoiDung(userType);
+
+INSERT INTO NhomNguoiDung(name)
+VALUES 
+    ('Admin'),
+    (N'Lễ tân')
+select * from NhomNguoiDung
+
+INSERT INTO Form (url)
+VALUES 
+    ('Form_BaoCao'),
+    ('Form_DatPhongtheoDoan'),
+    ('/profile'),
+    ('/reports'),
+    ('/help');
+

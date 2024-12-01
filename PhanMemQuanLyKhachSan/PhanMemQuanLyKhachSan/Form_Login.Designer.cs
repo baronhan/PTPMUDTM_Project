@@ -140,6 +140,7 @@
             this.ClientSize = new System.Drawing.Size(874, 450);
             this.Controls.Add(this.panel1);
             this.Name = "Form_Login";
+            this.Tag = "Form_Login";
             this.Text = "Form_Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Login_FormClosing_1);
             this.panel1.ResumeLayout(false);

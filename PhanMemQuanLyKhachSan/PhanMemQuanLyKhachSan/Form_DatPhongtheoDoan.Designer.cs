@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DatPhongtheoDoan));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
+            this.btnXoaDatPhong = new System.Windows.Forms.ToolStripButton();
             this.btnSua = new System.Windows.Forms.ToolStripButton();
             this.btnLuu = new System.Windows.Forms.ToolStripButton();
             this.btnBoQua = new System.Windows.Forms.ToolStripButton();
@@ -88,7 +89,6 @@
             this.lblKhachHang = new System.Windows.Forms.Label();
             this.menuForButton = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnTraPhong = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnXoaDatPhong = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabDanhSach.SuspendLayout();
@@ -144,6 +144,16 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnXoaDatPhong
+            // 
+            this.btnXoaDatPhong.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.delete_icon;
+            this.btnXoaDatPhong.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnXoaDatPhong.Name = "btnXoaDatPhong";
+            this.btnXoaDatPhong.Size = new System.Drawing.Size(37, 41);
+            this.btnXoaDatPhong.Text = "Xóa";
+            this.btnXoaDatPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnXoaDatPhong.Click += new System.EventHandler(this.btnXoaDatPhong_Click);
             // 
             // btnSua
             // 
@@ -759,16 +769,6 @@
             this.btnTraPhong.Size = new System.Drawing.Size(149, 26);
             this.btnTraPhong.Text = "Trả phòng";
             // 
-            // btnXoaDatPhong
-            // 
-            this.btnXoaDatPhong.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.delete_icon;
-            this.btnXoaDatPhong.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnXoaDatPhong.Name = "btnXoaDatPhong";
-            this.btnXoaDatPhong.Size = new System.Drawing.Size(37, 41);
-            this.btnXoaDatPhong.Text = "Xóa";
-            this.btnXoaDatPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnXoaDatPhong.Click += new System.EventHandler(this.btnXoaDatPhong_Click);
-            // 
             // Form_DatPhongtheoDoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -778,6 +778,7 @@
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form_DatPhongtheoDoan";
+            this.Tag = "Form_DatPhongtheoDoan";
             this.Text = "Form_DatPhongtheoDoan";
             this.Load += new System.EventHandler(this.Form_DatPhongtheoDoan_Load);
             this.toolStrip1.ResumeLayout(false);

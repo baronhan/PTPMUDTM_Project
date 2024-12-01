@@ -21,6 +21,15 @@ namespace BLL
             return dal.GetUID(tenDangNhap);
         }
 
+        public int GetUserTypeID(int uid)
+        {
+            if(uid <= 0)
+            {
+                MessageBox.Show("Mã nhân viên không hợp lệ!");
+            }    
+            return dal.GetUserTypeID(uid);
+        }
+
         public bool KiemTraMatKhauCu(string passWord)
         {
             if (string.IsNullOrEmpty(passWord))

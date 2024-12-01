@@ -14,7 +14,9 @@ namespace PhanMemQuanLyKhachSan
     public partial class Form_Login : Form
     {
         UserBLL userBLL = new UserBLL();
+        PhanQuyenBLL phanQuyenBLL = new PhanQuyenBLL();
         public static int uid;
+        public static int userTypeId;
         public Form_Login()
         {
             InitializeComponent();
@@ -27,11 +29,21 @@ namespace PhanMemQuanLyKhachSan
 
             if (userBLL.KiemTraNguoiDung(tenDangNhap, passWord))
             {
-                MessageBox.Show("Đăng nhập thành công!");
-                uid = userBLL.GetUID(tenDangNhap);
-                Form_Main form = new Form_Main();
-                form.Show();
-                this.Hide();
+                int uid = userBLL.GetUID(tenDangNhap);
+                int userTypeId = userBLL.GetUserTypeID(uid);
+
+                Form_Main form = new Form_Main(userTypeId);
+
+                if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+                {
+                    MessageBox.Show("Đăng nhập thành công!");
+                    form.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+                }
             }
             else
             {
@@ -42,6 +54,7 @@ namespace PhanMemQuanLyKhachSan
                 txtUsername.Focus();
             }
         }
+
 
         private void ckHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
         {

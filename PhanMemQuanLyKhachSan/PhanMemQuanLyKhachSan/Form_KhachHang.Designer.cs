@@ -298,6 +298,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form_KhachHang";
+            this.Tag = "Form_KhachHang";
             this.Text = "Form_KhachHang";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
