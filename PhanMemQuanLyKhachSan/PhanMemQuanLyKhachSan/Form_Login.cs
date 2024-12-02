@@ -20,12 +20,13 @@ namespace PhanMemQuanLyKhachSan
         public Form_Login()
         {
             InitializeComponent();
+            loginUC1.SubmitClicked += LoginUC_SubmitClicked;
         }
 
-        private void btnDangNhap_Click(object sender, EventArgs e)
+        private void LoginUC_SubmitClicked(object sender, EventArgs e)
         {
-            string tenDangNhap = txtUsername.Text;
-            string passWord = txtPassword.Text;
+            string tenDangNhap = loginUC1.Username;
+            string passWord = loginUC1.Password;
 
             if (userBLL.KiemTraNguoiDung(tenDangNhap, passWord))
             {
@@ -48,24 +49,7 @@ namespace PhanMemQuanLyKhachSan
             else
             {
                 MessageBox.Show("Đăng nhập thất bại! Kiểm tra lại tên đăng nhập hoặc mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                txtUsername.Clear();
-                txtPassword.Clear();
-                txtUsername.Focus();
             }
-        }
-
-
-        private void ckHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ckHienThiMatKhau.Checked)
-            {
-                txtPassword.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtPassword.UseSystemPasswordChar= true;
-            }    
         }
 
         private void Form_Login_FormClosing_1(object sender, FormClosingEventArgs e)
