@@ -12,10 +12,11 @@ using System.Windows.Forms;
 
 namespace PhanMemQuanLyKhachSan
 {
-    public partial class Form_ThongKeDoanhThu : Form
+    public partial class Form_ThongKeDichVu : Form
     {
         DatPhongBLL _datPhongBLL = new DatPhongBLL();
-        public Form_ThongKeDoanhThu()
+        SanPhamBLL _sanPhamBLL = new SanPhamBLL();
+        public Form_ThongKeDichVu()
         {
             InitializeComponent();
             loadDanhSachDatPhong();
@@ -71,25 +72,42 @@ namespace PhanMemQuanLyKhachSan
                 return;
             }
 
+            // Lọc danh sách đặt phòng
             List<DatPhongDTO> filteredList = _datPhongBLL.getDanhSachDatPhongDaThanhToan()
                 .Where(dp => dp.ngayTra.Date >= ngayTu && dp.ngayTra.Date <= ngayDen)
                 .ToList();
 
             dgvDanhSach.DataSource = filteredList;
 
-            decimal tongDoanhThu = filteredList.Sum(dp => dp.soTien);
-
-            txtDoanhThu.Text = $"Doanh thu tại khách sạn của bạn từ ngày {ngayTu.ToString("dd/MM/yyyy")} đến ngày {ngayDen.ToString("dd/MM/yyyy")} đạt được: {tongDoanhThu.ToString("N0", new System.Globalization.CultureInfo("vi-VN"))} VND";
-
             if (filteredList.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy kết quả nào trong khoảng thời gian được chọn!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
+
+            List<int> idDatPhongs = filteredList.Select(dp => dp.idDP).ToList();
+
+            List<SanPhamDTO> danhSachSanPham = _sanPhamBLL.getDanhSachSanPhamByIDDPs(idDatPhongs);
+
+            dgvDSDichVu.DataSource = danhSachSanPham;
+
+            dgvDSDichVu.Columns[0].HeaderText = "ID Sản phẩm";
+            dgvDSDichVu.Columns[1].HeaderText = "Tên sản phẩm";
+            dgvDSDichVu.Columns[2].HeaderText = "Đơn giá";
+            dgvDSDichVu.Columns[3].HeaderText = "Disable";
+
+            dgvDSDichVu.Columns[0].Visible = false;
+            dgvDSDichVu.Columns[3].Visible = false;
+
+            dgvDSDichVu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            txtSoLuongKhach.Text = $"Số lượng sản phẩm: {danhSachSanPham.Count}";
         }
 
-        private void btnHuyTimKiem_Click_1(object sender, EventArgs e)
+        private void btnHuyTimKiem_Click(object sender, EventArgs e)
         {
             loadDanhSachDatPhong();
+            dgvDSDichVu.DataSource = null;
         }
     }
 }

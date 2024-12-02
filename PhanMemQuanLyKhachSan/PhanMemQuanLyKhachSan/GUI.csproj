@@ -169,6 +169,12 @@
     <Compile Include="Form_ThietBiTrongPhong.Designer.cs">
       <DependentUpon>Form_ThietBiTrongPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_ThongKeDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ThongKeDichVu.Designer.cs">
+      <DependentUpon>Form_ThongKeDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_ThongKeDoanhThu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,12 @@
     </Compile>
     <Compile Include="Form_ThongKeKhachHang.Designer.cs">
       <DependentUpon>Form_ThongKeKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ThongKePhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ThongKePhong.Designer.cs">
+      <DependentUpon>Form_ThongKePhong.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_TrangForm.cs">
       <SubType>Form</SubType>
@@ -237,11 +249,17 @@
     <EmbeddedResource Include="Form_ThietBiTrongPhong.resx">
       <DependentUpon>Form_ThietBiTrongPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_ThongKeDichVu.resx">
+      <DependentUpon>Form_ThongKeDichVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_ThongKeDoanhThu.resx">
       <DependentUpon>Form_ThongKeDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ThongKeKhachHang.resx">
       <DependentUpon>Form_ThongKeKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ThongKePhong.resx">
+      <DependentUpon>Form_ThongKePhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_TrangForm.resx">
       <DependentUpon>Form_TrangForm.cs</DependentUpon>

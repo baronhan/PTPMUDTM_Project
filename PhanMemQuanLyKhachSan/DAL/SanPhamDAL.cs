@@ -79,6 +79,22 @@ namespace DAL
             }
         }
 
+        public List<SanPhamDTO> getDanhSachSanPhamByIDDPs(List<int> idDPs)
+        {
+            var sanPhamList = (from dpctsp in context.DatPhong_SPs
+                               join sp in context.SanPhams on dpctsp.idSP equals sp.idSP
+                               where idDPs.Contains((int)dpctsp.idDP)
+                               select new SanPhamDTO
+                               {
+                                   idSP = sp.idSP,
+                                   tenSP = sp.tenSP,
+                                   donGia = (decimal)sp.donGia,
+                                   disable = (bool)sp.disable
+                               }).Distinct().ToList();
+            return sanPhamList;
+        }
+
+
         public DataTable getDanhSachSanPham_DataTable()
         {
             DataTable table = new DataTable();

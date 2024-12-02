@@ -13,11 +13,12 @@ namespace PhanMemQuanLyKhachSan
 {
     public partial class Form_QuenMatKhau : Form
     {
-        int uid = Form_Login.uid;
         UserBLL bll = new UserBLL();
-        public Form_QuenMatKhau()
+        int uid;
+        public Form_QuenMatKhau(int uid)
         {
             InitializeComponent();
+            this.uid = uid;
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)

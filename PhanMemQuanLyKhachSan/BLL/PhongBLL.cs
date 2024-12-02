@@ -135,5 +135,10 @@ namespace BLL
         {
             return dal.KiemTraTrangThaiPhong(idPhong);
         }
+
+        public List<PhongDTO> getDanhSachPhongByIDDPs(List<int> idDPs)
+        {
+            return dal.getDanhSachPhongByIDDPs(idDPs);
+        }
     }
 }

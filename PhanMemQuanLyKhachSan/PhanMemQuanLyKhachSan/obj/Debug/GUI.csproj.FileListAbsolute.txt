@@ -72,3 +72,5 @@ D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQua
 D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_PhanQuyen.resources
 D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_ThongKeDoanhThu.resources
 D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_ThongKeKhachHang.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_ThongKePhong.resources
+D:\HotelBooking\PhanMemQuanLyKhachSan\PhanMemQuanLyKhachSan\obj\Debug\PhanMemQuanLyKhachSan.Form_ThongKeDichVu.resources

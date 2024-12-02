@@ -32,7 +32,7 @@ namespace PhanMemQuanLyKhachSan
                 int uid = userBLL.GetUID(tenDangNhap);
                 int userTypeId = userBLL.GetUserTypeID(uid);
 
-                Form_Main form = new Form_Main(userTypeId);
+                Form_Main form = new Form_Main(userTypeId, uid);
 
                 if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
                 {

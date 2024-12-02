@@ -220,5 +220,28 @@ namespace DAL
                 return false;
             }
         }
+
+        public List<PhongDTO> getDanhSachPhongByIDDPs(List<int> idDPs)
+        {
+            var phongList = (from dpct in context.DatPhong_CTs
+                             join phong in context.Phongs on dpct.idPhong equals phong.idPhong
+                             join tang in context.Tangs on phong.idTang equals tang.idTang
+                             join loaiPhong in context.LoaiPhongs on phong.idLoaiPhong equals loaiPhong.idLoaiPhong
+                             where idDPs.Contains((int)dpct.idDP)
+                             select new PhongDTO
+                             {
+                                 idPhong = phong.idPhong,
+                                 tenPhong = phong.tenPhong,
+                                 trangThai = (bool)phong.trangThai,
+                                 idTang = (int)phong.idTang,
+                                 tenTang = tang.tenTang, // Lấy tên tầng
+                                 idLoaiPhong = (int)phong.idLoaiPhong,
+                                 tenLoaiPhong = loaiPhong.tenLoaiPhong, // Lấy tên loại phòng
+                                 disable = (bool)phong.disable
+                             }).Distinct().ToList();
+
+            return phongList;
+        }
+
     }
 }

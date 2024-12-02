@@ -18,15 +18,17 @@ namespace PhanMemQuanLyKhachSan
         PhongBLL phongBLL = new PhongBLL();
         DatPhongBLL datPhongBLL = new DatPhongBLL();
         PhanQuyenBLL phanQuyenBLL = new PhanQuyenBLL();
+        int uid;
 
         private static int idPhong = 0;
         public int userTypeId { get; set; }
 
-        public Form_Main(int userTypeId)
+        public Form_Main(int userTypeId, int uid)
         {
             InitializeComponent();
             showRoom();
             this.userTypeId = userTypeId;
+            this.uid = uid;
         }
 
 
@@ -238,7 +240,7 @@ namespace PhanMemQuanLyKhachSan
 
         private void quênMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_QuenMatKhau form = new Form_QuenMatKhau();
+            Form_QuenMatKhau form = new Form_QuenMatKhau(uid);
 
             if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
             {
@@ -341,6 +343,32 @@ namespace PhanMemQuanLyKhachSan
         private void thốngKêKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_ThongKeKhachHang form = new Form_ThongKeKhachHang();
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
+        }
+
+        private void thốngKêPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_ThongKePhong form = new Form_ThongKePhong();
+            if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
+            {
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Bạn không có quyền truy cập vào {form.Tag.ToString()}");
+            }
+        }
+
+        private void thốngKeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_ThongKeDichVu form = new Form_ThongKeDichVu();
             if (phanQuyenBLL.CoQuyen(userTypeId, form.Tag))
             {
                 form.Show();

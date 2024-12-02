@@ -12,10 +12,11 @@ using System.Windows.Forms;
 
 namespace PhanMemQuanLyKhachSan
 {
-    public partial class Form_ThongKeDoanhThu : Form
+    public partial class Form_ThongKePhong : Form
     {
         DatPhongBLL _datPhongBLL = new DatPhongBLL();
-        public Form_ThongKeDoanhThu()
+        PhongBLL _phongBLL = new PhongBLL();
+        public Form_ThongKePhong()
         {
             InitializeComponent();
             loadDanhSachDatPhong();
@@ -71,25 +72,53 @@ namespace PhanMemQuanLyKhachSan
                 return;
             }
 
-            List<DatPhongDTO> filteredList = _datPhongBLL.getDanhSachDatPhongDaThanhToan()
+            // Lọc danh sách đặt phòng
+            List<DatPhongDTO> filteredList = _datPhongBLL.getDanhSachDatPhong()
                 .Where(dp => dp.ngayTra.Date >= ngayTu && dp.ngayTra.Date <= ngayDen)
                 .ToList();
 
             dgvDanhSach.DataSource = filteredList;
 
-            decimal tongDoanhThu = filteredList.Sum(dp => dp.soTien);
-
-            txtDoanhThu.Text = $"Doanh thu tại khách sạn của bạn từ ngày {ngayTu.ToString("dd/MM/yyyy")} đến ngày {ngayDen.ToString("dd/MM/yyyy")} đạt được: {tongDoanhThu.ToString("N0", new System.Globalization.CultureInfo("vi-VN"))} VND";
-
             if (filteredList.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy kết quả nào trong khoảng thời gian được chọn!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvDSPhong.DataSource = null;
+                return;
             }
+
+            List<int> idDPs = filteredList.Select(dp => dp.idDP).Distinct().ToList();
+
+            txtSoLuongKhach.Text = "Số lượng phòng: " + idDPs.Count.ToString();
+
+            List<PhongDTO> phongList = _phongBLL.getDanhSachPhongByIDDPs(idDPs);
+
+            dgvDSPhong.DataSource = phongList;
+
+            dgvDSPhong.Columns[0].HeaderText = "Mã Phòng";
+            dgvDSPhong.Columns[1].HeaderText = "Tên Phòng";
+            dgvDSPhong.Columns[2].HeaderText = "Trạng Thái";
+            dgvDSPhong.Columns[3].HeaderText = "Mã Tầng";
+            dgvDSPhong.Columns[4].HeaderText = "Mã Loại Phòng";
+            dgvDSPhong.Columns[5].HeaderText = "Tên tầng";
+            dgvDSPhong.Columns[6].HeaderText = "Tên Loại phòng";
+            dgvDSPhong.Columns[7].HeaderText = "Disable";
+
+            dgvDSPhong.Columns[0].Visible = false;
+            dgvDSPhong.Columns[2].Visible = false;
+            dgvDSPhong.Columns[3].Visible = false;
+            dgvDSPhong.Columns[4].Visible = false;
+            dgvDSPhong.Columns[7].Visible = false;
+
+
+
+
+            dgvDSPhong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        private void btnHuyTimKiem_Click_1(object sender, EventArgs e)
+        private void btnHuyTimKiem_Click(object sender, EventArgs e)
         {
             loadDanhSachDatPhong();
+            dgvDSPhong.DataSource = null;
         }
     }
 }

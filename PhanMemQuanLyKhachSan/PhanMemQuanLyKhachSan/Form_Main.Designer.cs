@@ -296,6 +296,7 @@
             this.thốngKeToolStripMenuItem.Name = "thốngKeToolStripMenuItem";
             this.thốngKeToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.thốngKeToolStripMenuItem.Text = "Thống kê dịch vụ";
+            this.thốngKeToolStripMenuItem.Click += new System.EventHandler(this.thốngKeToolStripMenuItem_Click);
             // 
             // thốngKêPhòngToolStripMenuItem
             // 
@@ -303,6 +304,7 @@
             this.thốngKêPhòngToolStripMenuItem.Name = "thốngKêPhòngToolStripMenuItem";
             this.thốngKêPhòngToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.thốngKêPhòngToolStripMenuItem.Text = "Thống kê phòng";
+            this.thốngKêPhòngToolStripMenuItem.Click += new System.EventHandler(this.thốngKêPhòngToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 

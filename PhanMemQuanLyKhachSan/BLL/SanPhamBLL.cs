@@ -80,5 +80,10 @@ namespace BLL
         {
             return dal.getDanhSachSanPham_DataTable();
         }
+
+        public List<SanPhamDTO> getDanhSachSanPhamByIDDPs(List<int> idDatPhongs)
+        {
+            return dal.getDanhSachSanPhamByIDDPs(idDatPhongs);
+        }
     }
 }
