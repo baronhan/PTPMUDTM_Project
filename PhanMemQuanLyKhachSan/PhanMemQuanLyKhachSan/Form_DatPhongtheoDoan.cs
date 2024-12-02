@@ -1124,14 +1124,15 @@ namespace PhanMemQuanLyKhachSan
                 dtpNgayTra.Value = (DateTime)selectedRow.Cells["ngayTra"].Value;
                 nbrSoNguoiO.Value = (int)selectedRow.Cells["soNguoiO"].Value;
 
-                if (selectedRow.Cells["status"].Value != null && selectedRow.Cells["status"].Value is int status)
+                if (selectedRow.Cells["status"].Value != null && selectedRow.Cells["status"].Value is bool status)
                 {
-                    cbTrangThai.SelectedValue = status;
+                    cbTrangThai.SelectedValue = status ? 1 : 0; 
                 }
                 else
                 {
                     cbTrangThai.SelectedValue = 0;
                 }
+
 
                 cbKhachHang.SelectedValue = (int)selectedRow.Cells["idKH"].Value;
 

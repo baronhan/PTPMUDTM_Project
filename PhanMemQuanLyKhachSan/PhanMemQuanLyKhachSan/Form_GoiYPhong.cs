@@ -60,12 +60,10 @@ namespace PhanMemQuanLyKhachSan
                 phong.DiemPhuHop = (TRONG_SO_GIA_TIEN * pGiaTien) + (TRONG_SO_SO_KHACH * pSoKhach);
             }
 
-            // Sắp xếp danh sách phòng theo điểm phù hợp giảm dần
             var phongSapXep = danhSachPhong
                 .OrderByDescending(p => p.DiemPhuHop)
                 .ToList();
 
-            // Sử dụng thuật toán tìm tổ hợp tối ưu
             var tapPhongToiUu = new List<PhongGreedyDTO>();
             var ketQuaToiUu = new List<PhongGreedyDTO>();
             double diemToiUu = double.MinValue;

@@ -27,6 +27,12 @@ namespace PhanMemQuanLyKhachSan
             string passWord = txtPassword.Text;
             string newPassword = txtNewPassword.Text;
 
+            if (string.IsNullOrWhiteSpace(newPassword) || string.IsNullOrWhiteSpace(confirmPassword))
+            {
+                MessageBox.Show("Mật khẩu mới và mật khẩu xác nhận không được để trống.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (newPassword != confirmPassword)
             {
                 MessageBox.Show("Mật khẩu mới và mật khẩu xác nhận không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);

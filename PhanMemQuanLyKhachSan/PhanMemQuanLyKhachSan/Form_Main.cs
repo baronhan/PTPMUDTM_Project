@@ -81,7 +81,7 @@ namespace PhanMemQuanLyKhachSan
                         phongButton.BackgroundImage = Properties.Resources.non_booking;
                     }    
                     phongButton.BackgroundImageLayout = ImageLayout.Stretch;
-                    phongButton.ContextMenuStrip = menuForButton;
+
                     phongButton.Tag = phong.idPhong;
 
                     phongButton.Click += (sender, e) =>

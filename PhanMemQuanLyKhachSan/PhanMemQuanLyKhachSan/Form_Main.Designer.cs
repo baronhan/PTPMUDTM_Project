@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -61,11 +60,8 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanelRooms = new System.Windows.Forms.TableLayoutPanel();
-            this.menuForButton = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btnTraPhong = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.menuForButton.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -102,15 +98,15 @@
             // 
             this.quênMậtKhẩuToolStripMenuItem.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.forward_icon;
             this.quênMậtKhẩuToolStripMenuItem.Name = "quênMậtKhẩuToolStripMenuItem";
-            this.quênMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
-            this.quênMậtKhẩuToolStripMenuItem.Text = "Quên mật khẩu";
+            this.quênMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quênMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             this.quênMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.quênMậtKhẩuToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.forward_icon;
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -143,7 +139,7 @@
             // 
             this.TANG.Image = ((System.Drawing.Image)(resources.GetObject("TANG.Image")));
             this.TANG.Name = "TANG";
-            this.TANG.Size = new System.Drawing.Size(289, 26);
+            this.TANG.Size = new System.Drawing.Size(283, 26);
             this.TANG.Tag = "TANG";
             this.TANG.Text = "Quản lý Tầng";
             this.TANG.Click += new System.EventHandler(this.TANG_Click);
@@ -152,7 +148,7 @@
             // 
             this.LOAIPHONG.Image = ((System.Drawing.Image)(resources.GetObject("LOAIPHONG.Image")));
             this.LOAIPHONG.Name = "LOAIPHONG";
-            this.LOAIPHONG.Size = new System.Drawing.Size(289, 26);
+            this.LOAIPHONG.Size = new System.Drawing.Size(283, 26);
             this.LOAIPHONG.Tag = "LOAIPHONG";
             this.LOAIPHONG.Text = "Quản lý Loại phòng";
             this.LOAIPHONG.Click += new System.EventHandler(this.LOAIPHONG_Click);
@@ -161,7 +157,7 @@
             // 
             this.PHONG.Image = ((System.Drawing.Image)(resources.GetObject("PHONG.Image")));
             this.PHONG.Name = "PHONG";
-            this.PHONG.Size = new System.Drawing.Size(289, 26);
+            this.PHONG.Size = new System.Drawing.Size(283, 26);
             this.PHONG.Tag = "PHONG";
             this.PHONG.Text = "Quản lý Phòng";
             this.PHONG.Click += new System.EventHandler(this.PHONG_Click);
@@ -170,7 +166,7 @@
             // 
             this.SANPHAM.Image = ((System.Drawing.Image)(resources.GetObject("SANPHAM.Image")));
             this.SANPHAM.Name = "SANPHAM";
-            this.SANPHAM.Size = new System.Drawing.Size(289, 26);
+            this.SANPHAM.Size = new System.Drawing.Size(283, 26);
             this.SANPHAM.Tag = "SANPHAM";
             this.SANPHAM.Text = "Quản lý Sản phẩm";
             this.SANPHAM.Click += new System.EventHandler(this.SANPHAM_Click);
@@ -179,7 +175,7 @@
             // 
             this.THIETBI.Image = ((System.Drawing.Image)(resources.GetObject("THIETBI.Image")));
             this.THIETBI.Name = "THIETBI";
-            this.THIETBI.Size = new System.Drawing.Size(289, 26);
+            this.THIETBI.Size = new System.Drawing.Size(283, 26);
             this.THIETBI.Tag = "THIETBI";
             this.THIETBI.Text = "Quản lý Thiết bị";
             this.THIETBI.Click += new System.EventHandler(this.THIETBI_Click);
@@ -188,7 +184,7 @@
             // 
             this.PHONG_THIETBI.Image = ((System.Drawing.Image)(resources.GetObject("PHONG_THIETBI.Image")));
             this.PHONG_THIETBI.Name = "PHONG_THIETBI";
-            this.PHONG_THIETBI.Size = new System.Drawing.Size(289, 26);
+            this.PHONG_THIETBI.Size = new System.Drawing.Size(283, 26);
             this.PHONG_THIETBI.Tag = "PHONG_THIETBI";
             this.PHONG_THIETBI.Text = "Quản lý Thiết bị trong phòng";
             this.PHONG_THIETBI.Click += new System.EventHandler(this.PHONG_THIETBI_Click);
@@ -197,7 +193,7 @@
             // 
             this.KHACHHANG.Image = ((System.Drawing.Image)(resources.GetObject("KHACHHANG.Image")));
             this.KHACHHANG.Name = "KHACHHANG";
-            this.KHACHHANG.Size = new System.Drawing.Size(289, 26);
+            this.KHACHHANG.Size = new System.Drawing.Size(283, 26);
             this.KHACHHANG.Tag = "KHACHHANG";
             this.KHACHHANG.Text = "Quản lý Khách hàng";
             this.KHACHHANG.Click += new System.EventHandler(this.KHACHHANG_Click);
@@ -210,7 +206,7 @@
             this.quảnLýPhânQuyềnToolStripMenuItem});
             this.quảnLýQuyềnTruyCậpToolStripMenuItem.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.forward_icon;
             this.quảnLýQuyềnTruyCậpToolStripMenuItem.Name = "quảnLýQuyềnTruyCậpToolStripMenuItem";
-            this.quảnLýQuyềnTruyCậpToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
+            this.quảnLýQuyềnTruyCậpToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
             this.quảnLýQuyềnTruyCậpToolStripMenuItem.Text = "Quản lý Quyền truy cập";
             // 
             // quảnLýToolStripMenuItem
@@ -241,9 +237,9 @@
             // 
             this.DATPHONG.Image = ((System.Drawing.Image)(resources.GetObject("DATPHONG.Image")));
             this.DATPHONG.Name = "DATPHONG";
-            this.DATPHONG.Size = new System.Drawing.Size(289, 26);
+            this.DATPHONG.Size = new System.Drawing.Size(283, 26);
             this.DATPHONG.Tag = "DATPHONG";
-            this.DATPHONG.Text = "Quản lý Đặt phòng theo đoàn";
+            this.DATPHONG.Text = "Quản lý Đặt phòng";
             this.DATPHONG.Click += new System.EventHandler(this.DATPHONG_Click);
             // 
             // toolStripSeparator1
@@ -350,21 +346,6 @@
             this.tableLayoutPanelRooms.Size = new System.Drawing.Size(0, 0);
             this.tableLayoutPanelRooms.TabIndex = 0;
             // 
-            // menuForButton
-            // 
-            this.menuForButton.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuForButton.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnTraPhong});
-            this.menuForButton.Name = "menuForButton";
-            this.menuForButton.Size = new System.Drawing.Size(150, 30);
-            // 
-            // btnTraPhong
-            // 
-            this.btnTraPhong.Image = global::PhanMemQuanLyKhachSan.Properties.Resources.forward_icon;
-            this.btnTraPhong.Name = "btnTraPhong";
-            this.btnTraPhong.Size = new System.Drawing.Size(149, 26);
-            this.btnTraPhong.Text = "Trả phòng";
-            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -379,7 +360,6 @@
             this.toolStrip1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            this.menuForButton.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,8 +385,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelRooms;
-        private System.Windows.Forms.ContextMenuStrip menuForButton;
-        private System.Windows.Forms.ToolStripMenuItem btnTraPhong;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem quênMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
