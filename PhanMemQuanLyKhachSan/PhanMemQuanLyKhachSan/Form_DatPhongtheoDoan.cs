@@ -35,6 +35,7 @@ namespace PhanMemQuanLyKhachSan
         private List<AvailableRoomDTO> bookedRooms = new List<AvailableRoomDTO>();
         private bool isRightClick = false;
         private int userTypeId;
+        private bool capNhat;
 
         public Form_DatPhongtheoDoan(Form_Main form)
         {
@@ -354,6 +355,7 @@ namespace PhanMemQuanLyKhachSan
             enableControl(true);
             dtableSanPham.Clear();
             dgvDanhSachSPDV.DataSource = dtableSanPham;
+            capNhat = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -642,6 +644,7 @@ namespace PhanMemQuanLyKhachSan
             enableControl(false);
             _btnThem = false;
             tabControl.SelectedTab = tabDanhSach;
+            capNhat = false;
         }
 
         private void btnIn_Click(object sender, EventArgs e)
@@ -826,25 +829,20 @@ namespace PhanMemQuanLyKhachSan
                 string tenSanPham = sanPhamRow["Tên sản phẩm"].ToString();
                 decimal donGia = Convert.ToDecimal(sanPhamRow["Giá"]);
 
-                int soLuong = 1;  // Giá trị mặc định cho số lượng (có thể thay đổi nếu cần)
+                int soLuong = 1;  
 
-                // Thêm Tên Sản Phẩm, Đơn Giá và Số Lượng vào dtSanPhamPhong
                 dtSanPhamPhong.Rows.Add(idSP, tenSanPham, donGia, soLuong);
             }
 
-            // Cập nhật DataGridView với dữ liệu mới
             dgvDanhSachSPDV.DataSource = dtSanPhamPhong;
 
-            // Kiểm tra xem cột "Disable" có tồn tại không trước khi thực hiện việc ẩn
             if (dgvDanhSachSPDV.Columns.Contains("Disable"))
             {
                 dgvDanhSachSPDV.Columns["Disable"].Visible = false;  // Ẩn cột "Disable"
             }
 
-            // Ẩn các cột không cần thiết
             dgvDanhSachSPDV.Columns["Mã Sản Phẩm"].Visible = false;  // Ẩn cột "Mã Sản Phẩm"
 
-            // Hiển thị cột "Tên Sản Phẩm", "Đơn Giá" và "Số Lượng"
             dgvDanhSachSPDV.Columns["Tên Sản Phẩm"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvDanhSachSPDV.Columns["Giá"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvDanhSachSPDV.Columns["Số lượng"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -1099,13 +1097,19 @@ namespace PhanMemQuanLyKhachSan
             if (dgvDanhSach.SelectedRows.Count > 0)
             {
                 var selectedRow = dgvDanhSach.SelectedRows[0];
-                DateTime ngayTra = (DateTime)selectedRow.Cells["NgayTra"].Value; 
+                DateTime ngayTra = (DateTime)selectedRow.Cells["NgayTra"].Value;
 
-                if (ngayTra <= DateTime.Now)
+                if (capNhat == true)
                 {
-                    MessageBox.Show("Không thể sửa phiếu đặt này vì ngày trả đã qua hạn!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                    if (selectedRow.Cells["status"].Value != null &&
+                        selectedRow.Cells["status"].Value is bool isPaid &&
+                        isPaid)
+                    {
+                        MessageBox.Show("Không thể sửa phiếu đặt này vì đơn đặt phòng đã được thanh toán!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
+
 
                 dtableSanPham.Clear();
                 showHideControl(false);
@@ -1233,16 +1237,32 @@ namespace PhanMemQuanLyKhachSan
                 var selectedRow = dgvDanhSach.SelectedRows[0];
                 int idDP = (int)selectedRow.Cells["idDP"].Value;
 
-                if (_datPhongBLL.VoHieuHoaPhieuDatPhong(idDP))
+                // Thêm thông báo xác nhận
+                DialogResult confirmResult = MessageBox.Show(
+                    "Bạn có chắc chắn muốn vô hiệu hóa phiếu đặt phòng này?",
+                    "Xác nhận vô hiệu hóa",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (confirmResult == DialogResult.Yes)
                 {
-                    MessageBox.Show("Bạn đã vô hiệu hóa phiếu đặt thành công");
-                    loadDanhSachDatPhong();
+                    if (_datPhongBLL.VoHieuHoaPhieuDatPhong(idDP))
+                    {
+                        MessageBox.Show("Bạn đã vô hiệu hóa phiếu đặt thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadDanhSachDatPhong();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vô hiệu hóa phiếu đặt phòng thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Vô hiệu hóa phiếu đặt phòng thất bại!");
-                }    
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một phiếu đặt phòng để vô hiệu hóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
     }
 }
